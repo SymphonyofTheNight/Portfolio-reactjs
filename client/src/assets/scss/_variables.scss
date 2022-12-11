@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxygen&display=swap'); // font-family: 'Oxygen', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap'); //  font-family: 'Oswald', sans-serif;
+
+:root {
+    padding: 0;
+    margin: 0;
+    box-sizing: 0px;
+    overflow-x: hidden;
+}
+
+$--bg-none: none;
+$--bg-dashbg: rgb(233, 233, 233);
+$--bg-div-color: rgb(9, 16, 27);
+$--bg-color: rgba($color: #080808, $alpha: 1.0);
+$--text-font-oswald: 'Oswald', sans-serif;
+$--text-font-oxygen: 'Oxygen', sans-serif;
