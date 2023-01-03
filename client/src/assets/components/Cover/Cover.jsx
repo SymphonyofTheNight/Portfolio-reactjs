@@ -8,6 +8,7 @@ const Cover = () => {
     const months = ["JANUARY", "FEBRUARY", "MARCH", "APRIL", "MAY", "JUNE", "JULY", "AUGUST", "SEPTEMBER", "October", "NOVEMBER", "DECEMBER"];
 
     const [scrollcount, setScrollCount] = useState(0);
+    const [togglecolor, setToggleColor] = useState(false);
 
     const wingTrigger = 150;
     const topbotTrigger = 350;
@@ -61,7 +62,7 @@ const Cover = () => {
         }
     }, [scrollcount])
 
-    console.log(scrollcount)
+    console.log(togglecolor)
 
     return (
         <div className='Cover col-lg-12 m-0 p-0' ref={mainref}>
@@ -74,7 +75,9 @@ const Cover = () => {
                 <div className='toggle-container'>
                     <div style={{ display: 'flex', alignItems: 'center' }}>
                         <Switch.Root className="SwitchRoot" id="airplane-mode">
-                            <Switch.Thumb className="SwitchThumb" />
+                            <Switch.Thumb onClick={() => {
+                                setToggleColor(state => !state)
+                            }} className="SwitchThumb" />
                         </Switch.Root>
                     </div>
                 </div>

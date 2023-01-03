@@ -20,30 +20,7 @@
     border-radius: 10px;
 }
 
-.Landingpage {
-    background: rgba($color: #000000, $alpha: 1.0);
-    height: 250vh;
-    width: 100vw;
-    position: relative; // for cover position abso
-    overflow: auto;
-
-    .imgContainer {
-        @include baseDisplay(none, 80vh, 100vw);
-        margin-top: 20vh;
-        display: grid;
-        align-items: center;
-        justify-content: center;
-
-        .img {
-            height: 40vh;
-            clip-path: circle(50% at 50% 50%);
-            // transform: scale(0.7);
-        }
-
-    }
-
-}
-
+// cover 
 .Cover {
     @include baseDisplay(rgb(0, 0, 0), 100vh, 100vw);
     position: absolute;
@@ -269,4 +246,75 @@
             }
         }
     }
+}
+
+.Landingpage {
+    @include baseDisplay($--bg-color, 250vh, 100vw);
+    position: relative; // for cover position abso
+    overflow: auto;
+
+    .imgContainer {
+        @include baseDisplay(none, 80vh, 100vw);
+        margin-top: 20vh;
+        display: grid;
+        align-items: center;
+        justify-content: center;
+
+        .img {
+            height: 40vh;
+            clip-path: circle(50% at 50% 50%);
+            // transform: scale(0.7);
+        }
+
+    }
+
+    .about {
+        @include baseDisplay(none, 80vh, 100vw);
+        position: relative;
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        text-align: justify;
+
+        .label {
+            font-family: $--text-font-oxygen;
+            font-weight: bold;
+            font-size: .6em;
+            color: $--font-color;
+            letter-spacing: 5px;
+            position: absolute;
+            transform: translate(50%, -50%);
+            top: 50%;
+            writing-mode: vertical-lr;
+        }
+
+        .container-text {
+            @include baseDisplay(none, 50vh, 60vw);
+            display: grid;
+            align-items: center;
+
+            // text-align: justify;
+
+            .text-form-one {
+                font-family: $--text-font-oxygen;
+                font-weight: bold;
+                font-size: 2em;
+                color: $--font-color;
+                margin-left: 2vw;
+                margin-top: 3vh;
+            }
+
+            .text-form-two-container {
+                @include baseDisplay(none, auto, 55vw);
+                text-align: justify;
+                color: $--font-color;
+                font-family: $--text-font-oxygen;
+                line-height: 300%;
+                margin: 2vw;
+                font-size: 1.3em;
+                // padding: 20px 20px;
+            }
+        }
+    }
+
 }
