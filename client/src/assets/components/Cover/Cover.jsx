@@ -62,8 +62,6 @@ const Cover = () => {
         }
     }, [scrollcount])
 
-    console.log(togglecolor)
-
     return (
         <div className='Cover col-lg-12 m-0 p-0' ref={mainref}>
             <div className='top' ref={topref}>
@@ -88,7 +86,7 @@ const Cover = () => {
                 </div>
                 <div className='mid-container'>
                     <span className='text-label'>
-                        WEB DEVELOPER
+                        FRONT END DEVELOPER <br />
                     </span>
                 </div>
                 <div className='right-container' ref={rightwingref}>

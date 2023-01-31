@@ -274,7 +274,7 @@
         display: grid;
         align-items: center;
         justify-content: center;
-        text-align: justify;
+        text-align: left;
 
         .label {
             font-family: $--text-font-oxygen;
@@ -289,7 +289,7 @@
         }
 
         .container-text {
-            @include baseDisplay(none, 50vh, 60vw);
+            @include baseDisplay(none, 75vh, 60vw);
             display: grid;
             align-items: center;
 
@@ -298,14 +298,14 @@
             .text-form-one {
                 font-family: $--text-font-oxygen;
                 font-weight: bold;
-                font-size: 2em;
+                font-size: 2.5em;
                 color: $--font-color;
                 margin-left: 2vw;
                 margin-top: 3vh;
             }
 
             .text-form-two-container {
-                @include baseDisplay(none, auto, 55vw);
+                @include baseDisplay(none, 55vh, 55vw);
                 text-align: justify;
                 color: $--font-color;
                 font-family: $--text-font-oxygen;

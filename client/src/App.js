@@ -1,4 +1,5 @@
 import React from 'react';
+import { Routes, Route } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 // components
@@ -10,12 +11,9 @@ import './assets/scss/_main.scss';
 
 const App = () => {
   return (
-    <div>
-      <Cover />
-      <Landingpage ID='Landingpage col-lg-12 m-0 p-0'>
-
-      </Landingpage>
-    </div>
+    <Routes>
+      <Route path='/' element={<><Cover /><Landingpage ID='Landingpage col-lg-12 m-0 p-0' /></>} />
+    </Routes>
   )
 }
 
