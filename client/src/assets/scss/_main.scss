@@ -2,6 +2,10 @@
 @import '_include_media.scss';
 @import '_variables.scss';
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 ::-webkit-scrollbar {
     width: .5vh;
 }
@@ -45,24 +49,24 @@
         transition: 1s;
         animation: ease-in-out;
 
-        .name-container {
-            background: rgba($color: #000000, $alpha: 1.0);
-            height: 20vh;
-            width: 20vw;
-            position: absolute;
-            left: 0;
-            display: grid;
-            place-items: center;
+        // .name-container {
+        //     background: rgba($color: #000000, $alpha: 1.0);
+        //     height: 20vh;
+        //     width: 20vw;
+        //     position: absolute;
+        //     left: 0;
+        //     display: grid;
+        //     place-items: center;
 
-            .text-label {
-                font-size: 1.65em;
-                font-family: 'Oswald', sans-serif;
-                color: white;
-                letter-spacing: 2.75px;
-            }
-        }
+        //     // .text-label {
+        //     //     font-size: 1.65em;
+        //     //     font-family: 'Oswald', sans-serif;
+        //     //     color: white;
+        //     //     letter-spacing: 2.75px;
+        //     // }
+        // }
 
-        .toggle-container {
+        .bg-transparent {
             background: rgba($color: #2e9e86, $alpha: 0);
             height: 20vh;
             width: 20vw;

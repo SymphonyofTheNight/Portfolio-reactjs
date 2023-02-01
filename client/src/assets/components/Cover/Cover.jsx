@@ -64,19 +64,20 @@ const Cover = () => {
 
     return (
         <div className='Cover col-lg-12 m-0 p-0' ref={mainref}>
-            <div className='top' ref={topref}>
-                <div className='name-container'>
-                    <span className='text-label'>
+            <div className='bg-red-700 h-[20vh] w-[100vw] flex flex-wrap relative transition duration-1000 ease-in-out' ref={topref}>
+                <div className='bg-red-500 h-[20vh] w-[20vw] absolute left-0 grid align-items-center justify-center'>
+                    <span className='text-white font-Oswald text-2xl tracking-[2.75px]'>
                         GINO D.V
                     </span>
                 </div>
-                <div className='toggle-container'>
+                <div className='bg-transparent h-[20vh] w-[20vw] absolute right-0 grid place-items-center'>
                     <div style={{ display: 'flex', alignItems: 'center' }}>
-                        <Switch.Root className="SwitchRoot" id="airplane-mode">
+                        <Switch.Root className='w-[52px] h-[25px] bg-white rounded-[9999px] relative' id="airplane-mode">
                             <Switch.Thumb onClick={() => {
                                 setToggleColor(state => !state)
-                            }} className="SwitchThumb" />
+                            }} className="block w-[21px] h-[19px] bg-black rounded-[9999px] translate-x-[5px]" />
                         </Switch.Root>
+                        {/* data-state on switch thumb need to fix */}
                     </div>
                 </div>
             </div>
