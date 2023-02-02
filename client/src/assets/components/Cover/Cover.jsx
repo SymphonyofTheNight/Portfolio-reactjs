@@ -66,7 +66,7 @@ const Cover = () => {
     }, [scrollcount])
 
     return (
-        <div className='Cover col-lg-12 m-0 p-0' ref={mainref}>
+        <div className='cover bg-black h-[100vh] w-[100vw] absolute top-0 left-0 z-10  opacity-[0.9] flex flex-col flex-wrap transition duration-[1s] ease-in-out' ref={mainref}>
             <div className='bg-red-700 h-[20vh] w-[100vw] flex flex-wrap relative transition duration-1000 ease-in-out' ref={topref}>
                 <div className='bg-red-500 h-[20vh] w-[20vw] absolute left-0 grid align-items-center justify-center'>
                     <span className='text-white font-Oswald text-2xl tracking-[2.75px]'>
