@@ -66,58 +66,58 @@
         //     // }
         // }
 
-        .bg-transparent {
-            background: rgba($color: #2e9e86, $alpha: 0);
-            height: 20vh;
-            width: 20vw;
-            position: absolute;
-            right: 0;
-            place-items: center;
-            display: grid;
-            place-items: center;
+        // .bg-transparent {
+        //     background: rgba($color: #2e9e86, $alpha: 0);
+        //     height: 20vh;
+        //     width: 20vw;
+        //     position: absolute;
+        //     right: 0;
+        //     place-items: center;
+        //     display: grid;
+        //     place-items: center;
 
-            .SwitchRoot {
-                width: 52px;
-                height: 25px;
-                background-color: white;
-                border-radius: 9999px;
-                position: relative;
-                box-shadow: 0 2px 10px var(--blackA7);
-                -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-            }
+        //     .SwitchRoot {
+        //         width: 52px;
+        //         height: 25px;
+        //         background-color: white;
+        //         border-radius: 9999px;
+        //         position: relative;
+        //         box-shadow: 0 2px 10px var(--blackA7);
+        //         -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        //     }
 
-            .SwitchRoot:focus {
-                box-shadow: 0 0 0 1px black;
-            }
+        //     .SwitchRoot:focus {
+        //         box-shadow: 0 0 0 1px black;
+        //     }
 
-            .SwitchRoot[data-state='checked'] {
-                background-color: black;
-            }
+        //     .SwitchRoot[data-state='checked'] {
+        //         background-color: black;
+        //     }
 
-            .SwitchThumb {
-                display: block;
-                width: 21px;
-                height: 19px;
-                background-color: rgb(0, 0, 0);
-                border-radius: 9999px;
-                box-shadow: 0 2px 2px var(--blackA7);
-                transition: transform 100ms;
-                transform: translateX(-5px);
-                will-change: transform;
-            }
+        //     .SwitchThumb {
+        //         display: block;
+        //         width: 21px;
+        //         height: 19px;
+        //         background-color: rgb(0, 0, 0);
+        //         border-radius: 9999px;
+        //         box-shadow: 0 2px 2px var(--blackA7);
+        //         transition: transform 100ms;
+        //         transform: translateX(-5px);
+        //         will-change: transform;
+        //     }
 
-            .SwitchThumb[data-state='checked'] {
-                transform: translateX(19px);
-                background-color: white;
-            }
+        //     .SwitchThumb[data-state='checked'] {
+        //         transform: translateX(19px);
+        //         background-color: white;
+        //     }
 
-            .Label {
-                color: white;
-                font-size: 15px;
-                line-height: 1;
-                user-select: none;
-            }
-        }
+        //     .Label {
+        //         color: white;
+        //         font-size: 15px;
+        //         line-height: 1;
+        //         user-select: none;
+        //     }
+        // }
     }
 
     .middle {
@@ -129,56 +129,56 @@
         flex-wrap: wrap;
         position: relative;
 
-        .left-container {
-            background: rgba($color: #000000, $alpha: 1.0);
-            width: 15vw;
-            height: 65vh;
-            display: grid;
-            place-items: center;
-            transition: 1s;
-            animation: ease-in-out;
+        // .left-container {
+        //     background: rgba($color: #000000, $alpha: 1.0);
+        //     width: 15vw;
+        //     height: 65vh;
+        //     display: grid;
+        //     place-items: center;
+        //     transition: 1s;
+        //     animation: ease-in-out;
 
-            .line {
-                height: 50vh;
-                width: 4px;
-                background: white;
-            }
-        }
+        //     .line {
+        //         height: 50vh;
+        //         width: 4px;
+        //         background: white;
+        //     }
+        // }
 
-        .mid-container {
-            background: rgba($color: #b18e43, $alpha: 0);
-            height: 65vh;
-            width: 70vw;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        // .mid-container {
+        //     background: rgba($color: #b18e43, $alpha: 0);
+        //     height: 65vh;
+        //     width: 70vw;
+        //     display: flex;
+        //     align-items: center;
+        //     justify-content: center;
 
-            .text-label {
-                font-size: 4.5em;
-                font-family: 'Oxygen', sans-serif;
-                color: white;
-                letter-spacing: 25px;
-                font-weight: bold;
-            }
-        }
+        //     .text-label {
+        //         font-size: 4.5em;
+        //         font-family: 'Oxygen', sans-serif;
+        //         color: white;
+        //         letter-spacing: 25px;
+        //         font-weight: bold;
+        //     }
+        // }
 
-        .right-container {
-            background: rgba($color: #000000, $alpha: 1.0);
-            width: 15vw;
-            height: 65vh;
-            display: grid;
-            place-items: center;
-            position: absolute;
-            right: 0;
-            transition: 1s;
-            animation: ease-in-out;
+        // .right-container {
+        //     background: rgba($color: #000000, $alpha: 1.0);
+        //     width: 15vw;
+        //     height: 65vh;
+        //     display: grid;
+        //     place-items: center;
+        //     position: absolute;
+        //     right: 0;
+        //     transition: 1s;
+        //     animation: ease-in-out;
 
-            .line {
-                height: 50vh;
-                width: 4px;
-                background: white;
-            }
-        }
+        //     .line {
+        //         height: 50vh;
+        //         width: 4px;
+        //         background: white;
+        //     }
+        // }
     }
 
     .bottom {

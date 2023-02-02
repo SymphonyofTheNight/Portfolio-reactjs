@@ -21,6 +21,7 @@ module.exports = {
       },
       fontFamily: {
         Oswald: ["Oswald", "sans-serif"],
+        Oxygen: ["Oxygen", "sans-serif"]
       },
     },
     screens: {
