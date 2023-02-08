@@ -1,18 +1,28 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 // components
-import Cover from './assets/components/Cover/Cover';
-import Landingpage from './assets/components/Landingpage/Landingpage';
+import Cover from './components/Cover/Cover';
+import Landingpage from './components/Landingpage/Landingpage';
 
 // scss
-import './assets/scss/_main.scss';
+import './scss/_main.scss';
 
 const App = () => {
+
+  const [colortoggle, setColortoggle] = useState(false);
+
   return (
     <Routes>
-      <Route path='/' element={<><Cover /><Landingpage ID='Landingpage col-lg-12 m-0 p-0' /></>} />
+      <Route path='/' element=
+        {
+          <>
+            <Cover colortoggle={colortoggle} setColortoggle={setColortoggle} />
+            <Landingpage colortoggle={colortoggle} setColortoggle={setColortoggle} />
+          </>
+        }
+      />
     </Routes>
   )
 }

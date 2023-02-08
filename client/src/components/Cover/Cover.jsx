@@ -2,12 +2,12 @@ import React, { useRef } from 'react';
 import { useEffect, useState } from 'react';
 import { FaFacebook, FaGithub, FaTelegram } from 'react-icons/fa';
 
-const Cover = () => {
+const Cover = ({ colortoggle, setColortoggle }) => {
 
     const months = ["JANUARY", "FEBRUARY", "MARCH", "APRIL", "MAY", "JUNE", "JULY", "AUGUST", "SEPTEMBER", "October", "NOVEMBER", "DECEMBER"];
 
     const [scrollcount, setScrollCount] = useState(0);
-    const [togglecolor, setToggleColor] = useState(false);
+    // const [togglecolor, setToggleColor] = useState(false);
 
     const wingTrigger = 150;
     const topbotTrigger = 350;
@@ -62,7 +62,7 @@ const Cover = () => {
     }, [scrollcount])
 
     return (
-        <div className={`cover ${!togglecolor ? 'bg-black/[0.9]' : 'bg-white/[0.9]'} h-[100vh] w-[100vw] absolute top-0 left-0 z-10 flex flex-col flex-wrap transition duration-[1s] ease-in-out`} ref={mainref}>
+        <div className={`cover ${!colortoggle ? 'bg-black/[0.9]' : 'bg-white/[0.9]'} h-[100vh] w-[100vw] absolute top-0 left-0 z-10 flex flex-col flex-wrap transition duration-[1s] ease-in-out`} ref={mainref}>
             <div className='bg-transparent h-[20vh] w-[100vw] flex flex-wrap relative transition duration-1000 ease-in-out' ref={topref}>
                 <div className='bg-transparent h-[20vh] w-[20vw] absolute left-0 grid align-items-center justify-center'>
                     <span className='text-white font-Oswald text-2xl tracking-[2.75px]'>
@@ -70,10 +70,10 @@ const Cover = () => {
                     </span>
                 </div>
                 <div className='bg-transparent h-[20vh] w-[20vw] absolute right-0 grid place-items-center'>
-                    <button className={`bg-transparent h-[4vh] w-[auto] px-4 ${!togglecolor ? 'text-white' : 'text-black'} font-Oswald tracking-[3px] transition duration-[.5s] text-[1.2em]`} onClick={() => {
-                        setToggleColor(state => !state)
+                    <button className={`bg-transparent h-[4vh] w-[auto] px-4 ${!colortoggle ? 'text-white' : 'text-black'} font-Oswald tracking-[3px] transition duration-[.5s] text-[1.2em]`} onClick={() => {
+                        setColortoggle(state => !state)
                     }}>
-                        {!togglecolor ? 'Light mode' : 'Night mode'}
+                        {!colortoggle ? 'Light mode' : 'Night mode'}
                     </button>
                 </div>
             </div>
@@ -93,7 +93,7 @@ const Cover = () => {
             <div className='bg-transparent h-[15vh] w-[100vw] flex flex-row flex-wrap relative transition duration-[1s] ease-in-out' ref={botref}>
                 <div className='bg-transparent w-[40vw] h-[15vh] flex items-center justify-center'>
                     <span className='text-[1.1em] font-Oswald text-white tracking-[7px] mb-[3vh]'>
-                        AVAILABLE FOR NEW PROJECTS THIS {months[11]}
+                        AVAILABLE FOR NEW PROJECTS THIS {months[new Date().getMonth()]}
                     </span>
                 </div>
                 <div className='bg-transparent w-[40vw] h-[15vh] absolute right-0 flex items-center justify-end'>

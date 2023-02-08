@@ -1,0 +1,45 @@
+@import '_variables.scss';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+::-webkit-scrollbar {
+    width: .5vh;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba($color: #000000, $alpha: 1.0);
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(255, 255, 255);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(192, 163, 33);
+    border-radius: 10px;
+}
+
+// cover 
+.cover {
+    position: fixed;
+}
+
+.landing {
+    .img-container {
+        .img {
+            clip-path: circle(50% at 50% 50%);
+        }
+    }
+
+    .about {
+        .label {
+            transform: translate(50%, -50%);
+            top: 50%;
+            writing-mode: vertical-lr;
+        }
+    }
+
+}
