@@ -30,11 +30,19 @@
 .landing {
     .img-container {
         .img {
-            clip-path: circle(50% at 50% 50%);
+            clip-path: circle(35% at 50% 50%);
         }
     }
 
     .about {
+        .label {
+            transform: translate(50%, -50%);
+            top: 50%;
+            writing-mode: vertical-lr;
+        }
+    }
+
+    .technologies {
         .label {
             transform: translate(50%, -50%);
             top: 50%;

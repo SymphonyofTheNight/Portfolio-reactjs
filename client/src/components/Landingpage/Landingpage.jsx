@@ -1,8 +1,11 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 
-// img
-import profile from '../../assets/img/profile.jpg';
+// developer
+import developer from '../../developer/developer';
+
+// techstack 
+import techstack from '../../developer/techstack';
 
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
@@ -21,14 +24,14 @@ const Landingpage = () => {
                 setIndex(index + 1)
             }, 1);
         }
-    }, [index])
+    }, [index, fulltext, text])
 
     return (
-        <div className='bg-black h-[250vh] w-[100vw] relative overflow-auto landing'>
+        <div className='bg-black h-[auto] w-[100vw] relative overflow-auto landing'>
 
             {/* img */}
-            <div className='h-[80vh] w-[100vw] mt-[20vh] grid items-center justify-center img-container'>
-                <img src={profile} className='h-[40vh] img' alt='img' />
+            <div className='h-[80vh] w-[100vw] mt-[30vh] grid items-center justify-center img-container'>
+                <img src={developer.img} className='h-[70vh] img' alt='img' />
             </div>
 
             {/* about me */}
@@ -41,7 +44,7 @@ const Landingpage = () => {
                         Hi, I'm Gino
                     </span>
                     <span className='text-white ml-[2vw] font-Oxygen font-bold'>
-                        Gino Dela Vega
+                        {developer.fullname}
                     </span>
                     <div className='w-[auto] text-white font-Oxygen leading-[200%] m-[2vw] text-[1.4em]'>
                         Full-stack web developer and also an Instructor based in City of Malolos,Bulacan. <br />
@@ -52,8 +55,15 @@ const Landingpage = () => {
             </div>
 
             {/* Technologies using */}
-            <div className='bg-red-700 h-[50vh] w-[100vw] mt-[20vh] relative'>
-
+            <div className='h-[70vh] w-[100vw] mt-[30vh] relative grid items-center justify-center technologies'>
+                <span className='font-Oxygen font-bold text-[.7em] text-white tracking-[5px] absolute label'>
+                    TECHNOLOGIES
+                </span>
+                <div type='input' className='h-[auto] w-[50vw] rounded-[20px] relative flex flex-wrap items-center justify-center'>
+                    {Object.keys(techstack).map(tech => {
+                        return <img className='h-[9vh] m-4 grayscale hover:grayscale-0 trasition duration-[.3s]' src={techstack[tech].svg} alt={techstack[tech].tech} key={techstack[tech].tech} />
+                    })}
+                </div>
             </div>
 
         </div>

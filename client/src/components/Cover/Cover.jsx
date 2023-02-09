@@ -7,7 +7,6 @@ const Cover = ({ colortoggle, setColortoggle }) => {
     const months = ["JANUARY", "FEBRUARY", "MARCH", "APRIL", "MAY", "JUNE", "JULY", "AUGUST", "SEPTEMBER", "October", "NOVEMBER", "DECEMBER"];
 
     const [scrollcount, setScrollCount] = useState(0);
-    // const [togglecolor, setToggleColor] = useState(false);
 
     const wingTrigger = 150;
     const topbotTrigger = 350;
