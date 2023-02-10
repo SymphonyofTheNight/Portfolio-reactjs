@@ -50,4 +50,12 @@
         }
     }
 
+    .services {
+        .label {
+            transform: translate(50%, -50%);
+            top: 50%;
+            writing-mode: vertical-lr;
+        }
+    }
+
 }
