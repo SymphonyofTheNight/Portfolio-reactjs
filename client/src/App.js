@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -12,6 +12,10 @@ import './scss/_main.scss';
 const App = () => {
 
   const [colortoggle, setColortoggle] = useState(false);
+
+  useEffect(() => {
+    window.history.scrollRestoration = 'manual'
+  }, []);
 
   return (
     <Routes>

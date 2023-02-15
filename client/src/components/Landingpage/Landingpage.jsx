@@ -1,5 +1,5 @@
 import React from 'react';
-import { useState, useEffect } from 'react';
+// import { useState, useEffect } from 'react';
 
 // developer
 import developer from '../../developer/developer';
@@ -9,10 +9,6 @@ import techstack from '../../developer/techstack';
 
 // vector
 import vector from '../../assets/vector/vector';
-
-// import gsap from 'gsap';
-// import ScrollTrigger from 'gsap/ScrollTrigger';
-// gsap.registerPlugin(ScrollTrigger);
 
 const Landingpage = ({ colortoggle, setColortoggle }) => {
 
@@ -68,14 +64,14 @@ const Landingpage = ({ colortoggle, setColortoggle }) => {
             </div>
 
             {/* Technologies using */}
-            <div className='h-[70vh] w-[100vw] mt-[20vh] relative grid items-center justify-center technologies'>
+            <div className='h-[70vh] w-[100vw] mt-[15vh] relative grid items-center justify-center technologies'>
                 <span className={`font-Oxygen font-bold text-[.7em] ${!colortoggle ? 'text-white' : 'text-black'} tracking-[5px] absolute label`}>
                     TECHNOLOGIES
                 </span>
                 <span className={`font-Oxygen font-bold text-[2em] ${!colortoggle ? 'text-white' : 'text-black'} tracking-[5px]`}>
                     My <span className={`text-yellow-500`}>Skills</span>
                 </span>
-                <div type='input' className='h-[auto] w-[60vw] rounded-[20px] relative flex flex-wrap items-center justify-center'>
+                <div type='input' className='h-[auto] w-[50vw] rounded-[20px] relative flex flex-wrap items-center justify-center'>
                     {Object.keys(techstack).map(tech => {
                         return <img className='h-[9.5vh] m-5 grayscale hover:grayscale-0 trasition duration-[.3s]' src={techstack[tech].svg} alt={techstack[tech].tech} key={techstack[tech].tech} />
                     })}
@@ -83,8 +79,26 @@ const Landingpage = ({ colortoggle, setColortoggle }) => {
             </div>
 
             {/* projects */}
-            <div className='h-[200vh] w-full bg-green-700 mt-[30vh]'>
+            <div className='h-[auto] w-full mt-[30vh] relative grid items-center justify-center projects'>
+                {/* <span className={`font-Oxygen font-bold text-[.7em] ${!colortoggle ? 'text-white' : 'text-black'} tracking-[5px] absolute label`}>
+                    PROJECTS
+                </span> */}
+                <div className='h-[100vh] w-[100vw] flex flex-wrap flex-col items-center justify-center'>
+                    <span className={`font-Oxygen font-bold text-[2em] ${!colortoggle ? 'text-white' : 'text-black'} tracking-[5px]`}>
+                        My <span className={`text-yellow-500`}>Projects</span>
+                    </span>
+                    <div className='bg-blue-500 h-[80vh] w-[100vw] mt-[3vh] relative flex flex-row'>
+                        <button className='bg-gray-300 h-[80vh] w-[33.3vw] overflow-hidden grid items-center justify-center hover:w-[80vw] transition-all duration-[.7s]'>
 
+                        </button>
+                        <button className='bg-yellow-400 h-[80vh] w-[33.3vw] overflow-hidden grid items-center justify-center hover:w-[80vw] transition-all duration-[.7s]'>
+
+                        </button>
+                        <button className='bg-green-700 h-[80vh] w-[33.3vw] overflow-hidden grid items-center justify-center hover:w-[80vw] transition-all duration-[.7s]'>
+
+                        </button>
+                    </div>
+                </div>
             </div>
 
         </div>
