@@ -1,5 +1,4 @@
 import React from 'react';
-// import { useState, useEffect } from 'react';
 
 // developer
 import developer from '../../developer/developer';
@@ -37,7 +36,6 @@ const Landingpage = ({ colortoggle, setColortoggle }) => {
                         I'm passionate in creating web applications with the latest technologies available in the market. <br />
                     </div>
                 </div>
-
             </div>
 
             {/* Services */}
@@ -46,7 +44,7 @@ const Landingpage = ({ colortoggle, setColortoggle }) => {
                     SERVICES
                 </span>
                 <div className={`h-[90vh] w-[70vw] relative flex flex-wrap flex-row items-center justify-around`}>
-                    <span className={`text-[2.5em] font-Oxygen absolute text-white top-0 mt-[2vh]`}>
+                    <span className={`text-[2.5em] font-Oxygen absolute ${!colortoggle ? 'text-white' : 'text-black'} top-0 mt-[2vh]`}>
                         What I <span className={`text-yellow-500`}>offer?</span>
                     </span>
                     {Object.keys(vector).map(state => {
@@ -80,22 +78,67 @@ const Landingpage = ({ colortoggle, setColortoggle }) => {
 
             {/* projects */}
             <div className='h-[auto] w-full mt-[30vh] relative grid items-center justify-center projects'>
-                {/* <span className={`font-Oxygen font-bold text-[.7em] ${!colortoggle ? 'text-white' : 'text-black'} tracking-[5px] absolute label`}>
+                <span className={`font-Oxygen font-bold text-[.7em] ${!colortoggle ? 'text-white' : 'text-black'} tracking-[5px] z-10 absolute label`}>
                     PROJECTS
-                </span> */}
-                <div className='h-[100vh] w-[100vw] flex flex-wrap flex-col items-center justify-center'>
-                    <span className={`font-Oxygen font-bold text-[2em] ${!colortoggle ? 'text-white' : 'text-black'} tracking-[5px]`}>
-                        My <span className={`text-yellow-500`}>Projects</span>
-                    </span>
-                    <div className='bg-blue-500 h-[80vh] w-[100vw] mt-[3vh] relative flex flex-row'>
-                        <button className='bg-gray-300 h-[80vh] w-[33.3vw] overflow-hidden grid items-center justify-center hover:w-[80vw] transition-all duration-[.7s]'>
-
+                </span>
+                <div className='h-[100vh] w-[100vw] flex flex-wrap flex-col items-center justify-center projects-container'>
+                    <div className='bg-blue-500 h-[80vh] w-[100vw] mt-[3vh] relative flex flex-row child-container'>
+                        <button className='bg-[#3ce992] h-[80vh] w-[33.3vw] relative grid items-center justify-center overflow-hidden hover:w-[60vw] transition-all duration-[1s] ease-in-out child-container-1'>
+                            <div className='h-[auto] w-[auto] grid items-center mt-[3vh] relative main-container'>
+                                <div className='bg-nft h-[400px] w-[800px] bg-center bg-cover bg-no-repeat cover-container' />
+                                <div className='h-[60px] w-[auto] relative flex items-center logo-container'>
+                                    <div className='h-[30px] w-[30px] bg-gray-800 absolute right-0 rounded-[5px] grid place-items-center logo'>
+                                        <img src={techstack[2].svg} alt='react' className='h-[17px]' />
+                                    </div>
+                                    <div className='h-[30px] w-[30px] bg-gray-800 absolute right-10 rounded-[5px] grid place-items-center logo'>
+                                        <img src={techstack[4].svg} alt='react' className='h-[20px]' />
+                                    </div>
+                                </div>
+                            </div>
+                            <span className='font-Poppins text-[1.5em] absolute bottom-20 ml-[3vw] font-bold'>
+                                NFT CARD
+                            </span>
+                            <span className='font-Oxygen text-[1.1rem] absolute bottom-12 ml-[3vw]'>
+                                Front End Development
+                            </span>
                         </button>
-                        <button className='bg-yellow-400 h-[80vh] w-[33.3vw] overflow-hidden grid items-center justify-center hover:w-[80vw] transition-all duration-[.7s]'>
-
+                        <button className='bg-[#d1b432] h-[80vh] w-[33.3vw] relative grid items-center justify-center overflow-hidden hover:w-[60vw] transition-all duration-[1s] ease-in-out child-container-1'>
+                            <div className='h-[auto] w-[auto] grid items-center mt-[3vh] relative main-container'>
+                                <div className='bg-portfolio h-[400px] w-[800px] bg-center bg-cover bg-no-repeat cover-container' />
+                                <div className='h-[60px] w-[auto] relative flex items-center logo-container'>
+                                    <div className='h-[30px] w-[30px] bg-gray-800 absolute right-0 rounded-[5px] grid place-items-center logo'>
+                                        <img src={techstack[8].svg} alt='tailwind' className='h-[12px]' />
+                                    </div>
+                                    <div className='h-[30px] w-[30px] bg-gray-800 absolute right-10 rounded-[5px] grid place-items-center logo'>
+                                        <img src={techstack[4].svg} alt='react' className='h-[20px]' />
+                                    </div>
+                                </div>
+                            </div>
+                            <span className='font-Poppins text-[1.5em] absolute bottom-20 ml-[3vw]'>
+                                MY PORTFOLIO
+                            </span>
+                            <span className='font-Oxygen text-[1.1rem] absolute bottom-12 ml-[3vw]'>
+                                Front End Development
+                            </span>
                         </button>
-                        <button className='bg-green-700 h-[80vh] w-[33.3vw] overflow-hidden grid items-center justify-center hover:w-[80vw] transition-all duration-[.7s]'>
-
+                        <button className='bg-[#dbdfdb] h-[80vh] w-[33.3vw] relative grid items-center justify-center overflow-hidden hover:w-[60vw] transition-all duration-[1s] ease-in-out child-container-1'>
+                            <div className='h-[auto] w-[auto] grid items-center mt-[3vh] relative main-container'>
+                                <div className='bg-animefreak h-[400px] w-[800px] bg-center bg-cover bg-no-repeat cover-container' />
+                                <div className='h-[60px] w-[auto] relative flex items-center logo-container'>
+                                    <div className='h-[30px] w-[30px] bg-gray-800 absolute right-0 rounded-[5px] grid place-items-center logo'>
+                                        <img src={techstack[2].svg} alt='react' className='h-[17px]' />
+                                    </div>
+                                    <div className='h-[30px] w-[30px] bg-gray-800 absolute right-10 rounded-[5px] grid place-items-center logo'>
+                                        <img src={techstack[4].svg} alt='react' className='h-[20px]' />
+                                    </div>
+                                </div>
+                            </div>
+                            <span className='font-Poppins text-[1.5em] absolute bottom-20 ml-[3vw] font-bold'>
+                                ANIMEFREAK
+                            </span>
+                            <span className='font-Oxygen text-[1.1rem] absolute bottom-12 ml-[3vw]'>
+                                Front End Development
+                            </span>
                         </button>
                     </div>
                 </div>

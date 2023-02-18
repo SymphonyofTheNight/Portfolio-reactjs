@@ -21,8 +21,21 @@ module.exports = {
       },
       fontFamily: {
         Oswald: ["Oswald", "sans-serif"],
-        Oxygen: ["Oxygen", "sans-serif"]
+        Oxygen: ["Oxygen", "sans-serif"],
+        Poppins: ["Poppins", "sans-serif"]
       },
+      backgroundImage: theme => ({
+        'nft': "url('../assets/projectsimg/nft.jpg')",
+        'portfolio': "url('../assets/projectsimg/portfolio.jpg')",
+        'animefreak': "url('../assets/projectsimg/animefreak.jpg')",
+      }),
+      dropShadow: {
+        '3xl': '0 35px 35px rgba(0, 0, 0, 0.25)',
+        '4xl': [
+          '0 35px 35px rgba(0, 0, 0, 0.25)',
+          '0 45px 65px rgba(0, 0, 0, 0.15)'
+        ]
+      }
     },
     screens: {
       xs: "480px",
