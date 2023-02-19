@@ -64,12 +64,12 @@ const Cover = ({ colortoggle, setColortoggle }) => {
         <div className={`cover ${!colortoggle ? 'bg-black/[0.9]' : 'bg-white/[0.9]'} h-[100vh] w-[100vw] absolute top-0 left-0 z-10 flex flex-col flex-wrap transition duration-[1s] ease-in-out`} ref={mainref}>
             <div className='bg-transparent h-[20vh] w-[100vw] flex flex-wrap relative transition duration-1000 ease-in-out' ref={topref}>
                 <div className='bg-transparent h-[20vh] w-[20vw] absolute left-0 grid align-items-center justify-center'>
-                    <span className={`${!colortoggle ? 'text-white' : 'text-black'} font-Oswald text-2xl tracking-[2.75px]`}>
+                    <span className={`${!colortoggle ? 'text-white' : 'text-black'} font-Oswald xl:text-2xl tracking-[2.75px] lg2:text-1xl`}>
                         GINO D.V
                     </span>
                 </div>
                 <div className='bg-transparent h-[20vh] w-[20vw] absolute right-0 grid place-items-center'>
-                    <button className={`bg-transparent h-[4vh] w-[auto] px-4 ${!colortoggle ? 'text-white' : 'text-black'} font-Oswald tracking-[3px] transition duration-[.5s] text-[1.2em]`} onClick={() => {
+                    <button className={`bg-transparent h-[4vh] w-[auto] px-4 ${!colortoggle ? 'text-white' : 'text-black'} font-Oswald tracking-[3px] transition duration-[.5s] xl:text-[1.2em] lg2:text-[1.1em]`} onClick={() => {
                         setColortoggle(state => !state)
                     }}>
                         {!colortoggle ? 'Light mode' : 'Night mode'}
@@ -81,7 +81,7 @@ const Cover = ({ colortoggle, setColortoggle }) => {
                     <div className={`h-[50vh] w-[4px] ${!colortoggle ? 'bg-white' : 'bg-black'}`} />
                 </div>
                 <div className='bg-transparent h-[65vh] w-[70vw] flex items-center justify-center'>
-                    <span className={`text-[4.5em] ${!colortoggle ? 'text-white' : 'text-black'} font-Oxygen tracking-[25px] font-bold`}>
+                    <span className={`xl:text-[4.5em] ${!colortoggle ? 'text-white' : 'text-black'} font-Oxygen tracking-[25px] font-bold lg2:text-[3.5em]`}>
                         FRONT END DEVELOPER <br />
                     </span>
                 </div>
@@ -91,20 +91,20 @@ const Cover = ({ colortoggle, setColortoggle }) => {
             </div>
             <div className='bg-transparent h-[15vh] w-[100vw] flex flex-row flex-wrap relative transition duration-[1s] ease-in-out' ref={botref}>
                 <div className='bg-transparent w-[40vw] h-[15vh] flex items-center justify-center'>
-                    <span className={`text-[1.1em] font-Oswald ${!colortoggle ? 'text-white' : 'text-black'} tracking-[7px] mb-[3vh]`}>
+                    <span className={`xl:text-[1.2em] font-Oswald ${!colortoggle ? 'text-white' : 'text-black'} tracking-[7px] mb-[3vh] lg2:text-base lg2:tracking-[5px]`}>
                         AVAILABLE FOR NEW PROJECTS THIS {months[new Date().getMonth()]}
                     </span>
                 </div>
                 <div className='bg-transparent w-[40vw] h-[15vh] absolute right-0 flex items-center justify-end'>
                     <div className='bg-transparent h-[4vh] w-[auto] mr-[5vw] mb-[3vh] flex flex-row'>
                         <button className='bg-transparent h-[4vh] w-[auto] grid place-items-center'>
-                            <FaFacebook className={`text-[2em] mr-[20px] ml-[20px] ${!colortoggle ? 'text-white' : 'text-black'}`} />
+                            <FaFacebook className={`xl:text-[2em] mr-[20px] ml-[20px] ${!colortoggle ? 'text-white' : 'text-black'} lg2:text-3xl`} />
                         </button>
                         <button className='bg-transparent h-[4vh] w-[auto] grid place-items-center'>
-                            <FaGithub className={`text-[2em] mr-[20px] ml-[20px] ${!colortoggle ? 'text-white' : 'text-black'}`} />
+                            <FaGithub className={`xl:text-[2em] mr-[20px] ml-[20px] ${!colortoggle ? 'text-white' : 'text-black'} lg2:text-3xl`} />
                         </button>
                         <button className='bg-transparent h-[4vh] w-[auto] grid place-items-center'>
-                            <FaTelegram className={`text-[2em] mr-[20px] ml-[20px] ${!colortoggle ? 'text-white' : 'text-black'}`} />
+                            <FaTelegram className={`xl:text-[2em] mr-[20px] ml-[20px] ${!colortoggle ? 'text-white' : 'text-black'} lg2:text-3xl`} />
                         </button>
                     </div>
                 </div>
