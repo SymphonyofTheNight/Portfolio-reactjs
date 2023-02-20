@@ -80,7 +80,7 @@ const Landingpage = ({ colortoggle, setColortoggle }) => {
                 `}>
                     SERVICES
                 </span>
-                <div className={`h-[90vh] md:h-[45vh] w-[70vw] md:w-[80vw] relative flex flex-wrap flex-row items-center justify-around`}>
+                <div className={`xl:h-[90vh] lg2:h-[70vh] lg1:h-[70vh] lg:h-[60vh] md:h-[45vh] w-[70vw] md:w-[80vw] relative flex flex-wrap flex-row items-center justify-around`}>
                     <span className={`
                     xl:text-[2.5em] 
                     font-Oxygen 
@@ -96,8 +96,8 @@ const Landingpage = ({ colortoggle, setColortoggle }) => {
                         What I <span className={`text-yellow-500`}>offer?</span>
                     </span>
                     {Object.keys(vector).map(state => {
-                        return <div key={vector[state].label} className={`h-[38vh] w-[19vw] md:h-[28vh] md:w-[25vw] flex flex-wrap items-top justify-center text`}>
-                            <img className=' h-[18vh] mt-[5vh] md:mt-[0vh]' src={vector[state].svg} alt={vector[state].label} />
+                        return <div key={vector[state].label} className={`xl:h-[38vh] xl:w-[19vw] md:h-[28vh] md:w-[20vw] flex flex-wrap items-top justify-center text`}>
+                            <img className='h-[18vh] xl:mt-[5vh] md:mt-[0vh]' src={vector[state].svg} alt={vector[state].label} />
                             <h1 className={`
                             font-Oxygen 
                             ${!colortoggle ? 'text-yellow-500' : 'text-black'} 
@@ -174,7 +174,7 @@ const Landingpage = ({ colortoggle, setColortoggle }) => {
                         lg2:h-[8.5vh] 
                         lg1:h-[8.5vh] 
                         lg:h-[8vh] 
-                        md:h-[7vh] 
+                        md:h-[5vh] 
                         m-5 grayscale 
                         hover:grayscale-0 
                         trasition 
@@ -184,8 +184,10 @@ const Landingpage = ({ colortoggle, setColortoggle }) => {
                 </div>
             </div>
 
+            {/* unfinished reso md:1024 projects */}
+
             {/* projects */}
-            <div className='h-[auto] w-full mt-[30vh] relative grid items-center justify-center projects'>
+            <div className='h-[auto] w-full mt-[30vh] md:mt-[10vh] relative grid items-center justify-center projects'>
                 <span className={`
                 font-Oxygen 
                 font-bold 
@@ -200,10 +202,10 @@ const Landingpage = ({ colortoggle, setColortoggle }) => {
                 `}>
                     PROJECTS
                 </span>
-                <div className='h-[100vh] w-[100vw] flex flex-wrap flex-col items-center justify-center projects-container'>
-                    <div className='h-[80vh] w-[100vw] mt-[3vh] relative flex flex-row child-container'>
-                        <button className='bg-[#3ce992] h-[80vh] w-[33.3vw] relative grid items-center justify-center overflow-hidden hover:w-[60vw] transition-all duration-[1.5s] ease-in-out child-container-1'>
-                            <div className='h-[auto] w-[auto] grid items-center mt-[3vh] relative main-container'>
+                <div className='h-[100vh] md:h-[auto] w-[100vw] flex flex-wrap flex-col items-center justify-center projects-container'>
+                    <div className='h-[80vh] md:h-[auto] w-[100vw] mt-[3vh] relative flex flex-row child-container md:flex-col md:flex-wrap'>
+                        <button className='bg-[#3ce992] xl:h-[80vh] xl:w-[33.3vw] md:w-[100vw] md:h-[50vh] relative grid items-center justify-center overflow-hidden hover:w-[60vw] md:hover:w-[100vw] transition-all duration-[1.5s] ease-in-out child-container-1'>
+                            <div className='h-[auto] w-[auto] grid items-center mt-[5vh] md:mt-[0vh] relative main-container'>
                                 <div className='
                                 bg-nft 
                                 xl:h-[400px] 
@@ -214,6 +216,8 @@ const Landingpage = ({ colortoggle, setColortoggle }) => {
                                 lg1:w-[565px] 
                                 lg:h-[270px] 
                                 lg:w-[535px]
+                                md:h-[470px] 
+                                md:w-[900px]
                                 bg-center 
                                 bg-cover 
                                 bg-no-repeat 
@@ -227,6 +231,8 @@ const Landingpage = ({ colortoggle, setColortoggle }) => {
                                     lg1:w-[25px]
                                     lg:h-[25px]
                                     lg:w-[25px]
+                                    md:h-[37px]
+                                    md:w-[37px]
                                     bg-gray-800 
                                     absolute 
                                     right-0 
@@ -235,7 +241,7 @@ const Landingpage = ({ colortoggle, setColortoggle }) => {
                                     place-items-center 
                                     logo
                                     '>
-                                        <img src={techstack[2].svg} alt='sass' className='xl:h-[17px] lg1:h-[14px] lg:h-[14px]' />
+                                        <img src={techstack[2].svg} alt='sass' className='xl:h-[17px] lg1:h-[14px] lg:h-[14px] md:h-[19px]' />
                                     </div>
                                     <div className='
                                     xl:h-[30px] 
@@ -244,29 +250,32 @@ const Landingpage = ({ colortoggle, setColortoggle }) => {
                                     lg1:w-[25px]  
                                     lg:h-[25px] 
                                     lg:w-[25px]
+                                    md:h-[37px]
+                                    md:w-[37px]
                                     bg-gray-800 
                                     absolute 
                                     xl:right-10
                                     lg1:right-8
                                     lg:right-8
+                                    md:right-12
                                     rounded-[5px] 
                                     grid 
                                     place-items-center 
                                     logo
                                     '>
-                                        <img src={techstack[4].svg} alt='react' className='xl:h-[20px] lg1:h-[17px] lg:h-[17px]' />
+                                        <img src={techstack[4].svg} alt='react' className='xl:h-[20px] lg1:h-[17px] lg:h-[17px] md:h-[25px]' />
                                     </div>
                                 </div>
                             </div>
-                            <a className='font-Poppins xl:text-[1.5em] lg2:text-1xl absolute bottom-20 ml-[3vw] font-bold hover:text-black' href='https://ginodelavega.netlify.app/' target="_blank" rel="noreferrer">
+                            <a className='font-Poppins xl:text-[1.5em] lg2:text-1xl md:text-1xl absolute bottom-20 ml-[3vw] font-bold hover:text-black' href='https://ginodelavega.netlify.app/' target="_blank" rel="noreferrer">
                                 NFT CARD
                             </a>
-                            <span className='font-Oxygen xl:text-[1.1rem] lg2:text-base lg:text-[.9em] absolute bottom-12 ml-[3vw]'>
+                            <span className='font-Oxygen xl:text-[1.1rem] lg2:text-base lg:text-[.9em] md:text-[1.1em] absolute bottom-12 ml-[3vw]'>
                                 Front End Development
                             </span>
                         </button>
-                        <button className='bg-[#d1b432] h-[80vh] w-[33.3vw] relative grid items-center justify-center overflow-hidden hover:w-[60vw] transition-all duration-[1.5s] ease-in-out child-container-1'>
-                            <div className='h-[auto] w-[auto] grid items-center mt-[3vh] relative main-container'>
+                        <button className='bg-[#d1b432] xl:h-[80vh] xl:w-[33.3vw] md:w-[100vw] md:h-[50vh] relative grid items-center justify-center overflow-hidden hover:w-[60vw] md:hover:w-[100vw] transition-all duration-[1.5s] ease-in-out child-container-1'>
+                            <div className='h-[auto] w-[auto] grid items-center mt-[3vh] md:mt-[0vh] relative main-container'>
                                 <div className='
                                 bg-portfolio 
                                 xl:h-[400px] 
@@ -277,6 +286,8 @@ const Landingpage = ({ colortoggle, setColortoggle }) => {
                                 lg1:w-[565px]
                                 lg:h-[270px] 
                                 lg:w-[535px]
+                                md:h-[470px] 
+                                md:w-[900px]
                                 bg-center 
                                 bg-cover 
                                 bg-no-repeat 
@@ -290,6 +301,8 @@ const Landingpage = ({ colortoggle, setColortoggle }) => {
                                     lg1:w-[25px]
                                     lg:h-[25px]
                                     lg:w-[25px]
+                                    md:h-[37px]
+                                    md:w-[37px]
                                     bg-gray-800 
                                     absolute 
                                     right-0 
@@ -298,7 +311,7 @@ const Landingpage = ({ colortoggle, setColortoggle }) => {
                                     place-items-center 
                                     logo
                                     '>
-                                        <img src={techstack[8].svg} alt='tailwind' className='xl:h-[12px] lg1:h-[11px] lg:h-[11px]' />
+                                        <img src={techstack[8].svg} alt='tailwind' className='xl:h-[12px] lg1:h-[11px] lg:h-[11px] md:h-[17px]' />
                                     </div>
                                     <div className='
                                     xl:h-[30px] 
@@ -306,30 +319,33 @@ const Landingpage = ({ colortoggle, setColortoggle }) => {
                                     lg1:h-[25px] 
                                     lg1:w-[25px]
                                     lg:h-[25px]
-                                    lg:w-[25px] 
+                                    lg:w-[25px]
+                                    md:h-[37px]
+                                    md:w-[37px]
                                     bg-gray-800 
                                     absolute 
                                     xl:right-10 
                                     lg1:right-8
                                     lg:right-8
+                                    md:right-12
                                     rounded-[5px] 
                                     grid 
                                     place-items-center 
                                     logo
                                     '>
-                                        <img src={techstack[4].svg} alt='react' className='xl:h-[20px] lg1:h-[17px] lg:h-[17px]' />
+                                        <img src={techstack[4].svg} alt='react' className='xl:h-[20px] lg1:h-[17px] lg:h-[17px] md:h-[25px]' />
                                     </div>
                                 </div>
                             </div>
-                            <a className='font-Poppins xl:text-[1.5em] lg2:text-1xl absolute bottom-20 ml-[3vw] hover:text-black' href='https://ginodelavega.netlify.app/' target="_blank" rel="noreferrer">
+                            <a className='font-Poppins xl:text-[1.5em] lg2:text-1xl md:text-1xl absolute bottom-20 ml-[3vw] hover:text-black' href='https://ginodelavega.netlify.app/' target="_blank" rel="noreferrer">
                                 MY PORTFOLIO
                             </a>
-                            <span className='font-Oxygen xl:text-[1.1rem] lg2:text-base lg:text-[.9em] absolute bottom-12 ml-[3vw]'>
+                            <span className='font-Oxygen xl:text-[1.1rem] lg2:text-base lg:text-[.9em] md:text-[1.1em] absolute bottom-12 ml-[3vw]'>
                                 Front End Development
                             </span>
                         </button>
-                        <button className='bg-[#dbdfdb] h-[80vh] w-[33.3vw] relative grid items-center justify-center overflow-hidden hover:w-[60vw] transition-all duration-[1.5s] ease-in-out child-container-1'>
-                            <div className='h-[auto] w-[auto] grid items-center mt-[3vh] relative main-container'>
+                        <button className='bg-[#dbdfdb] xl:h-[80vh] xl:w-[33.3vw] md:w-[100vw] md:h-[50vh] relative grid items-center justify-center overflow-hidden hover:w-[60vw] md:hover:w-[100vw] transition-all duration-[1.5s] ease-in-out child-container-1'>
+                            <div className='h-[auto] w-[auto] grid items-center mt-[3vh] md:mt-[0vh] relative main-container'>
                                 <div className='
                                 bg-animefreak 
                                 xl:h-[400px] 
@@ -340,6 +356,8 @@ const Landingpage = ({ colortoggle, setColortoggle }) => {
                                 lg1:w-[565px]
                                 lg:h-[270px] 
                                 lg:w-[535px]
+                                md:h-[470px] 
+                                md:w-[900px]
                                 bg-center 
                                 bg-cover 
                                 bg-no-repeat 
@@ -352,7 +370,9 @@ const Landingpage = ({ colortoggle, setColortoggle }) => {
                                     lg1:h-[25px] 
                                     lg1:w-[25px]
                                     lg:h-[25px]
-                                    lg:w-[25px]  
+                                    lg:w-[25px]
+                                    md:h-[37px]
+                                    md:w-[37px]
                                     bg-gray-800 
                                     absolute 
                                     right-0 
@@ -361,7 +381,7 @@ const Landingpage = ({ colortoggle, setColortoggle }) => {
                                     place-items-center 
                                     logo
                                     '>
-                                        <img src={techstack[2].svg} alt='sass' className='xl:h-[17px] lg1:h-[14px] lg:h-[14px]' />
+                                        <img src={techstack[2].svg} alt='sass' className='xl:h-[17px] lg1:h-[14px] lg:h-[14px] md:h-[19px]' />
                                     </div>
                                     <div className='
                                     xl:h-[30px] 
@@ -369,24 +389,27 @@ const Landingpage = ({ colortoggle, setColortoggle }) => {
                                     lg1:h-[25px] 
                                     lg1:w-[25px]
                                     lg:h-[25px]
-                                    lg:w-[25px]   
+                                    lg:w-[25px]
+                                    md:h-[37px]
+                                    md:w-[37px]  
                                     bg-gray-800 
                                     absolute 
                                     xl:right-10 
                                     lg1:right-8
                                     lg:right-8
+                                    md:right-12
                                     rounded-[5px] 
                                     grid 
                                     place-items-center 
                                     logo'>
-                                        <img src={techstack[4].svg} alt='react' className='xl:h-[20px] lg1:h-[17px] lg:h-[17px]' />
+                                        <img src={techstack[4].svg} alt='react' className='xl:h-[20px] lg1:h-[17px] lg:h-[17px] md:h-[25px]' />
                                     </div>
                                 </div>
                             </div>
-                            <a className='font-Poppins xl:text-[1.5em] lg2:text-1xl absolute bottom-20 ml-[3vw] font-bold hover:text-black' href='https://ginodelavega.netlify.app/' target="_blank" rel="noreferrer">
+                            <a className='font-Poppins xl:text-[1.5em] lg2:text-1xl md:text-1xl absolute bottom-20 ml-[3vw] font-bold hover:text-black' href='https://ginodelavega.netlify.app/' target="_blank" rel="noreferrer">
                                 ANIMEFREAK
                             </a>
-                            <span className='font-Oxygen xl:text-[1.1rem] lg2:text-base lg:text-[.9em] absolute bottom-12 ml-[3vw]'>
+                            <span className='font-Oxygen xl:text-[1.1rem] lg2:text-base lg:text-[.9em] md:text-[1.1em] absolute bottom-12 ml-[3vw]'>
                                 Front End Development
                             </span>
                         </button>
