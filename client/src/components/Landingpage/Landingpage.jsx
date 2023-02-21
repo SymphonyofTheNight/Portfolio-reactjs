@@ -173,7 +173,7 @@ const Landingpage = ({ colortoggle, setColortoggle }) => {
                         xl:h-[9.5vh] 
                         lg2:h-[8.5vh] 
                         lg1:h-[8.5vh] 
-                        lg:h-[8vh] 
+                        lg:h-[6.5vh] 
                         md:h-[5vh] 
                         m-5 grayscale 
                         hover:grayscale-0 
@@ -202,9 +202,28 @@ const Landingpage = ({ colortoggle, setColortoggle }) => {
                 `}>
                     PROJECTS
                 </span>
-                <div className='h-[100vh] md:h-[auto] w-[100vw] flex flex-wrap flex-col items-center justify-center projects-container'>
-                    <div className='h-[80vh] md:h-[auto] w-[100vw] mt-[3vh] relative flex flex-row child-container md:flex-col md:flex-wrap'>
-                        <button className='bg-[#3ce992] xl:h-[80vh] xl:w-[33.3vw] md:w-[100vw] md:h-[50vh] relative grid items-center justify-center overflow-hidden hover:w-[60vw] md:hover:w-[100vw] transition-all duration-[1.5s] ease-in-out child-container-1'>
+                <div className='xl:h-[100vh] md:h-[auto] w-[100vw] flex flex-wrap flex-col items-center justify-center projects-container'>
+                    <div className='xl:h-[80vh] lg:h-[90vh] xl:w-[100vw] md:w-[100vw] mt-[3vh] relative flex lg:flex-row xs:flex-col child-container '>
+                        <button className='bg-[#3ce992] 
+                        xl:h-[80vh] 
+                        xl:w-[33.3vw] 
+                        lg2:w-[33.3vw] 
+                        lg:h-[80vh]
+                        lg:w-[33.3vw] 
+                        md:w-[100vw] 
+                        md:h-[50vh] 
+                        relative 
+                        grid 
+                        items-center 
+                        justify-center 
+                        overflow-hidden 
+                        lg:hover:w-[60vw] 
+                        md:hover:w-[100vw]
+                        transition-all 
+                        duration-[1.5s] 
+                        ease-in-out 
+                        child-container-1
+                        '>
                             <div className='h-[auto] w-[auto] grid items-center mt-[5vh] md:mt-[0vh] relative main-container'>
                                 <div className='
                                 bg-nft 
@@ -274,7 +293,27 @@ const Landingpage = ({ colortoggle, setColortoggle }) => {
                                 Front End Development
                             </span>
                         </button>
-                        <button className='bg-[#d1b432] xl:h-[80vh] xl:w-[33.3vw] md:w-[100vw] md:h-[50vh] relative grid items-center justify-center overflow-hidden hover:w-[60vw] md:hover:w-[100vw] transition-all duration-[1.5s] ease-in-out child-container-1'>
+                        <button className='
+                        bg-[#d1b432] 
+                        xl:h-[80vh] 
+                        xl:w-[33.3vw] 
+                        md:w-[100vw] 
+                        lg2:w-[33.3vw]
+                        lg:h-[80vh]
+                        lg1:w-[33.3vw] 
+                        lg:w-[33.3vw] 
+                        md:h-[50vh] 
+                        relative 
+                        grid 
+                        items-center 
+                        justify-center 
+                        overflow-hidden 
+                        lg:hover:w-[60vw] 
+                        md:hover:w-[100vw] 
+                        transition-all 
+                        duration-[1.5s] 
+                        ease-in-out 
+                        child-container-1'>
                             <div className='h-[auto] w-[auto] grid items-center mt-[3vh] md:mt-[0vh] relative main-container'>
                                 <div className='
                                 bg-portfolio 
@@ -344,7 +383,28 @@ const Landingpage = ({ colortoggle, setColortoggle }) => {
                                 Front End Development
                             </span>
                         </button>
-                        <button className='bg-[#dbdfdb] xl:h-[80vh] xl:w-[33.3vw] md:w-[100vw] md:h-[50vh] relative grid items-center justify-center overflow-hidden hover:w-[60vw] md:hover:w-[100vw] transition-all duration-[1.5s] ease-in-out child-container-1'>
+                        <button className='
+                        bg-[#dbdfdb] 
+                        xl:h-[80vh] 
+                        xl:w-[33.3vw] 
+                        md:w-[100vw] 
+                        lg2:w-[33.3vw]
+                        lg:h-[80vh] 
+                        lg1:w-[33.3vw] 
+                        lg:w-[33.3vw] 
+                        md:h-[50vh] 
+                        relative 
+                        grid 
+                        items-center 
+                        justify-center 
+                        overflow-hidden 
+                        lg:hover:w-[60vw] 
+                        md:hover:w-[100vw] 
+                        transition-all 
+                        duration-[1.5s] 
+                        ease-in-out 
+                        child-container-1
+                        '>
                             <div className='h-[auto] w-[auto] grid items-center mt-[3vh] md:mt-[0vh] relative main-container'>
                                 <div className='
                                 bg-animefreak 
