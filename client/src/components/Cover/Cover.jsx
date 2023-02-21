@@ -62,22 +62,24 @@ const Cover = ({ colortoggle, setColortoggle }) => {
 
     return (
         <div className={`cover ${!colortoggle ? 'bg-black/[0.9]' : 'bg-white/[0.9]'} h-[100vh] w-[100vw] absolute top-0 left-0 z-10 flex flex-col flex-wrap transition duration-[1s] ease-in-out`} ref={mainref}>
-            <div className='bg-transparent h-[20vh] w-[100vw] flex flex-wrap relative transition duration-1000 ease-in-out' ref={topref}>
-                <div className='bg-transparent h-[20vh] w-[20vw] absolute left-0 grid align-items-center justify-center'>
+            <div className='lg:h-[20vh] xs:h-[10vh] w-[100vw] flex flex-wrap relative transition duration-1000 ease-in-out' ref={topref}>
+                <div className='lg:h-[20vh] xs:h-[10vh] lg:w-[20vw] xs:w-[30vw]  absolute left-0 grid align-items-center justify-center'>
                     <span className={`
                     ${!colortoggle ? 'text-white' : 'text-black'} 
                     font-Oswald 
                     xl:text-2xl 
-                    tracking-[2.75px]
+                    lg:tracking-[2.75px]
+                    xs:tracking-[1.75px]
                     lg2:text-1xl
                     lg1:text-[1.3em]
                     lg:text-[1.3em]
                     md:text-[1.4em]
+                    xs:text-base
                     `}>
                         GINO D.V
                     </span>
                 </div>
-                <div className='bg-transparent h-[20vh] w-[20vw] absolute right-0 grid place-items-center'>
+                <div className='lg:h-[20vh] xs:h-[10vh] lg:w-[20vw] xs:w-[36vw] absolute right-0 grid place-items-center'>
                     <button className={`
                     bg-transparent 
                     h-[4vh] 
@@ -85,7 +87,8 @@ const Cover = ({ colortoggle, setColortoggle }) => {
                     px-4
                     ${!colortoggle ? 'text-white' : 'text-black'} 
                     font-Oswald 
-                    tracking-[3px] 
+                    lg:tracking-[3px]
+                    xs:tracking-[1px]
                     transition 
                     duration-[.5s] 
                     xl:text-[1.2em] 
@@ -101,31 +104,33 @@ const Cover = ({ colortoggle, setColortoggle }) => {
                     </button>
                 </div>
             </div>
-            <div className='bg-transparent h-[65vh] w-[100vw] flex flex-row flex-wrap relative'>
-                <div className='bg-transparent w-[15vw] h-[65vh] grid place-items-center transition duration-[1s] ease-in-out' ref={leftwingref}>
-                    <div className={`h-[50vh] w-[4px] md:h-[65vh] ${!colortoggle ? 'bg-white' : 'bg-black'}`} />
+            <div className='lg:h-[65vh] xs:h-[80vh] w-[100vw] flex flex-row flex-wrap relative'>
+                <div className='bg-transparent w-[15vw] lg:h-[65vh] xs:h-[80vh] grid place-items-center transition duration-[1s] ease-in-out' ref={leftwingref}>
+                    <div className={`lg:h-[50vh] xs:h-[80vh] lg:w-[4px] xs:w-[3px] md:h-[65vh] ${!colortoggle ? 'bg-white' : 'bg-black'}`} />
                 </div>
-                <div className='bg-transparent h-[65vh] w-[70vw] flex items-center justify-center text-center'>
+                <div className='lg:h-[65vh] xs:h-[80vh] w-[70vw] flex items-center justify-center xs:text-center'>
                     <span className={`
                     xl:text-[4.5em] 
                     ${!colortoggle ? 'text-white' : 'text-black'} 
                     font-Oxygen 
-                    tracking-[25px] 
+                    lg:tracking-[25px] 
+                    xs:tracking-[10px]
                     font-bold 
                     lg2:text-[3.5em]
                     lg1:text-[2.5em]
                     lg:text-[2.2em]
                     md:text-[5em]
+                    xs:text-[2em]
                     `}>
                         FRONT END DEVELOPER <br />
                     </span>
                 </div>
-                <div className='bg-transparent w-[15vw] h-[65vh] grid place-items-center absolute right-[0] transition duration-[1s] ease-in-out' ref={rightwingref}>
-                    <div className={`h-[50vh] w-[4px] md:h-[65vh] ${!colortoggle ? 'bg-white' : 'bg-black'}`} />
+                <div className='bg-transparent w-[15vw] lg:h-[65vh] xs:h-[80vh] grid place-items-center absolute right-[0] transition duration-[1s] ease-in-out' ref={rightwingref}>
+                    <div className={`lg:h-[50vh] xs:h-[80vh] lg:w-[4px] xs:w-[3px] md:h-[65vh] ${!colortoggle ? 'bg-white' : 'bg-black'}`} />
                 </div>
             </div>
             <div className='h-[15vh] w-[100vw] flex flex-row flex-wrap relative transition duration-[1s] ease-in-out' ref={botref}>
-                <div className='w-[40vw] h-[15vh] flex items-center justify-center md:text-justify'>
+                <div className='lg:w-[40vw] xs:w-[50vw] h-[15vh] flex items-center justify-center md:text-justify'>
                     <span className={`
                     xl:text-[1.2em] 
                     font-Oswald 
@@ -141,13 +146,16 @@ const Cover = ({ colortoggle, setColortoggle }) => {
                     md:text-[1.3em]
                     md:tracking-[3px]
                     md:p-[2em]
+                    xs:text-[.7em]
+                    xs:tracking-[1px]
+                    xs:ml-[5vw]
                     `}>
                         AVAILABLE FOR NEW PROJECTS THIS {months[new Date().getMonth()]}
                     </span>
                 </div>
-                <div className='bg-transparent w-[40vw] h-[15vh] absolute right-0 flex items-center justify-end'>
-                    <div className='bg-transparent h-[4vh] w-[auto] mr-[5vw] mb-[3vh] flex flex-row'>
-                        <button className='bg-transparent h-[4vh] w-[auto] grid place-items-center'>
+                <div className='w-[40vw] h-[15vh] absolute right-0 flex items-center justify-end'>
+                    <div className='lg:h-[4vh] lg:w-[auto] lg:mr-[5vw] xs:mr-[7vw] mb-[3vh] flex flex-row'>
+                        <button className='lg:h-[4vh] lg:w-[auto] xs:w-[11vw] grid place-items-center'>
                             <FaFacebook className={`
                             xl:text-[2em] 
                             mr-[20px] 
@@ -157,9 +165,10 @@ const Cover = ({ colortoggle, setColortoggle }) => {
                             lg1:text-2xl
                             lg:text-2xl
                             md:text-3xl
+                            xs:text-2xl
                             `} />
                         </button>
-                        <button className='bg-transparent h-[4vh] w-[auto] grid place-items-center'>
+                        <button className='bg-transparent lg:h-[4vh] lg:w-[auto] xs:w-[11vw] grid place-items-center'>
                             <FaGithub className={`
                             xl:text-[2em] 
                             mr-[20px] 
@@ -169,9 +178,10 @@ const Cover = ({ colortoggle, setColortoggle }) => {
                             lg1:text-2xl
                             lg:text-2xl
                             md:text-3xl
+                            xs:text-2xl
                             `} />
                         </button>
-                        <button className='bg-transparent h-[4vh] w-[auto] grid place-items-center'>
+                        <button className='bg-transparent lg:h-[4vh] lg:w-[auto] xs:w-[11vw] grid place-items-center'>
                             <FaTelegram className={`
                             xl:text-[2em] 
                             mr-[20px]
@@ -181,6 +191,7 @@ const Cover = ({ colortoggle, setColortoggle }) => {
                             lg1:text-2xl
                             lg:text-2xl
                             md:text-3xl
+                            xs:text-2xl
                             `} />
                         </button>
                     </div>
