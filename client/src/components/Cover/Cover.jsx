@@ -149,12 +149,13 @@ const Cover = ({ colortoggle, setColortoggle }) => {
                     xs:text-[.7em]
                     xs:tracking-[1px]
                     xs:ml-[5vw]
+                    xs:mb-[5vh]
                     `}>
                         AVAILABLE FOR NEW PROJECTS THIS {months[new Date().getMonth()]}
                     </span>
                 </div>
                 <div className='w-[40vw] h-[15vh] absolute right-0 flex items-center justify-end'>
-                    <div className='lg:h-[4vh] lg:w-[auto] lg:mr-[5vw] xs:mr-[7vw] mb-[3vh] flex flex-row'>
+                    <div className='lg:h-[4vh] lg:w-[auto] lg:mr-[5vw] xs:mr-[7vw] mb-[3vh] xs:mb-[5vh] flex flex-row '>
                         <button className='lg:h-[4vh] lg:w-[auto] xs:w-[11vw] grid place-items-center'>
                             <FaFacebook className={`
                             xl:text-[2em] 
