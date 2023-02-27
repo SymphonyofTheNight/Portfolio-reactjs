@@ -1,4 +1,5 @@
 import React from 'react';
+import { FaArrowAltCircleRight, FaGithub } from 'react-icons/fa'
 
 // developer
 import developer from '../../developer/developer';
@@ -9,7 +10,12 @@ import techstack from '../../developer/techstack';
 // vector
 import vector from '../../assets/vector/vector';
 
+// projects
+import projects from '../../assets/projectsimg/projects';
+
 const Landingpage = ({ colortoggle, setColortoggle }) => {
+
+
 
     return (
         <div className={`${colortoggle ? 'bg-white' : 'bg-black'} h-[auto] w-[100vw] relative overflow-auto landing`}>
@@ -69,7 +75,7 @@ const Landingpage = ({ colortoggle, setColortoggle }) => {
             </div>
 
             {/* Services */}
-            <div className={`w-[full] lg:h-[90vh] xs:h-auto md:h-[auto] lg:mt-[20vh] xs:mt-[15vh] relative grid items-center justify-center services`}>
+            <div className={`w-[full] lg:h-[90vh] xs:h-[105vh] md:h-[auto] lg:mt-[20vh] xs:mt-[15vh] relative grid items-start justify-center services text-center`}>
                 <span className={`
                 font-Oxygen
                 font-bold 
@@ -84,6 +90,26 @@ const Landingpage = ({ colortoggle, setColortoggle }) => {
                 `}>
                     SERVICES
                 </span>
+                <span className={`${!colortoggle ? 'text-white' : 'text-black'} lg2:text-[2.2em] lg1:text-3xl lg:text-3xl md:text-4xl xs:text-2xl`}>
+                    What I <span className={`text-yellow-500`}>offer?</span>
+                </span>
+                {/* <span className={`
+                    bg-black
+                    xl:text-[2.5em] 
+                    font-Oxygen 
+                    absolute 
+                    ${!colortoggle ? 'text-white' : 'text-black'} 
+                    lg:top-0 
+                    xs:top-0
+                    lg:mt-[2vh] 
+                    lg2:text-[2.2em]
+                    lg1:text-3xl
+                    lg:text-3xl
+                    md:text-4xl
+                    xs:text-2xl
+                    `}>
+                    What I <span className={`text-yellow-500`}>offer?</span>
+                </span> */}
                 <div className={`
                 xs:h-[95vh] 
                 xl:h-[90vh] 
@@ -152,7 +178,7 @@ const Landingpage = ({ colortoggle, setColortoggle }) => {
             </div>
 
             {/* Technologies using */}
-            <div className='lg:h-[70vh] xs:h-auto md:h-[auto] w-[100vw] x mt-[15vh] md:mt-[7vh] relative grid items-center justify-center technologies'>
+            <div className='lg:h-[70vh] xs:h-auto md:h-[auto] w-[100vw] xs:mt-[5vh] md:mt-[7vh] relative grid items-center justify-center technologies'>
                 <span className={`
                   font-Oxygen
                   font-bold 
@@ -218,7 +244,7 @@ const Landingpage = ({ colortoggle, setColortoggle }) => {
             {/* unfinished reso md:1024 projects */}
 
             {/* projects */}
-            <div className='lg:h-[auto] xs:h-[auto] w-full mt-[30vh] md:mt-[10vh] xs:mt-[10vh] relative grid items-center justify-center projects'>
+            {/* <div className='lg:h-[auto] xs:h-[auto] w-full mt-[30vh] md:mt-[10vh] xs:mt-[10vh] relative grid items-center justify-center projects'>
                 <span className={`
                 font-Oxygen 
                 font-bold 
@@ -235,7 +261,7 @@ const Landingpage = ({ colortoggle, setColortoggle }) => {
                     PROJECTS
                 </span>
                 <div className='xl:h-[100vh] xs:h-[100vh] md:h-[auto] w-[100vw] flex flex-wrap flex-col items-center justify-center projects-container'>
-                    <div className='xl:h-[80vh] xs:-[80vh] lg:h-[90vh] xl:w-[100vw] md:w-[100vw] mt-[3vh] relative flex lg:flex-row xs:flex-col child-container '>
+                    <div className='xl:h-[80vh] xs:-[80vh] lg:h-[90vh] xl:w-[100vw] md:w-[100vw] xs:w-[100vw] mt-[3vh] relative flex lg:flex-row xs:flex-col child-container '>
                         <button className='
                         bg-[#3ce992] 
                         xl:h-[80vh] 
@@ -245,7 +271,7 @@ const Landingpage = ({ colortoggle, setColortoggle }) => {
                         lg:w-[33.3vw] 
                         md:w-[100vw] 
                         md:h-[50vh] 
-                        xs:w-[100vw] 
+                        xs:w-[90vw] 
                         xs:h-[33vh] 
                         relative 
                         grid 
@@ -258,6 +284,7 @@ const Landingpage = ({ colortoggle, setColortoggle }) => {
                         duration-[1.5s] 
                         ease-in-out 
                         child-container-1
+                        xs:overflow-hidden
                         '>
                             <div className='h-[auto] w-[auto] grid items-center lg:mt-[5vh] md:mt-[0vh] relative main-container'>
                                 <div className='
@@ -348,7 +375,7 @@ const Landingpage = ({ colortoggle, setColortoggle }) => {
                         lg:w-[33.3vw] 
                         md:w-[100vw] 
                         md:h-[50vh] 
-                        xs:w-[100vw] 
+                        xs:w-[90vw] 
                         xs:h-[33vh] 
                         relative 
                         grid 
@@ -451,7 +478,7 @@ const Landingpage = ({ colortoggle, setColortoggle }) => {
                         lg:w-[33.3vw] 
                         md:w-[100vw] 
                         md:h-[50vh] 
-                        xs:w-[100vw] 
+                        xs:w-[90vw] 
                         xs:h-[33vh] 
                         relative 
                         grid 
@@ -546,6 +573,76 @@ const Landingpage = ({ colortoggle, setColortoggle }) => {
                             </span>
                         </button>
                     </div>
+                </div>
+            </div> */}
+            <div className='xs:h-[auto] w-[100vw] xs:mt-[5vh] relative grid items-start justify-start projects'>
+                {/* <span className={`
+                  font-Oxygen
+                  font-bold 
+                  xl:text-[.7em] 
+                  lg1:text-[.6em]
+                  lg:text-[.6em]
+                  xs:text-[.5em]
+                  ${!colortoggle ? 'text-white' : 'text-black'} 
+                  tracking-[5px] 
+                  absolute 
+                  label
+                `}>
+                    PROJECTS
+                </span> */}
+                <span className={`
+                font-Oxygen 
+                font-bold 
+                xl:text-[2em] 
+                ${!colortoggle ? 'text-white' : 'text-black'} 
+                tracking-[5px] 
+                lg2:text-[1.8em]
+                lg1:text-2xl
+                lg:text-2xl
+                md:text-4xl
+                xs:text-xl
+                xs:ml-5
+                xs:mt-[3vh]
+                `}>
+                    My <span className={`text-yellow-500`}>Projects</span>
+                </span>
+                <div className='xs:h-[150vh] xs:w-[100vw] relative flex xs:flex-wrap xs:flex-col items-center justify-around'>
+                    {projects && Object.keys(projects).map(state => {
+                        return (
+                            <div className='xs:h-[auto] w-[90vw] flex xs:flex-wrap xs:flex-col' key={projects[state].name}>
+                                <div className='xs:h-[auto] w-[90vw] grid '>
+                                    <span className={`font-Oxygen ${!colortoggle ? 'text-white' : 'text-black'} text-xl xs:mt-[1vh]`}>
+                                        {projects[state].project}
+                                    </span>
+                                    <p className={`font-Oxygen ${!colortoggle ? 'text-white' : 'text-black'} text-[.9em] xs:mt-[1vh]`}>
+                                        {projects[state].description}
+                                    </p>
+                                    <div className='flex xs:h-[11vh] w-[90vw] relative'>
+                                        <span className={`font-Oxygen ${colortoggle ? 'text-black' : 'text-[#cbd5e1]'} text-sm xs:mt-[2vh] absolute`}>
+                                            {projects[state].hashtag}
+                                        </span>
+                                        <button className={`${!colortoggle ? 'bg-white' : 'bg-black'} font-Oxygen flex items-center justify-center h-[4vh] w-auto p-2 text-oxygen xs:text-sm xs:mt-[5.5vh] rounded-[3px] ${colortoggle ? 'text-white' : 'text-black'} outline-none`}>
+                                            Live demo <FaArrowAltCircleRight className='text-base xs:ml-2 transform-all xs:mt-1' />
+                                        </button>
+                                        <button className={`${!colortoggle ? 'bg-white' : 'bg-black'} font-Oxygen flex items-center justify-center h-[4vh] w-auto p-2 text-oxygen xs:text-sm xs:mt-[5.5vh] xs:ml-[2vw] rounded-[3px] ${colortoggle ? 'text-white' : 'text-black'} outline-none`}>
+                                            Code repo <FaGithub className='text-base xs:ml-2 transform-all xs:mt-1' />
+                                        </button>
+                                    </div>
+                                </div>
+                                <div className={`bg-${projects[state].name} h-[20vh] xs:w-[90vw] bg-cover bg-no-repeat border-white border-[1px]`} />
+                            </div>
+                            // pixel xs reso h-[170px] w-[336px]
+                        )
+                    })}
+                </div>
+                <div className='bg-red-700 xs:h-[60vh] w-[100vw] xs:mt-[5vh]'>
+                    <span className={`font-Oxygen ${!colortoggle ? 'text-white' : 'text-black'} grid text-3xl font-bold xs:ml-3 xs:mt-1`}>
+                        Say hi to Gino.
+                    </span>
+                    <p className={`font-Oxygen ${!colortoggle ? 'text-white' : 'text-black'} text-[.9em] xs:ml-3 xs:mt-1`}>
+                        I would love to hear from you. Whether it’s a project, a job opportunity,
+                        or just a chat. Feel free to contact me.
+                    </p>
                 </div>
             </div>
 
