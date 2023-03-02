@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaArrowAltCircleRight, FaGithub } from 'react-icons/fa'
+import { FaArrowAltCircleRight, FaGithub, FaTelegram, FaCode, FaDiscord } from 'react-icons/fa'
 
 // developer
 import developer from '../../developer/developer';
@@ -15,10 +15,8 @@ import projects from '../../assets/projectsimg/projects';
 
 const Landingpage = ({ colortoggle, setColortoggle }) => {
 
-
-
     return (
-        <div className={`${colortoggle ? 'bg-white' : 'bg-black'} h-[auto] w-[100vw] relative overflow-auto landing`}>
+        <div className={`${colortoggle ? 'bg-white' : 'bg-black'} h-[auto] w-[100vw] relative overflow-hidden landing`}>
 
             {/* img */}
             <div className='h-[70vh] w-[100vw] md:mt-[30vh] xs:mt-[50vh] grid items-center justify-center img-container'>
@@ -75,7 +73,7 @@ const Landingpage = ({ colortoggle, setColortoggle }) => {
             </div>
 
             {/* Services */}
-            <div className={`w-[full] lg:h-[90vh] xs:h-[105vh] md:h-[auto] lg:mt-[20vh] xs:mt-[15vh] relative grid items-start justify-center services text-center`}>
+            <div className={`bg-red-700 w-[full] lg:h-[90vh] xs:h-[105vh] sm:h-auto sm:p-[7vh] md:h-[auto] lg:mt-[20vh] xs:mt-[15vh] sm:mt-[5vh] relative grid items-start justify-center services text-center`}>
                 <span className={`
                 font-Oxygen
                 font-bold 
@@ -90,63 +88,33 @@ const Landingpage = ({ colortoggle, setColortoggle }) => {
                 `}>
                     SERVICES
                 </span>
-                <span className={`${!colortoggle ? 'text-white' : 'text-black'} lg2:text-[2.2em] lg1:text-3xl lg:text-3xl md:text-4xl xs:text-2xl`}>
+                <span className={`bg-blue-700 ${!colortoggle ? 'text-white' : 'text-black'} lg2:text-[2.2em] lg1:text-3xl lg:text-3xl md:text-4xl sm:text-3xl xs:text-2xl`}>
                     What I <span className={`text-yellow-500`}>offer?</span>
                 </span>
-                {/* <span className={`
-                    bg-black
-                    xl:text-[2.5em] 
-                    font-Oxygen 
-                    absolute 
-                    ${!colortoggle ? 'text-white' : 'text-black'} 
-                    lg:top-0 
-                    xs:top-0
-                    lg:mt-[2vh] 
-                    lg2:text-[2.2em]
-                    lg1:text-3xl
-                    lg:text-3xl
-                    md:text-4xl
-                    xs:text-2xl
-                    `}>
-                    What I <span className={`text-yellow-500`}>offer?</span>
-                </span> */}
                 <div className={`
+                bg-blue-700
                 xs:h-[95vh] 
                 xl:h-[90vh] 
                 lg2:h-[70vh] 
                 lg1:h-[70vh] 
                 lg:h-[60vh] 
-                md:h-[45vh] 
+                md:h-[auto] 
+                sm:h-[auto]
                 w-[70vw]
-                md:w-[80vw] 
+                md:w-[80vw]
                 relative
                 flex 
                 lg:flex-wrap 
                 xs:flex-col
                 lg:flex-row
+                md:flex-row
+                md:flex-wrap
                 lg:items-center 
                 justify-around
                 `}>
-                    {/* <span className={`
-                    bg-black
-                    xl:text-[2.5em] 
-                    font-Oxygen 
-                    absolute 
-                    ${!colortoggle ? 'text-white' : 'text-black'} 
-                    lg:top-0 
-                    xs:top-0
-                    lg:mt-[2vh] 
-                    lg2:text-[2.2em]
-                    lg1:text-3xl
-                    lg:text-3xl
-                    md:text-4xl
-                    xs:text-2xl
-                    `}>
-                        What I <span className={`text-yellow-500`}>offer?</span>
-                    </span> */}
                     {Object.keys(vector).map(state => {
-                        return <div key={vector[state].label} className={`lg:h-[38vh] lg:w-[19vw] md:h-[28vh] xs:h-[25vh] md:w-[20vw] flex flex-wrap items-top justify-center text`}>
-                            <img className='lg:h-[18vh] xs:h-[13vh] xl:mt-[5vh] md:mt-[0vh]' src={vector[state].svg} alt={vector[state].label} />
+                        return <div key={vector[state].label} className={`bg-green-700 lg:h-[38vh] lg:w-[19vw] md:h-auto sm:h-auto sm:p-[5vh] xs:h-[45vh] md:w-[40vw] flex sm:grid md:flex md:flex-row flex-wrap items-top justify-center text`}>
+                            <img className='lg:h-[18vh] xs:h-[13vh] sm:h-[18vh] xl:mt-[5vh] md:mt-[0vh] md:h-[9vh]' src={vector[state].svg} alt={vector[state].label} />
                             <h1 className={`
                             font-Oxygen 
                             ${!colortoggle ? 'text-yellow-500' : 'text-black'} 
@@ -155,7 +123,7 @@ const Landingpage = ({ colortoggle, setColortoggle }) => {
                             lg2:text-base
                             lg1:text-sm
                             lg:text-[.7em]
-                            md:text-[1.3em]
+                            md:text-[1.4em]
                             xs:text-[.9em]
                             text-center
                             `}>
@@ -167,8 +135,10 @@ const Landingpage = ({ colortoggle, setColortoggle }) => {
                             text-center
                             lg1:text-[.9em]
                             lg:text-sm
-                            md:text-[.9em]
+                            md:text-[1em]
                             xs:text-[.8em]
+                            sm:w-[40vw]
+                            md:mt-[.5em]
                             `}>
                                 {vector[state].description}
                             </span>
@@ -178,7 +148,7 @@ const Landingpage = ({ colortoggle, setColortoggle }) => {
             </div>
 
             {/* Technologies using */}
-            <div className='lg:h-[70vh] xs:h-auto md:h-[auto] w-[100vw] xs:mt-[5vh] md:mt-[7vh] relative grid items-center justify-center technologies'>
+            <div className='bg-red-700 lg:h-[70vh] xs:h-auto md:h-[auto] w-[100vw] xs:mt-[5vh] md:mt-[7vh] relative grid items-center justify-center technologies'>
                 <span className={`
                   font-Oxygen
                   font-bold 
@@ -208,12 +178,15 @@ const Landingpage = ({ colortoggle, setColortoggle }) => {
                     My <span className={`text-yellow-500`}>Skills</span>
                 </span>
                 <div type='input' className='
-                h-[auto] 
+                bg-blue-700
+                h-[auto]
                 xl:w-[50vw] 
                 lg2:w-[60vw] 
                 lg1:w-[60vw] 
                 lg:w-[60vw] 
                 md:w-[80vw] 
+                md:h-[40vh]
+                sm:w-[80vw]
                 xs:w-[90vw]
                 xs:h-[50vh]
                 rounded-[20px] 
@@ -229,7 +202,8 @@ const Landingpage = ({ colortoggle, setColortoggle }) => {
                         lg2:h-[8.5vh] 
                         lg1:h-[8.5vh] 
                         lg:h-[6.5vh] 
-                        md:h-[5vh]
+                        md:h-[6.6vh]
+                        sm:h-[6vh]
                         xs:h-[5vh]
                         lg:m-5 lg:grayscale 
                         xs:m-5 xs:grayscale
@@ -241,356 +215,10 @@ const Landingpage = ({ colortoggle, setColortoggle }) => {
                 </div>
             </div>
 
-            {/* unfinished reso md:1024 projects */}
-
             {/* projects */}
-            {/* <div className='lg:h-[auto] xs:h-[auto] w-full mt-[30vh] md:mt-[10vh] xs:mt-[10vh] relative grid items-center justify-center projects'>
+            <div className='bg-red-700 xs:h-[auto] w-[100vw] xs:mt-[5vh] relative grid items-start lg:justify-center justify-start projects'>
                 <span className={`
-                font-Oxygen 
-                font-bold 
-                xl:text-[.7em] 
-                lg1:text-[.6em] 
-                lg:text-[.6em] 
-                xs:text-[.5em]
-                ${!colortoggle ? 'text-white' : 'text-black'} 
-                tracking-[5px] 
-                z-10 
-                absolute 
-                label
-                `}>
-                    PROJECTS
-                </span>
-                <div className='xl:h-[100vh] xs:h-[100vh] md:h-[auto] w-[100vw] flex flex-wrap flex-col items-center justify-center projects-container'>
-                    <div className='xl:h-[80vh] xs:-[80vh] lg:h-[90vh] xl:w-[100vw] md:w-[100vw] xs:w-[100vw] mt-[3vh] relative flex lg:flex-row xs:flex-col child-container '>
-                        <button className='
-                        bg-[#3ce992] 
-                        xl:h-[80vh] 
-                        xl:w-[33.3vw] 
-                        lg2:w-[33.3vw] 
-                        lg:h-[80vh]
-                        lg:w-[33.3vw] 
-                        md:w-[100vw] 
-                        md:h-[50vh] 
-                        xs:w-[90vw] 
-                        xs:h-[33vh] 
-                        relative 
-                        grid 
-                        items-center 
-                        justify-center 
-                        overflow-hidden 
-                        lg:hover:w-[60vw] 
-                        md:hover:w-[100vw]
-                        transition-all 
-                        duration-[1.5s] 
-                        ease-in-out 
-                        child-container-1
-                        xs:overflow-hidden
-                        '>
-                            <div className='h-[auto] w-[auto] grid items-center lg:mt-[5vh] md:mt-[0vh] relative main-container'>
-                                <div className='
-                                bg-nft 
-                                xl:h-[400px] 
-                                xl:w-[800px] 
-                                lg2:h-[340px] 
-                                lg2:w-[690px] 
-                                lg1:h-[270px] 
-                                lg1:w-[565px] 
-                                lg:h-[270px] 
-                                lg:w-[535px]
-                                md:h-[470px] 
-                                md:w-[900px]
-                                xs:h-[170px] 
-                                xs:w-[340px]
-                                bg-center 
-                                bg-cover 
-                                bg-no-repeat 
-                                cover-container
-                                '/>
-                                <div className='h-[60px] w-[auto] relative flex items-center logo-container'>
-                                    <div className='
-                                    xl:h-[30px]
-                                    xl:w-[30px]
-                                    lg1:h-[25px]
-                                    lg1:w-[25px]
-                                    lg:h-[25px]
-                                    lg:w-[25px]
-                                    md:h-[37px]
-                                    md:w-[37px]
-                                    xs:h-[23px]
-                                    xs:w-[23px]
-                                    bg-gray-800 
-                                    absolute 
-                                    right-0 
-                                    lg:rounded-[5px]
-                                    xs:rounded-[5px]
-                                    xs:bottom-4
-                                    grid 
-                                    place-items-center 
-                                    logo
-                                    '>
-                                        <img src={techstack[2].svg} alt='sass' className='xl:h-[17px] lg1:h-[14px] lg:h-[14px] md:h-[19px] xs:h-[14px]' />
-                                    </div>
-                                    <div className='
-                                    xl:h-[30px] 
-                                    xl:w-[30px] 
-                                    lg1:h-[25px] 
-                                    lg1:w-[25px]  
-                                    lg:h-[25px] 
-                                    lg:w-[25px]
-                                    md:h-[37px]
-                                    md:w-[37px]
-                                    xs:h-[23px]
-                                    xs:w-[23px]
-                                    bg-gray-800 
-                                    absolute 
-                                    xl:right-10
-                                    lg1:right-8
-                                    lg:right-8
-                                    md:right-12
-                                    xs:right-7
-                                    lg:rounded-[5px]
-                                    xs:rounded-[5px]
-                                    xs:bottom-4
-                                    grid 
-                                    place-items-center 
-                                    logo
-                                    '>
-                                        <img src={techstack[4].svg} alt='react' className='xl:h-[20px] lg1:h-[17px] lg:h-[17px] md:h-[25px] xs:h-[18px]' />
-                                    </div>
-                                </div>
-                            </div>
-                            <a className='font-Poppins xl:text-[1.5em] lg2:text-1xl md:text-1xl xs:text-base absolute lg:bottom-20 xs:bottom-10 lg:ml-[3vw] xs:ml-[5vw] font-bold hover:text-black' href='https://ginodelavega.netlify.app/' target="_blank" rel="noreferrer">
-                                NFT CARD
-                            </a>
-                            <span className='font-Oxygen xl:text-[1.1rem] lg2:text-base lg:text-[.9em] md:text-[1.1em] xs:text-[.8em] absolute lg:bottom-12 xs:bottom-6 lg:ml-[3vw] xs:ml-[5vw]'>
-                                Front End Development
-                            </span>
-                        </button>
-                        <button className='
-                        bg-[#d1b432] 
-                        xl:h-[80vh] 
-                        xl:w-[33.3vw] 
-                        lg2:w-[33.3vw] 
-                        lg:h-[80vh]
-                        lg:w-[33.3vw] 
-                        md:w-[100vw] 
-                        md:h-[50vh] 
-                        xs:w-[90vw] 
-                        xs:h-[33vh] 
-                        relative 
-                        grid 
-                        items-center 
-                        justify-center 
-                        overflow-hidden 
-                        lg:hover:w-[60vw] 
-                        md:hover:w-[100vw]
-                        transition-all 
-                        duration-[1.5s] 
-                        ease-in-out 
-                        child-container-1
-                        '>
-                            <div className='h-[auto] w-[auto] grid items-center lg:mt-[5vh] md:mt-[0vh] relative main-container'>
-                                <div className='
-                                bg-portfolio 
-                                xl:h-[400px] 
-                                xl:w-[800px] 
-                                lg2:h-[340px] 
-                                lg2:w-[690px] 
-                                lg1:h-[270px] 
-                                lg1:w-[565px] 
-                                lg:h-[270px] 
-                                lg:w-[535px]
-                                md:h-[470px] 
-                                md:w-[900px]
-                                xs:h-[170px] 
-                                xs:w-[340px]
-                                bg-center 
-                                bg-cover 
-                                bg-no-repeat 
-                                cover-container
-                                '/>
-                                <div className='h-[60px] w-[auto] relative flex items-center logo-container'>
-                                    <div className='
-                                     xl:h-[30px]
-                                     xl:w-[30px]
-                                     lg1:h-[25px]
-                                     lg1:w-[25px]
-                                     lg:h-[25px]
-                                     lg:w-[25px]
-                                     md:h-[37px]
-                                     md:w-[37px]
-                                     xs:h-[23px]
-                                     xs:w-[23px]
-                                     bg-gray-800 
-                                     absolute 
-                                     right-0 
-                                     lg:rounded-[5px]
-                                     xs:rounded-[5px]
-                                     xs:bottom-4
-                                     grid 
-                                     place-items-center 
-                                     logo
-                                    '>
-                                        <img src={techstack[8].svg} alt='tailwind' className='xl:h-[12px] lg1:h-[11px] lg:h-[11px] md:h-[17px] xs:h-[12px]' />
-                                    </div>
-                                    <div className='
-                                   xl:h-[30px] 
-                                   xl:w-[30px] 
-                                   lg1:h-[25px] 
-                                   lg1:w-[25px]  
-                                   lg:h-[25px] 
-                                   lg:w-[25px]
-                                   md:h-[37px]
-                                   md:w-[37px]
-                                   xs:h-[23px]
-                                   xs:w-[23px]
-                                   bg-gray-800 
-                                   absolute 
-                                   xl:right-10
-                                   lg1:right-8
-                                   lg:right-8
-                                   md:right-12
-                                   xs:right-7
-                                   lg:rounded-[5px]
-                                   xs:rounded-[5px]
-                                   xs:bottom-4
-                                   grid 
-                                   place-items-center 
-                                   logo
-                                    '>
-                                        <img src={techstack[4].svg} alt='react' className='xl:h-[20px] lg1:h-[17px] lg:h-[17px] md:h-[25px] xs:h-[18px]' />
-                                    </div>
-                                </div>
-                            </div>
-                            <a className='font-Poppins xl:text-[1.5em] lg2:text-1xl md:text-1xl xs:text-base absolute lg:bottom-20 xs:bottom-10 lg:ml-[3vw] xs:ml-[5vw] font-bold hover:text-black' href='https://ginodelavega.netlify.app/' target="_blank" rel="noreferrer">
-                                MY PORTFOLIO
-                            </a>
-                            <span className='font-Oxygen xl:text-[1.1rem] lg2:text-base lg:text-[.9em] md:text-[1.1em] xs:text-[.8em] absolute lg:bottom-12 xs:bottom-6 lg:ml-[3vw] xs:ml-[5vw]'>
-                                Front End Development
-                            </span>
-                        </button>
-                        <button className='
-                        bg-[#dbdfdb] 
-                        xl:h-[80vh] 
-                        xl:w-[33.3vw] 
-                        lg2:w-[33.3vw] 
-                        lg:h-[80vh]
-                        lg:w-[33.3vw] 
-                        md:w-[100vw] 
-                        md:h-[50vh] 
-                        xs:w-[90vw] 
-                        xs:h-[33vh] 
-                        relative 
-                        grid 
-                        items-center 
-                        justify-center 
-                        overflow-hidden 
-                        lg:hover:w-[60vw] 
-                        md:hover:w-[100vw]
-                        transition-all 
-                        duration-[1.5s] 
-                        ease-in-out 
-                        child-container-1
-                        '>
-                            <div className='h-[auto] w-[auto] grid items-center lg:mt-[5vh] md:mt-[0vh] relative main-container'>
-                                <div className='
-                                bg-animefreak 
-                                xl:h-[400px] 
-                                xl:w-[800px] 
-                                lg2:h-[340px] 
-                                lg2:w-[690px] 
-                                lg1:h-[270px] 
-                                lg1:w-[565px] 
-                                lg:h-[270px] 
-                                lg:w-[535px]
-                                md:h-[470px] 
-                                md:w-[900px]
-                                xs:h-[170px] 
-                                xs:w-[340px]
-                                bg-center 
-                                bg-cover 
-                                bg-no-repeat 
-                                cover-container
-                                '/>
-                                <div className='h-[60px] w-[auto] relative flex items-center logo-container'>
-                                    <div className='
-                                    xl:h-[30px]
-                                    xl:w-[30px]
-                                    lg1:h-[25px]
-                                    lg1:w-[25px]
-                                    lg:h-[25px]
-                                    lg:w-[25px]
-                                    md:h-[37px]
-                                    md:w-[37px]
-                                    xs:h-[23px]
-                                    xs:w-[23px]
-                                    bg-gray-800 
-                                    absolute 
-                                    right-0 
-                                    lg:rounded-[5px]
-                                    xs:rounded-[5px]
-                                    xs:bottom-4
-                                    grid 
-                                    place-items-center 
-                                    logo
-                                    '>
-                                        <img src={techstack[2].svg} alt='sass' className='xl:h-[17px] lg1:h-[14px] lg:h-[14px] md:h-[19px] xs:h-[14px]' />
-                                    </div>
-                                    <div className='
-                                   xl:h-[30px] 
-                                   xl:w-[30px] 
-                                   lg1:h-[25px] 
-                                   lg1:w-[25px]  
-                                   lg:h-[25px] 
-                                   lg:w-[25px]
-                                   md:h-[37px]
-                                   md:w-[37px]
-                                   xs:h-[23px]
-                                   xs:w-[23px]
-                                   bg-gray-800 
-                                   absolute 
-                                   xl:right-10
-                                   lg1:right-8
-                                   lg:right-8
-                                   md:right-12
-                                   xs:right-7
-                                   lg:rounded-[5px]
-                                   xs:rounded-[5px]
-                                   xs:bottom-4
-                                   grid 
-                                   place-items-center 
-                                   logo
-                                   '>
-                                        <img src={techstack[4].svg} alt='react' className='xl:h-[20px] lg1:h-[17px] lg:h-[17px] md:h-[25px] xs:h-[18px]' />
-                                    </div>
-                                </div>
-                            </div>
-                            <a className='font-Poppins xl:text-[1.5em] lg2:text-1xl md:text-1xl xs:text-base absolute lg:bottom-20 xs:bottom-10 lg:ml-[3vw] xs:ml-[5vw] font-bold hover:text-black' href='https://ginodelavega.netlify.app/' target="_blank" rel="noreferrer">
-                                ANIMEFREAK
-                            </a>
-                            <span className='font-Oxygen xl:text-[1.1rem] lg2:text-base lg:text-[.9em] md:text-[1.1em] xs:text-[.8em] absolute lg:bottom-12 xs:bottom-6 lg:ml-[3vw] xs:ml-[5vw]'>
-                                Front End Development
-                            </span>
-                        </button>
-                    </div>
-                </div>
-            </div> */}
-            <div className='xs:h-[auto] w-[100vw] xs:mt-[5vh] relative grid items-start justify-start projects'>
-                {/* <span className={`
-                  font-Oxygen
-                  font-bold 
-                  xl:text-[.7em] 
-                  lg1:text-[.6em]
-                  lg:text-[.6em]
-                  xs:text-[.5em]
-                  ${!colortoggle ? 'text-white' : 'text-black'} 
-                  tracking-[5px] 
-                  absolute 
-                  label
-                `}>
-                    PROJECTS
-                </span> */}
-                <span className={`
+                bg-violet-700
                 font-Oxygen 
                 font-bold 
                 xl:text-[2em] 
@@ -598,51 +226,71 @@ const Landingpage = ({ colortoggle, setColortoggle }) => {
                 tracking-[5px] 
                 lg2:text-[1.8em]
                 lg1:text-2xl
-                lg:text-2xl
+                lg:text-sm
+                lg:ml-0
                 md:text-4xl
+                sm:text-2xl
                 xs:text-xl
                 xs:ml-5
                 xs:mt-[3vh]
                 `}>
                     My <span className={`text-yellow-500`}>Projects</span>
                 </span>
-                <div className='xs:h-[150vh] xs:w-[100vw] relative flex xs:flex-wrap xs:flex-col items-center justify-around'>
+                <div className='xs:h-[150vh] sm:h-[180vh] lg:h-[115vh] xs:w-[100vw] lg:w-[auto] relative flex xs:flex-wrap xs:flex-col items-center justify-around'>
                     {projects && Object.keys(projects).map(state => {
                         return (
-                            <div className='xs:h-[auto] w-[90vw] flex xs:flex-wrap xs:flex-col' key={projects[state].name}>
-                                <div className='xs:h-[auto] w-[90vw] grid '>
-                                    <span className={`font-Oxygen ${!colortoggle ? 'text-white' : 'text-black'} text-xl xs:mt-[1vh]`}>
+                            <div className='bg-blue-700 xs:h-[auto] w-[90vw] lg:w-[64vw] flex xs:flex-wrap xs:flex-col lg:flex lg: flex-wrap lg:flex-row' key={projects[state].name}>
+                                <div className='bg-orange-700 xs:h-[auto] lg:h-[28vh] w-[90vw] lg:w-[32vw] grid'>
+                                    <span className={`bg-pink-700 font-Oxygen ${!colortoggle ? 'text-white' : 'text-black'} text-xl xs:mt-[1vh] lg:mt-[0vh] sm:text-2xl lg:text-1xl lg:font-bold lg:w-[22vw] lg:flex lg:items-center lg:justify-start lg:leading-6`}>
                                         {projects[state].project}
                                     </span>
-                                    <p className={`font-Oxygen ${!colortoggle ? 'text-white' : 'text-black'} text-[.9em] xs:mt-[1vh]`}>
+                                    <p className={`bg-green-700 font-Oxygen ${!colortoggle ? 'text-white' : 'text-black'} text-[.9em] xs:mt-[1vh] lg:mt-[0vh] sm:text-[1.1em] lg:text-[.8em] lg:w-[30vw] lg:text-justify `}>
                                         {projects[state].description}
                                     </p>
-                                    <div className='flex xs:h-[11vh] w-[90vw] relative'>
-                                        <span className={`font-Oxygen ${colortoggle ? 'text-black' : 'text-[#cbd5e1]'} text-sm xs:mt-[2vh] absolute`}>
+                                    <div className='bg-green-700 flex xs:h-[11vh] lg:h-[10vh] w-[90vw] lg:w-[30vw] relative lg:mt-[5vh]'>
+                                        <span className={`font-Oxygen ${colortoggle ? 'text-black' : 'text-[#cbd5e1]'} text-sm xs:mt-[2vh] lg:mt-[0vh] sm:text-[1em] lg:text-[.8em] absolute`}>
                                             {projects[state].hashtag}
                                         </span>
-                                        <button className={`${!colortoggle ? 'bg-white' : 'bg-black'} font-Oxygen flex items-center justify-center h-[4vh] w-auto p-2 text-oxygen xs:text-sm xs:mt-[5.5vh] rounded-[3px] ${colortoggle ? 'text-white' : 'text-black'} outline-none`}>
-                                            Live demo <FaArrowAltCircleRight className='text-base xs:ml-2 transform-all xs:mt-1' />
+                                        <button className={`${!colortoggle ? 'bg-white' : 'bg-black'} font-Oxygen flex items-center justify-center h-[4vh] w-auto p-2 text-oxygen xs:text-sm lg:text-[.7em] xs:mt-[5.5vh] lg:mt-[3vh] rounded-[3px] ${colortoggle ? 'text-white' : 'text-black'} outline-none`}>
+                                            Live demo <FaArrowAltCircleRight className='text-base xs:ml-2 transform-all xs:mt-1 lg:mt-0' />
                                         </button>
-                                        <button className={`${!colortoggle ? 'bg-white' : 'bg-black'} font-Oxygen flex items-center justify-center h-[4vh] w-auto p-2 text-oxygen xs:text-sm xs:mt-[5.5vh] xs:ml-[2vw] rounded-[3px] ${colortoggle ? 'text-white' : 'text-black'} outline-none`}>
-                                            Code repo <FaGithub className='text-base xs:ml-2 transform-all xs:mt-1' />
+                                        <button className={`${!colortoggle ? 'bg-white' : 'bg-black'} font-Oxygen flex items-center justify-center h-[4vh] w-auto p-2 text-oxygen xs:text-sm lg:text-[.7em] xs:mt-[5.5vh] lg:mt-[3vh] xs:ml-[2vw] lg:ml-[.5vw] rounded-[3px] ${colortoggle ? 'text-white' : 'text-black'} outline-none`}>
+                                            Code repo <FaGithub className='text-base xs:ml-2 transform-all xs:mt-1 lg:mt-0' />
                                         </button>
                                     </div>
                                 </div>
-                                <div className={`bg-${projects[state].name} h-[20vh] xs:w-[90vw] bg-cover bg-no-repeat border-white border-[1px]`} />
+                                <div className={`${projects[state].name} h-[20vh] sm:h-[35vh] xs:w-[90vw] lg:w-[32vw] lg:h-[28vh] bg-cover bg-no-repeat border-white border-[1px]`} />
                             </div>
                             // pixel xs reso h-[170px] w-[336px]
                         )
                     })}
                 </div>
-                <div className='bg-red-700 xs:h-[60vh] w-[100vw] xs:mt-[5vh]'>
-                    <span className={`font-Oxygen ${!colortoggle ? 'text-white' : 'text-black'} grid text-3xl font-bold xs:ml-3 xs:mt-1`}>
+            </div>
+            <div className='h-auto w-auto xs:mt-[5vh]'>
+                <div className='xs:h-[auto] w-[100vw] '>
+                    <span className={`font-Oxygen ${!colortoggle ? 'text-white' : 'text-black'} grid text-2xl font-bold xs:ml-3 sm:ml-[3vw] xs:mt-1`}>
                         Say hi to Gino.
                     </span>
-                    <p className={`font-Oxygen ${!colortoggle ? 'text-white' : 'text-black'} text-[.9em] xs:ml-3 xs:mt-1`}>
+                    <p className={`font-Oxygen ${!colortoggle ? 'text-white' : 'text-black'} text-[.9em] xs:ml-3 sm:ml-[3vw] sm:text-base xs:mt-1`}>
                         I would love to hear from you. Whether it’s a project, a job opportunity,
                         or just a chat. Feel free to contact me.
                     </p>
+                </div>
+                <div className='xs:h-[15vh] w-[100vw] grid items-start justify-center'>
+                    <button className={`${colortoggle ? 'bg-white' : 'bg-black'} font-Oxygen flex items-center justify-center h-[4vh] w-auto p-2 text-oxygen xs:text-sm sm:text-xl xs:mt-[5.5vh] xs:ml-[2vw] rounded-[3px] ${!colortoggle ? 'text-white' : 'text-black'} outline-none`}>
+                        Email <FaTelegram className={`text-base xs:ml-2 transform-all`} />
+                    </button>
+                </div>
+                <div className='xs:h-[auto] w-full flex items-center justify-center font-Oxygen text-white text-[.7em] sm:text-base'>
+                    <button className={`hover:bg-[#cbd5e1] hover:text-black xs:h-[3vh] xs:w-[8vw] flex items-center justify-center rounded-[2px]`}>
+                        <FaGithub className='text-base sm:text-xl transform-all' />
+                    </button>
+                    <button className={`hover:bg-[#cbd5e1] hover:text-black xs:h-[3vh] xs:w-[8vw] flex items-center justify-center rounded-[2px]`}>
+                        <FaDiscord className='text-base sm:text-xl transform-all' />
+                    </button>
+                </div>
+                <div className='xs:h-[5vh] w-full flex items-center justify-center font-Oxygen text-white text-[.7em] sm:text-base'>
+                    Built with <FaCode className={`xs:ml-2 transform-all`} /> &nbsp; by Gino Dela Vega
                 </div>
             </div>
 
