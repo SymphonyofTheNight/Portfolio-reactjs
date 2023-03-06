@@ -69,7 +69,7 @@ const Landingpage = ({ colortoggle, setColortoggle }) => {
                     `}>
                         {developer.fullname}
                     </span>
-                    <div className={`w-[auto] ${!colortoggle ? 'text-white' : 'text-black'} font-Oxygen leading-[200%] m-[2vw] xl:text-[1.4em] lg2:text-[1.3em] lg:text-base md:text-[1.1em] xs:text-[.9em] md:text-justify`}>
+                    <div className={`w-[auto] ${!colortoggle ? 'text-white' : 'text-black'} font-Oxygen leading-[200%] m-[2vw] xl:text-[1.2em] lg2:text-[1.3em] lg:text-base md:text-[1.1em] xs:text-[.9em] md:text-justify`}>
                         Full-stack web developer and also an Instructor based in City of Malolos,Bulacan. <br />
                         I'm passionate in creating web applications with the latest technologies available in the market. <br />
                     </div>
@@ -133,17 +133,7 @@ const Landingpage = ({ colortoggle, setColortoggle }) => {
                             `}>
                                 {vector[state].label}
                             </h1>
-                            <span className={`
-                            font-Oxygen 
-                            ${!colortoggle ? 'text-white' : 'text-black'} 
-                            text-center
-                            lg1:text-[.8em]
-                            lg:text-sm
-                            md:text-[1em]
-                            xs:text-[.8em]
-                            sm:w-[40vw]
-                            md:mt-[.5em]
-                            `}>
+                            <span className={`font-Oxygen ${!colortoggle ? 'text-white' : 'text-black'} text-center lg1:text-[.8em] lg:text-sm md:text-[1em] xs:text-[.8em] sm:w-[40vw] md:mt-[.5em]`}>
                                 {vector[state].description}
                             </span>
                         </div>
@@ -151,45 +141,8 @@ const Landingpage = ({ colortoggle, setColortoggle }) => {
                 </div>
             </div>
 
-            {/* Technologies using */}
-            <div className='lg:h-[auto] xs:h-auto md:h-[auto] w-[100vw] xs:mt-[5vh] md:mt-[7vh] relative grid items-center justify-center lg:mt-[20vh] technologies'>
-                <span className={`font-Oxygen font-bold xl:text-[.7em] lg1:text-[.4em] lg:text-[.6em] xs:text-[.5em] ${!colortoggle ? 'text-white' : 'text-black'} tracking-[5px] absolute label`}>
-                    TECHNOLOGIES
-                </span>
-                <span className={`font-Oxygen font-bold xl:text-[1.5em] ${!colortoggle ? 'text-white' : 'text-black'} tracking-[5px] lg2:text-[1.8em] lg1:text-base lg:text-base md:text-4xl xs:text-xl`}>
-                    My <span className={`text-yellow-500`}>Skills</span>
-                </span>
-                <div type='input' className='h-[auto] xl:h-[20vh] xl:w-[53vw] lg2:w-[60vw] lg1:w-[65vw] lg1:h-[25vh] lg:w-[65vw] lg:h-[25vh]md:w-[80vw] md:h-[40vh] sm:w-[80vw] xs:w-[90vw] xs:h-[50vh] rounded-[20px] relative flex flex-wrap items-center justify-center'>
-                    <span className='-z-7 absolute font-Oxygen text-white text-[11em] grid place-items-center font-bold tracking-[50px] pointer-events-none text transition-all'>
-                        {hover}
-                    </span>
-                    {Object.keys(techstack).map(tech => {
-                        return (
-                            <React.Fragment>
-                                <img className='
-                                xl:h-[4vh] 
-                                lg2:h-[8.5vh] 
-                                lg1:h-[6.5vh] 
-                                lg:h-[6vh] 
-                                md:h-[6.6vh]
-                                sm:h-[6vh]
-                                xs:h-[5vh]
-                                lg:m-5 
-                                lg:grayscale 
-                                xs:m-5 
-                                xs:grayscale
-                                hover:grayscale-0 
-                                trasition 
-                                duration-[.3s]
-                                'src={techstack[tech].svg} alt={techstack[tech].tech} key={techstack[tech].tech} onMouseOver={() => setHover(techstack[tech].tech)}
-                                />
-                            </React.Fragment>)
-                    })}
-                </div>
-            </div>
-
             {/* projects */}
-            <div className='xs:h-[auto] w-[100vw] xs:mt-[5vh] relative grid items-start lg:justify-center justify-start lg:mt-[25vh] projects'>
+            <div className='xs:h-[auto] w-[100vw] xs:mt-[5vh] relative grid items-start lg:justify-center justify-start lg:mt-[15vh] xl:mt-[15vh] projects'>
                 <span className={`
                 font-Oxygen 
                 font-bold 
@@ -238,12 +191,51 @@ const Landingpage = ({ colortoggle, setColortoggle }) => {
                     })}
                 </div>
             </div>
+
+            {/* Technologies using */}
+            <div className='lg:h-[auto] xs:h-auto md:h-[auto] w-[100vw] xs:mt-[5vh] md:mt-[7vh] relative grid items-center justify-center lg:mt-[20vh] xl:mt-[10vh] technologies'>
+                <span className={`font-Oxygen font-bold xl:text-[.7em] lg1:text-[.4em] lg:text-[.6em] xs:text-[.5em] ${!colortoggle ? 'text-white' : 'text-black'} tracking-[5px] absolute label`}>
+                    TECHNOLOGIES
+                </span>
+                <span className={`font-Oxygen font-bold xl:text-[1.5em] ${!colortoggle ? 'text-white' : 'text-black'} tracking-[5px] lg2:text-[1.8em] lg1:text-base lg:text-base md:text-4xl xs:text-xl`}>
+                    My <span className={`text-yellow-500`}>Skills</span>
+                </span>
+                <div type='input' className='h-[auto] xl:h-[20vh] xl:w-[51vw] lg2:w-[60vw] lg1:w-[65vw] lg1:h-[25vh] lg:w-[65vw] lg:h-[25vh]md:w-[80vw] md:h-[40vh] sm:w-[80vw] xs:w-[90vw] xs:h-[50vh] rounded-[20px] relative flex flex-wrap items-center justify-center'>
+                    <span className='-z-7 absolute font-Oxygen text-white xl:text-[9em] grid place-items-center font-bold tracking-[50px] pointer-events-none text transition-all'>
+                        {hover}
+                    </span>
+                    {Object.keys(techstack).map(tech => {
+                        return (
+                            <React.Fragment>
+                                <img className='
+                                xl:h-[3.5vh] 
+                                lg2:h-[8.5vh] 
+                                lg1:h-[6.5vh] 
+                                lg:h-[6vh] 
+                                md:h-[6.6vh]
+                                sm:h-[6vh]
+                                xs:h-[5vh]
+                                lg:m-5 
+                                lg:grayscale 
+                                xs:m-5 
+                                xs:grayscale
+                                hover:grayscale-0 
+                                trasition 
+                                duration-[.3s]
+                                'src={techstack[tech].svg} alt={techstack[tech].tech} key={techstack[tech].tech} onMouseOver={() => setHover(techstack[tech].tech)}
+                                />
+                            </React.Fragment>)
+                    })}
+                </div>
+            </div>
+
+            {/* footer */}
             <div className='h-auto w-auto xs:mt-[5vh]'>
                 <div className='xs:h-[auto] w-[100vw] lg:grid lg:items-center lg:justify-center lg:text-center'>
-                    <span className={`font-Oxygen ${!colortoggle ? 'text-white' : 'text-black'} grid text-2xl lg:text-4xl font-bold xs:ml-3 sm:ml-[3vw] xs:mt-1`}>
+                    <span className={`font-Oxygen ${!colortoggle ? 'text-white' : 'text-black'} grid text-2xl lg:text-4xl xl:text-5xl font-bold xs:ml-3 sm:ml-[3vw] xs:mt-1 lg:ml-[0vw]`}>
                         Say hi to Gino.
                     </span>
-                    <p className={`font-Oxygen ${!colortoggle ? 'text-white' : 'text-black'} text-[.9em] xs:ml-3 sm:ml-[3vw] sm:text-base xs:mt-1 lg:text-sm`}>
+                    <p className={`font-Oxygen ${!colortoggle ? 'text-white' : 'text-black'} text-[.9em] xs:ml-3 sm:ml-[3vw] sm:text-base xs:mt-1 lg:text-sm xl:w-[35vw] lg:ml-[0vw]`}>
                         I would love to hear from you. Whether it’s a project, a job opportunity,
                         or just a chat. Feel free to contact me.
                     </p>
@@ -265,6 +257,8 @@ const Landingpage = ({ colortoggle, setColortoggle }) => {
                     Built with <FaCode className={`xs:ml-2 transform-all`} /> &nbsp; by Gino Dela Vega
                 </div>
             </div>
+
+
 
         </div>
     )
