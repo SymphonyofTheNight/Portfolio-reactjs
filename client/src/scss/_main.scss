@@ -28,6 +28,9 @@
 }
 
 .landing {
+
+    background: rgba($color: #1a1f25, $alpha: 1.0);
+
     .img-container {
         .img {
             clip-path: circle(35% at 50% 50%);
@@ -47,6 +50,11 @@
             transform: translate(50%, -50%);
             top: 50%;
             writing-mode: vertical-lr;
+        }
+
+        .text {
+            opacity: 0.7;
+            background: red($color: #8a0707);
         }
     }
 

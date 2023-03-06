@@ -62,8 +62,8 @@ const Cover = ({ colortoggle, setColortoggle }) => {
 
     return (
         <div className={`cover ${!colortoggle ? 'bg-black/[0.9]' : 'bg-white/[0.9]'} overflow-hidden h-[100vh] w-[100vw] absolute top-0 left-0 z-10 flex flex-col flex-wrap transition duration-[1s] ease-in-out`} ref={mainref}>
-            <div className='bg-red-700 lg:h-[20vh] xs:h-[10vh] w-[100vw] flex flex-wrap relative transition duration-1000 ease-in-out' ref={topref}>
-                <div className='bg-blue-700 lg:h-[20vh] xs:h-[10vh] lg:w-[20vw] xs:w-[30vw] sm:w-[20vw] absolute left-0 grid align-items-center justify-center'>
+            <div className='lg:h-[20vh] xs:h-[10vh] w-[100vw] flex flex-wrap relative transition duration-1000 ease-in-out' ref={topref}>
+                <div className='lg:h-[20vh] xs:h-[10vh] lg:w-[20vw] xs:w-[30vw] sm:w-[20vw] absolute left-0 grid align-items-center justify-center'>
                     <span className={`
                     ${!colortoggle ? 'text-white' : 'text-black'} 
                     font-Oswald 
@@ -79,7 +79,7 @@ const Cover = ({ colortoggle, setColortoggle }) => {
                         GINO D.V
                     </span>
                 </div>
-                <div className='bg-violet-700 lg:h-[20vh] xs:h-[10vh] lg:w-[20vw] xs:w-[33vw] sm:w-[21vw] absolute right-0 grid place-items-center'>
+                <div className='lg:h-[20vh] xs:h-[10vh] lg:w-[20vw] xs:w-[33vw] sm:w-[21vw] absolute right-0 grid place-items-center'>
                     <button className={`
                     bg-transparent 
                     h-[4vh] 
@@ -117,7 +117,7 @@ const Cover = ({ colortoggle, setColortoggle }) => {
                     xs:tracking-[10px]
                     font-bold 
                     lg2:text-[3.5em]
-                    lg1:text-[5.5em]
+                    lg1:text-[2.5em]
                     lg:text-[2.2em]
                     md:text-[6em]
                     sm:text-[4.5em]
@@ -131,7 +131,7 @@ const Cover = ({ colortoggle, setColortoggle }) => {
                 </div>
             </div>
             <div className='h-[15vh] w-[100vw] flex flex-row flex-wrap relative transition duration-[1s] ease-in-out' ref={botref}>
-                <div className='bg-red-700 lg:w-[40vw] xs:w-[50vw] md:w-[45vw] h-[15vh] flex items-center justify-center md:text-justify'>
+                <div className='lg:w-[40vw] xs:w-[50vw] md:w-[45vw] h-[15vh] flex items-center justify-center md:text-justify'>
                     <span className={`
                     xl:text-[1.2em] 
                     font-Oswald 
@@ -159,9 +159,9 @@ const Cover = ({ colortoggle, setColortoggle }) => {
                         AVAILABLE FOR NEW PROJECTS THIS {months[new Date().getMonth()]}
                     </span>
                 </div>
-                <div className='bg-red-700 w-[40vw] h-[15vh] absolute right-0 flex items-center justify-end'>
-                    <div className='bg-violet-700 lg:h-[4vh] lg:w-[auto] lg:mr-[5vw] xs:mr-[7vw] sm:mr-[4vw] md:mr-[3vw] mb-[3vh] xs:mb-[5vh] flex flex-row '>
-                        <button className='bg-blue-700 lg:h-[4vh] lg:w-[auto] xs:w-[11vw] sm:w-[auto] grid place-items-center'>
+                <div className='w-[40vw] h-[15vh] absolute right-0 flex items-center justify-end'>
+                    <div className='lg:h-[4vh] lg:w-[auto] lg:mr-[5vw] xs:mr-[7vw] sm:mr-[4vw] md:mr-[3vw] mb-[3vh] xs:mb-[5vh] flex flex-row '>
+                        <button className='lg:h-[4vh] lg:w-[auto] xs:w-[11vw] sm:w-[auto] grid place-items-center'>
                             <FaFacebook className={`
                             xl:text-[2em] 
                             mr-[20px] 
