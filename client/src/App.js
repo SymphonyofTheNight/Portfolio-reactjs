@@ -23,7 +23,7 @@ const App = () => {
         {
           <>
             <Cover colortoggle={colortoggle} setColortoggle={setColortoggle} />
-            <Landingpage colortoggle={colortoggle} setColortoggle={setColortoggle} />
+            <Landingpage colortoggle={colortoggle} />
           </>
         }
       />
