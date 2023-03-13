@@ -27,6 +27,15 @@
     position: fixed;
 }
 
+.nav {
+    position: fixed;
+
+    .container-nav {
+        box-shadow: 0px 4px 50px rgba($color: #cecece, $alpha: 1.0);
+        background: rgba($color: #1a1a1a, $alpha: 1.0);
+    }
+}
+
 .landing {
 
     background: rgba($color: #1a1f25, $alpha: 1.0);

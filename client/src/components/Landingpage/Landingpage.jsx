@@ -68,19 +68,19 @@ const Landingpage = ({ colortoggle }) => {
             </div>
 
             {/* projects */}
-            <div className='xs:h-[auto] w-[100vw] xs:mt-[5vh] relative grid items-start lg:justify-center justify-start lg:mt-[15vh] lg2:mt-[0vh] xl:mt-[10vh] projects'>
-                <span className={`font-Oxygen font-bold xl:text-[1.5em] ${!colortoggle ? 'text-white' : 'text-black'} tracking-[5px] lg2:text-[1.3em] lg1:text-sm lg:text-sm md:text-2xl sm:text-2xl xs:text-xl xs:ml-5 sm:ml-[5vw] md:ml-[5vw] lg:ml-[0vw] xs:mt-[3vh]`}>
+            <div className='xs:h-[auto] w-[100vw] xs:mt-[5vh] relative grid align-center justify-center lg:mt-[15vh] lg2:mt-[0vh] xl:mt-[10vh] projects'>
+                <span className={`font-Oxygen font-bold xl:text-[1.5em] ${!colortoggle ? 'text-white' : 'text-black'} tracking-[5px] lg2:text-[1.3em] lg1:text-sm lg:text-sm md:text-2xl sm:text-2xl xs:text-xl xs:ml-4 xs:mt-[3vh]`}>
                     My <span className={`text-yellow-500`}>Projects</span>
                 </span>
-                <div className='xs:h-[150vh] sm:h-[180vh] lg:h-[115vh] lg2:h-[100vh] xs:w-[100vw] lg:w-[auto] relative flex xs:flex-wrap xs:flex-col items-center justify-around'>
+                <div className='w-auto xs:h-auto sm:h-[180vh] lg:h-auto lg2:h-[100vh] xs:w-[100vw] relative flex xs:flex-wrap xs:flex-col items-center justify-around'>
                     {projects && Object.keys(projects).map(state => {
                         return (
-                            <div className='xs:h-[auto] w-[90vw] lg:w-[60vw] lg1:w-[64vw] lg2:w-[54vw] xl:w-[49vw] flex xs:flex-wrap xs:flex-col lg:flex lg: flex-wrap lg:flex-row' key={projects[state].name}>
-                                <div className='xs:h-[auto] w-[90vw] lg:h-[28vh] lg:w-[30vw] lg1:h-[30vh] lg1:w-[32vw] lg2:w-[25vw] lg2:h-[28vh] xl:w-[23vw] xl:h-[26vh] grid'>
-                                    <span className={`font-Oxygen ${!colortoggle ? 'text-white' : 'text-black'} text-xl xs:mt-[1vh] lg:mt-[0vh] sm:text-2xl lg:text-1xl xl:text-2xl lg:font-bold lg:w-[22vw] lg:flex lg:items-center lg:justify-start lg:leading-6`}>
+                            <div className='xs:m-4 xs:h-[auto] w-[90vw] lg:w-[60vw] lg1:w-[59vw] lg2:w-[54vw] xl:w-[49vw] flex xs:flex-wrap xs:flex-col lg:flex lg: flex-wrap lg:flex-row' key={projects[state].name}>
+                                <div className='xs:h-[auto] w-[90vw] lg:h-[22vh] lg:w-[30vw] lg1:h-[220px] lg1:w-[27vw] lg2:w-[25vw] lg2:h-[27vh] xl:w-[23vw] xl:h-[26vh] grid'>
+                                    <span className={`font-Oxygen ${!colortoggle ? 'text-white' : 'text-black'} text-xl xs:mt-[1vh] lg:mt-[0vh] sm:text-2xl lg:text-xl xl:text-2xl lg:font-bold lg:w-[22vw] lg:flex lg:items-center lg:justify-start lg:leading-6`}>
                                         {projects[state].project}
                                     </span>
-                                    <p className={`font-Oxygen ${!colortoggle ? 'text-white' : 'text-black'} text-[.9em] xs:mt-[1vh] lg:mt-[0vh] sm:text-[1.1em] lg:text-[.8em] xl:text-[.9em] lg:w-[25vw] lg2:w-[23vw] xl:w-[20vw] lg:text-justify `}>
+                                    <p className={`font-Oxygen ${!colortoggle ? 'text-white' : 'text-black'} text-[.9em] xs:mt-[1vh] lg:mt-[0vh] sm:text-[1.1em] lg:text-[.7em] xl:text-[.9em] lg:w-[25vw] lg2:w-[23vw] xl:w-[20vw] lg:text-justify `}>
                                         {projects[state].description}
                                     </p>
                                     <div className='flex xs:h-[11vh] lg:h-[10vh] w-[90vw] lg:w-[30vw] xl:w-[25vw] relative lg:mt-[3vh]'>
@@ -95,7 +95,9 @@ const Landingpage = ({ colortoggle }) => {
                                         </button>
                                     </div>
                                 </div>
-                                <div className={`${projects[state].name} h-[20vh] sm:rounded-[5px] sm:h-[35vh] sm:w-[90vw] md:w-[925px] xs:h-[175px] xs:w-[336px] sss:h-[190px] sss:w-[370px] lg:w-[30vw] lg:h-[28vh] lg1:w-[32vw] lg1:h-[30vh] lg2:w-[29vw] lg2:h-[28vh] xl:w-[26vw] xl:h-[26vh] bg-cover bg-no-repeat border-white border-[1px]`} />
+                                <div className='h-auto w-[90vw] lg:h-[40vh] lg:p-[.50px] lg:w-[30vw] lg1:w-[32vw] lg2:w-[29vw] xl:w-[26vw] border-white border-[1px]'>
+                                    <img src={projects[state].img} alt={projects[state].name} className={`w-[100%]`} />
+                                </div>
                             </div>
                         )
                     })}

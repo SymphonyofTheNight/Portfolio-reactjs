@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 // components
 import Cover from './components/Cover/Cover';
+import Nav from './components/Nav/Nav';
 import Landingpage from './components/Landingpage/Landingpage';
 
 // scss
@@ -23,6 +24,7 @@ const App = () => {
         {
           <>
             <Cover colortoggle={colortoggle} setColortoggle={setColortoggle} />
+            <Nav colortoggle={colortoggle} setColortoggle={setColortoggle} />
             <Landingpage colortoggle={colortoggle} />
           </>
         }

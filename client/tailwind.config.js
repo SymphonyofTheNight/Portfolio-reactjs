@@ -20,9 +20,9 @@ module.exports = {
         Poppins: ["Poppins", "sans-serif"]
       },
       backgroundImage: theme => ({
-        'nft': "url('../assets/projectsimg/nft.jpg')",
-        'portfolio': "url('../assets/projectsimg/portfolio.jpg')",
-        'animefreak': "url('../assets/projectsimg/animefreak.jpg')",
+        'bg-nft': "url('../assets/projectsimg/nft.jpg')",
+        'bg-portfolio': "url('../assets/projectsimg/portfolio.jpg')",
+        'bg-animefreak': "url('../assets/projectsimg/animefreak.jpg')",
       })
     },
     screens: {
