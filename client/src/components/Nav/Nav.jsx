@@ -22,7 +22,7 @@ const Nav = ({ colortoggle, setColortoggle }) => {
 
     return (
         <nav className='flex items-center justify-end h-[6vh] w-[100vw] absolute bottom-0 left-0 z-10 transition-all duration-500 ease-in-out nav' ref={shownavref}>
-            <button className={`bg-[#1a1a1a] h-[4vh] w-[7vw] rounded-[5px] mr-[1vw] font-Oxygen text-sm text-white`}
+            <button className={`bg-[#1a1a1a] h-[4vh] w-auto p-2 rounded-[5px] xs:mr-[2vw] lg:mr-[1vw] font-Oxygen text-sm text-white`}
                 onClick={() => setColortoggle(state => !state)}
             >
                 {!colortoggle ? 'Light mode' : 'Night mode'}

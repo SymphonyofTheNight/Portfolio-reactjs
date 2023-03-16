@@ -13,9 +13,14 @@ import vector from '../../assets/vector/vector';
 // projects
 import projects from '../../assets/projectsimg/projects';
 
+// Email-Modal
+import EmailModal from '../EmailModal/EmailModal';
+
 const Landingpage = ({ colortoggle }) => {
 
     const [hover, setHover] = useState("");
+
+    const [toggleModal, setToggleModal] = useState(false);
 
     return (
         <div className={`${colortoggle ? 'bg-white' : 'bg-black'} h-[auto] w-[100vw] relative overflow-hidden landing`}>
@@ -72,7 +77,7 @@ const Landingpage = ({ colortoggle }) => {
                 <span className={`font-Oxygen font-bold xl:text-[1.5em] ${!colortoggle ? 'text-white' : 'text-black'} tracking-[5px] lg2:text-[1.3em] lg1:text-sm lg:text-sm md:text-2xl sm:text-2xl xs:text-xl xs:ml-4 xs:mt-[3vh]`}>
                     My <span className={`text-yellow-500`}>Projects</span>
                 </span>
-                <div className='w-auto xs:h-auto sm:h-[180vh] lg:h-auto lg2:h-[100vh] xs:w-[100vw] relative flex xs:flex-wrap xs:flex-col items-center justify-around'>
+                <div className='w-auto xs:h-auto lg:h-auto lg2:h-[100vh] xs:w-[100vw] relative flex xs:flex-wrap xs:flex-col items-center justify-around'>
                     {projects && Object.keys(projects).map(state => {
                         return (
                             <div className='xs:m-4 xs:h-[auto] w-[90vw] lg:w-[60vw] lg1:w-[59vw] lg2:w-[54vw] xl:w-[49vw] flex xs:flex-wrap xs:flex-col lg:flex lg: flex-wrap lg:flex-row' key={projects[state].name}>
@@ -95,7 +100,7 @@ const Landingpage = ({ colortoggle }) => {
                                         </button>
                                     </div>
                                 </div>
-                                <div className='h-auto w-[90vw] lg:h-[40vh] lg:p-[.50px] lg:w-[30vw] lg1:w-[32vw] lg2:w-[29vw] xl:w-[26vw] border-white border-[1px]'>
+                                <div className='h-auto w-[90vw] lg:p-[.50px] lg:w-[30vw] lg1:w-[32vw] lg2:w-[29vw] xl:w-[26vw] border-white border-[1px]'>
                                     <img src={projects[state].img} alt={projects[state].name} className={`w-[100%]`} />
                                 </div>
                             </div>
@@ -131,13 +136,17 @@ const Landingpage = ({ colortoggle }) => {
                     <span className={`font-Oxygen ${!colortoggle ? 'text-white' : 'text-black'} grid text-2xl md:text-4xl lg:text-4xl xl:text-5xl font-bold xs:ml-3 sm:ml-[3vw] xs:mt-1 lg:ml-[0vw]`}>
                         Say hi to Gino.
                     </span>
-                    <p className={`font-Oxygen ${!colortoggle ? 'text-white' : 'text-black'} text-[.9em] xs:ml-3 sm:ml-[3vw] sm:text-base md:text-xl xs:mt-1 lg:text-sm xl:w-[35vw] lg:ml-[0vw]`}>
+                    <p className={`w-[90vw] font-Oxygen ${!colortoggle ? 'text-white' : 'text-black'} text-[.9em] xs:ml-3 sm:ml-[3vw] sm:text-base md:text-xl xs:mt-1 lg:text-sm xl:w-[35vw] lg:ml-[0vw]`}>
                         I would love to hear from you. Whether it’s a project, a job opportunity,
                         or just a chat. Feel free to contact me.
                     </p>
                 </div>
                 <div className='xs:h-[15vh] lg:h-[20vh] xl:h-[30vh] w-[100vw] grid items-start justify-center lg:grid lg:items-center lg:justify-center'>
-                    <button className={`${colortoggle ? 'bg-white' : 'bg-black'} font-Oxygen flex items-center justify-center h-[4vh] w-auto p-2 text-oxygen xs:text-sm sm:text-xl lg:text-sm xl:text-xl xs:mt-[5.5vh] lg:mt-[0vh] xs:ml-[2vw] lg:ml-[0vw] rounded-[3px] ${!colortoggle ? 'text-white' : 'text-black'} outline-none`}>
+                    <button className={`${colortoggle ? 'bg-white' : 'bg-black'} font-Oxygen flex items-center justify-center h-[4vh] w-auto p-2 text-oxygen xs:text-sm sm:text-xl lg:text-sm xl:text-xl xs:mt-[5.5vh] lg:mt-[0vh] xs:ml-[2vw] lg:ml-[0vw] rounded-[3px] ${!colortoggle ? 'text-white' : 'text-black'} outline-none`}
+                        onClick={() => {
+                            setToggleModal(state => !state)
+                        }}
+                    >
                         Email <FaTelegram className={`text-base xs:ml-2 transform-all`} />
                     </button>
                 </div>
@@ -153,6 +162,10 @@ const Landingpage = ({ colortoggle }) => {
                     Built with <FaCode className={`xs:ml-2 transform-all`} /> &nbsp; by Gino Dela Vega
                 </div>
             </div>
+
+            {/* popup modal */}
+            <EmailModal toggleModal={toggleModal} setToggleModal={setToggleModal} />
+
         </div>
     )
 }

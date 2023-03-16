@@ -63,12 +63,12 @@ const Cover = ({ colortoggle, setColortoggle }) => {
     return (
         <div className={`cover ${!colortoggle ? 'bg-black/[0.9]' : 'bg-white/[0.9]'} overflow-hidden h-[100vh] w-[100vw] absolute top-0 left-0 z-10 flex flex-col flex-wrap transition duration-[1s] ease-in-out`} ref={mainref}>
             <div className='lg:h-[20vh] xs:h-[10vh] w-[100vw] flex flex-wrap relative transition duration-1000 ease-in-out' ref={topref}>
-                <div className='lg:h-[20vh] xs:h-[10vh] lg:w-[20vw] xs:w-[30vw] sm:w-[20vw] absolute left-0 grid align-items-center justify-center'>
+                <div className='lg:h-[20vh] xs:h-[10vh] lg:w-[20vw] xs:w-[33vw] sm:w-[20vw] absolute left-0 grid align-items-center justify-center'>
                     <span className={`${!colortoggle ? 'text-white' : 'text-black'} font-Oswald xl:text-2xl lg:tracking-[2.75px] xs:tracking-[1.75px] lg2:text-1xl lg1:text-[1.3em] lg:text-[1.3em] md:text-[1.6em] xs:text-base`}>
                         GINO D.V
                     </span>
                 </div>
-                <div className='lg:h-[20vh] xs:h-[10vh] lg:w-[20vw] xs:w-[33vw] sm:w-[21vw] absolute right-0 grid place-items-center'>
+                <div className='lg:h-[20vh] xs:h-[10vh] lg:w-[20vw] xs:w-[36vw] sss:w-[33vw] sm:w-[21vw] absolute right-0 grid place-items-center'>
                     <button className={`bg-transparent h-[4vh] w-[auto] px-4 ${!colortoggle ? 'text-white' : 'text-black'} font-Oswald lg:tracking-[3px] xs:tracking-[1px] transition duration-[.5s] xl:text-[1.2em] lg2:text-[1.1em] lg1:text-[1em] lg:text-[1em] md:text-[1.6em] md:mr-2 lg:mr-0`} onClick={() => {
                         setColortoggle(state => !state)
                     }}>
@@ -96,7 +96,7 @@ const Cover = ({ colortoggle, setColortoggle }) => {
                     </span>
                 </div>
                 <div className='w-[40vw] h-[15vh] absolute right-0 flex items-center justify-end'>
-                    <div className='xl:mr-[6vw] lg:h-[4vh] lg:w-[auto] lg:mr-[5vw] xs:mr-[7vw] sm:mr-[4vw] md:mr-[3vw] mb-[3vh] xs:mb-[5vh] flex flex-row '>
+                    <div className='xl:mr-[6vw] lg:h-[4vh] lg:w-[auto] lg:mr-[5vw] xs:mr-[8vw] sm:mr-[4vw] md:mr-[3vw] mb-[3vh] xs:mb-[5vh] flex flex-row '>
                         <button className='lg:h-[4vh] lg:w-[auto] xs:w-[11vw] sm:w-[auto] grid place-items-center'>
                             <FaFacebook className={`xl:text-[2em] mr-[20px] ml-[20px] ${!colortoggle ? 'text-white' : 'text-black'} lg2:text-3xl lg1:text-2xl lg:text-2xl md:text-4xl xs:text-2xl`} />
                         </button>

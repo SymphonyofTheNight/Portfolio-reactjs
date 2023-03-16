@@ -18,11 +18,13 @@ let transport = nodemailer.createTransport({
 });
 
 routes.post('/', (req, res) => {
+
     let mailOptions = {
         from: req.body.email,
         to: 'ginodelavega1997@gmail.com',
         subject: 'Message',
         html: `
+            <h1>From: ${req.body.email}</h1>
             <p>${req.body.message}</p>
         `,
     };
