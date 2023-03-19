@@ -61,7 +61,7 @@ const Cover = ({ colortoggle, setColortoggle }) => {
     }, [scrollcount])
 
     return (
-        <div className={`cover ${!colortoggle ? 'bg-black/[0.9]' : 'bg-white/[0.9]'} overflow-hidden h-[100vh] w-[100vw] absolute top-0 left-0 z-10 flex flex-col flex-wrap transition duration-[1s] ease-in-out`} ref={mainref}>
+        <div className={`cover ${!colortoggle ? 'bg-black/[0.9]' : 'bg-white/[0.9]'} overflow-hidden h-[100vh] w-[100vw] absolute top-0 left-0 z-[30] flex flex-col flex-wrap transition duration-[1s] ease-in-out`} ref={mainref}>
             <div className='lg:h-[20vh] xs:h-[10vh] w-[100vw] flex flex-wrap relative transition duration-1000 ease-in-out' ref={topref}>
                 <div className='lg:h-[20vh] xs:h-[10vh] lg:w-[20vw] xs:w-[33vw] sm:w-[20vw] absolute left-0 grid align-items-center justify-center'>
                     <span className={`${!colortoggle ? 'text-white' : 'text-black'} font-Oswald xl:text-2xl lg:tracking-[2.75px] xs:tracking-[1.75px] lg2:text-1xl lg1:text-[1.3em] lg:text-[1.3em] md:text-[1.6em] xs:text-base`}>

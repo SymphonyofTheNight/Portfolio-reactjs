@@ -117,14 +117,14 @@ const Landingpage = ({ colortoggle }) => {
                 <span className={`font-Oxygen font-bold xl:text-[1.5em] ${!colortoggle ? 'text-white' : 'text-black'} tracking-[5px] lg2:text-[1.3em] lg1:text-base lg:text-base md:text-2xl xs:text-xl`}>
                     My <span className={`text-yellow-500`}>Skills</span>
                 </span>
-                <div type='input' className='h-[auto] lg2:h-[15vh] xl:h-[15vh] xl:w-[49vw] lg2:w-[54vw] lg1:w-[65vw] lg1:h-[25vh] lg:w-[65vw] lg:h-[13vh] md:w-[90vw] md:h-[13vh] sm:w-[80vw] xs:w-[90vw] xs:h-[50vh] rounded-[20px] relative flex flex-wrap items-center justify-center'>
+                <div type='input' className='h-auto xs:w-[90vw] lg:w-[60vw] rounded-[20px] relative flex flex-wrap items-center justify-center'>
                     <span className={`xs:hidden lg:grid -z-7 absolute font-Oxygen ${!colortoggle ? 'text-white' : 'text-black'} lg:text-[4em] lg1:text-[4em] lg2:text-[4em] xl:text-[5em] grid place-items-center font-bold tracking-[50px] pointer-events-none text transition-all`}>
                         {hover}
                     </span>
                     {Object.keys(techstack).map(tech => {
                         return (
                             <React.Fragment>
-                                <img className='xl:h-[3.5vh] lg2:h-[3.4vh] lg1:h-[3.9vh] lg:h-[3.5vh] md:h-[3.5vh] sm:h-[6vh] xs:h-[5vh] lg:m-5 lg:grayscale xs:m-5 xs:grayscale hover:grayscale-0 trasition duration-[.3s]' src={techstack[tech].svg} alt={techstack[tech].tech} key={techstack[tech].tech} onMouseOver={() => setHover(techstack[tech].tech)} />
+                                <img className='xl:h-[3.5vh] lg2:h-[3.4vh] lg1:h-[3.9vh] lg:h-[3.5vh] md:h-[3.5vh] sm:h-[4.5vh] sss:h-[3.5vh] xs:h-[3vh] lg:m-5 lg:grayscale xs:m-4 xs:grayscale hover:grayscale-0 trasition duration-[.3s]' src={techstack[tech].svg} alt={techstack[tech].tech} key={techstack[tech].tech} onMouseOver={() => setHover(techstack[tech].tech)} />
                             </React.Fragment>)
                     })}
                 </div>
