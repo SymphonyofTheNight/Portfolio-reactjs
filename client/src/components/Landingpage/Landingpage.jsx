@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FaArrowAltCircleRight, FaGithub, FaTelegram, FaCode, FaDiscord } from 'react-icons/fa'
+import { FaArrowAltCircleRight, FaGithub, FaFacebookMessenger, FaCode, FaDiscord, FaPhone, FaEnvelope } from 'react-icons/fa'
 
 // developer
 import developer from '../../developer/developer';
@@ -13,20 +13,15 @@ import vector from '../../assets/vector/vector';
 // projects
 import projects from '../../assets/projectsimg/projects';
 
-// Email-Modal
-import EmailModal from '../EmailModal/EmailModal';
-
 const Landingpage = ({ colortoggle }) => {
 
     const [hover, setHover] = useState("");
 
-    const [toggleModal, setToggleModal] = useState(false);
-
     return (
-        <div className={`${colortoggle ? 'bg-white' : 'bg-black'} h-[auto] w-[100vw] relative overflow-hidden landing`}>
+        <div className={`${colortoggle ? 'bg-white' : 'bg-black'} h-full w-full overflow-hidden landing`}>
 
             {/* img */}
-            <div className='h-[70vh] w-[100vw] md:mt-[30vh] xs:mt-[50vh] grid items-center justify-center img-container'>
+            <div className='h-[70vh] w-[100vw] md:mt-[30vh] xs:mt-[50vh] relative grid items-center justify-center img-container'>
                 <img src={developer.img} className='h-[70vh] md:h-[60vh] xs:h-[50vh] img' alt='img' />
             </div>
 
@@ -131,7 +126,7 @@ const Landingpage = ({ colortoggle }) => {
             </div>
 
             {/* footer */}
-            <div className='h-auto w-auto xs:mt-[5vh]'>
+            {/* <div className='h-auto w-auto xs:mt-[5vh]'>
                 <div className='xs:h-[auto] w-[100vw] lg:grid lg:items-center lg:justify-center lg:text-center'>
                     <span className={`font-Oxygen ${!colortoggle ? 'text-white' : 'text-black'} grid text-2xl md:text-4xl lg:text-4xl xl:text-5xl font-bold xs:ml-3 sm:ml-[3vw] xs:mt-1 lg:ml-[0vw]`}>
                         Say hi to Gino.
@@ -141,12 +136,8 @@ const Landingpage = ({ colortoggle }) => {
                         or just a chat. Feel free to contact me.
                     </p>
                 </div>
-                <div className='xs:h-[15vh] lg:h-[20vh] xl:h-[30vh] w-[100vw] grid items-start justify-center lg:grid lg:items-center lg:justify-center'>
-                    <button className={`${colortoggle ? 'bg-white' : 'bg-black'} font-Oxygen flex items-center justify-center h-[4vh] w-auto p-2 text-oxygen xs:text-sm sm:text-xl lg:text-sm xl:text-xl xs:mt-[5.5vh] lg:mt-[0vh] xs:ml-[2vw] lg:ml-[0vw] rounded-[3px] ${!colortoggle ? 'text-white' : 'text-black'} outline-none`}
-                        onClick={() => {
-                            setToggleModal(state => !state)
-                        }}
-                    >
+                <div className='bg-red-700 xs:h-[15vh] lg:h-[20vh] xl:h-[30vh] w-[100vw] grid items-start justify-center lg:grid lg:items-center lg:justify-center'>
+                    <button className={`${colortoggle ? 'bg-white' : 'bg-black'} font-Oxygen flex items-center justify-center h-[4vh] w-auto p-2 text-oxygen xs:text-sm sm:text-xl lg:text-sm xl:text-xl xs:mt-[5.5vh] lg:mt-[0vh] xs:ml-[2vw] lg:ml-[0vw] rounded-[3px] ${!colortoggle ? 'text-white' : 'text-black'} outline-none`}>
                         Email <FaTelegram className={`text-base xs:ml-2 transform-all`} />
                     </button>
                 </div>
@@ -161,10 +152,40 @@ const Landingpage = ({ colortoggle }) => {
                 <div className={`${!colortoggle ? 'text-white' : 'text-black'} xs:h-[5vh] w-full flex items-center justify-center font-Oxygen text-[.7em] sm:text-base lg:text-[.7em]`}>
                     Built with <FaCode className={`xs:ml-2 transform-all`} /> &nbsp; by Gino Dela Vega
                 </div>
-            </div>
+            </div> */}
 
-            {/* popup modal */}
-            <EmailModal toggleModal={toggleModal} setToggleModal={setToggleModal} />
+            <div className='h-auto w-auto grid place-items-center gap-2 relative'>
+                <div className='h-auto w-[90vw] flex align-center justify-center text-center'>
+                    <p className='text-Oxygen text-2xl text-white'>Need a front-end
+                        <br />
+                        <span className='text-Oxygen text-yellow-500 font-[500]'>Developer ?</span>
+                        <p className='text-base font-[500]'>Let's <span className='text-yellow-500'>work</span> together!!</p>
+                    </p>
+                </div>
+                <div className='bg-[#0f0f0f] h-auto w-[80vw] mb-5 mt-2 flex flex-wrap justify-center align-center'>
+                    <div className='bg-[#1b1b1b] h-[28.5vh] w-[70vw] m-3 rounded-[5px]'>
+                        <p className='font-Oxygen text-white text-[.8em] ml-3 mt-2'><span className='text-yellow-500'>CONTACT</span> INFORMATION</p>
+                        <p className='font-Oxygen text-white w-[65vw] text-sm ml-3 mt-2 leading-[1.25rem] text-left'>If you have a good opportunity that matches my skills then don't hesitate to contact me.</p>
+
+                        {/* list of contacts */}
+
+                        <br />
+                        <button className='w-auto flex align-center justify-center ml-3'><FaDiscord className='text-white mt-[.1em] xs:text-[.9em]' /><span className='text-white font-Oxygen ml-[.75em] text-sm'>Discord</span></button>
+                        <button className='w-auto flex align-center justify-center ml-3 mt-2'><FaEnvelope className='text-white mt-[.1em] xs:text-[.9em]' /><span className='text-white font-Oxygen ml-[.75em] text-sm'>ginodelavega1997@gmail.com</span></button>
+                        <button className='w-auto flex align-center justify-center ml-3 mt-2'><FaPhone className='text-white mt-[.1em] xs:text-[.9em]' /><span className='text-white font-Oxygen ml-[.75em] text-sm'>+63 9922325221</span></button>
+                        <button className='w-auto flex align-center justify-center ml-3 mt-2'><FaFacebookMessenger className='text-white mt-[.1em] xs:text-[.9em]' /><span className='text-white font-Oxygen ml-[.75em] text-sm'>Messenger</span></button>
+                    </div>
+                    <div className='bg-[#1b1b1b] h-auto w-[70vw] mb-3 rounded-[5px] flex flex-wrap justify-center'>
+                        <input type="text" className='h-[4.5vh] w-[60vw] xs:mt-3 bg-transparent border-[#757575] border-2 outline-none text-white p-2 font-Oxygen text-sm' placeholder='Your name' />
+                        <input type="text" className='h-[4.5vh] w-[60vw] xs:mt-3 bg-transparent border-[#757575] border-2 outline-none text-white p-2 font-Oxygen text-sm' placeholder='Your email' />
+                        <textarea type="text" className='h-[24vh] w-[60vw] xs:mt-3 xs:mb-3 bg-transparent border-[#757575] border-2 outline-none text-white p-2 font-Oxygen text-sm resize-none' placeholder='Your message' />
+                        <button className='bg-[#757575] text-Oxygen h-[4vh] w-[60vw] mb-3 text-white grid place-items-center text-sm'>Send</button>
+                    </div>
+                </div>
+                <div className={`${!colortoggle ? 'text-white' : 'text-black'} xs:h-[5vh] w-full flex items-center justify-center font-Oxygen text-[.7em] sm:text-base lg:text-[.7em]`}>
+                    Built with <FaCode className={`xs:ml-2 transform-all`} /> &nbsp; by Gino Dela Vega
+                </div>
+            </div>
 
         </div>
     )

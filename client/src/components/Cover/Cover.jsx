@@ -76,14 +76,16 @@ const Cover = ({ colortoggle, setColortoggle }) => {
                     </button>
                 </div>
             </div>
-            <div className='lg:h-[65vh] xs:h-[80vh] w-[100vw] flex flex-row flex-wrap relative'>
+            <div className='lg:h-[65vh] xs:h-[80vh] w-[100vw] flex flex-row flex-wrap relative mid-container'>
                 <div className='bg-transparent w-[15vw] lg:h-[65vh] xs:h-[80vh] grid place-items-center transition duration-[1s] ease-in-out' ref={leftwingref}>
                     <div className={`lg:h-[50vh] xs:h-[80vh] lg:w-[4px] xs:w-[3px] md:h-[80vh] ${!colortoggle ? 'bg-white' : 'bg-black'}`} />
                 </div>
-                <div className='lg:h-[65vh] xs:h-[80vh] w-[70vw] flex items-center justify-center xs:text-center'>
-                    <span className={`xl:text-[4.5em] ${!colortoggle ? 'text-white' : 'text-black'} font-Oxygen lg:tracking-[25px] xs:tracking-[10px] font-bold lg2:text-[3.5em] lg1:text-[2.5em] lg:text-[2.2em] md:text-[6em] sm:text-[4.5em] xs:text-[2em]`}>
-                        FRONT END DEVELOPER <br />
-                    </span>
+                <div className='lg:h-[65vh] xs:h-[80vh] w-[70vw] flex items-center justify-center xs:text-center center-text-container'>
+                    <div className='txt-container'>
+                        <span className={`xl:text-[4.5em] flex items-center justify-center w-auto ${!colortoggle ? 'text-white' : 'text-black'} font-Oxygen lg:tracking-[25px] xs:tracking-[10px] font-bold lg2:text-[3.5em] lg1:text-[2.5em] lg:text-[2.2em] md:text-[6em] sm:text-[4.5em] xs:text-[2em] text`}>
+                            FRONT END DEVELOPER <br />
+                        </span>
+                    </div>
                 </div>
                 <div className='bg-transparent w-[15vw] lg:h-[65vh] xs:h-[80vh] grid place-items-center absolute right-[0] transition duration-[1s] ease-in-out' ref={rightwingref}>
                     <div className={`lg:h-[50vh] xs:h-[80vh] lg:w-[4px] xs:w-[3px] md:h-[80vh] ${!colortoggle ? 'bg-white' : 'bg-black'}`} />

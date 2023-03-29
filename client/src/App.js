@@ -15,18 +15,25 @@ const App = () => {
   const [colortoggle, setColortoggle] = useState(false);
 
   useEffect(() => {
-    window.history.scrollRestoration = 'manual'
+    var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+    var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+    console.log(h, w);
+    window.history.scrollRestoration = 'manual';
+    document.body.style.height = `${h}px`;
+    document.body.style.width = `${w}px`;
   }, []);
+
+  // fix keyboard overlap tommorow !!!!
 
   return (
     <Routes>
       <Route path='/' element=
         {
-          <>
-            <Cover colortoggle={colortoggle} setColortoggle={setColortoggle} />
-            <Nav colortoggle={colortoggle} setColortoggle={setColortoggle} />
+          <div className='overflow-hidden'>
             <Landingpage colortoggle={colortoggle} />
-          </>
+            <Cover colortoggle={colortoggle} setColortoggle={setColortoggle} />
+            {/* <Nav colortoggle={colortoggle} setColortoggle={setColortoggle} /> */}
+          </div>
         }
       />
     </Routes>
