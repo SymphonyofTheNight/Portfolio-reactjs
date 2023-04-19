@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 // components
 import Cover from './components/Cover/Cover';
-import Nav from './components/Nav/Nav';
+// import Nav from './components/Nav/Nav';
 import Landingpage from './components/Landingpage/Landingpage';
 
 // scss

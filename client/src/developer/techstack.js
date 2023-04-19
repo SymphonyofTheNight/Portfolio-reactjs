@@ -28,8 +28,8 @@ const techstack = [
     },
     {
         count: '5',
-        tech: 'NODEJS',
-        svg: technologies.nodejs
+        tech: 'GIT',
+        svg: technologies.git
     },
     {
         count: '6',
@@ -43,8 +43,8 @@ const techstack = [
     },
     {
         count: '8',
-        tech: 'TAILWIND',
-        svg: technologies.tailwind
+        tech: 'GITHUB',
+        svg: technologies.github
     },
     {
         count: '9',
@@ -53,13 +53,13 @@ const techstack = [
     },
     {
         count: '10',
-        tech: 'GIT',
-        svg: technologies.git
+        tech: 'NODEJS',
+        svg: technologies.nodejs
     },
     {
         count: '11',
-        tech: 'GITHUB',
-        svg: technologies.github
+        tech: 'TAILWIND',
+        svg: technologies.tailwind
     },
 ]
 

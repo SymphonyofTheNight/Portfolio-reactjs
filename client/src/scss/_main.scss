@@ -34,13 +34,15 @@ body {
 
     .mid-container {
         .center-text-container {
+            position: relative;
+
             .txt-container {
                 position: absolute;
 
                 .text {
                     opacity: 0;
                     animation: appear-text 0.0001s linear forwards;
-                    animation-delay: 2.4s;
+                    animation-delay: 2s;
                 }
 
                 @keyframes appear-text {
@@ -63,7 +65,7 @@ body {
                 height: 100%;
                 background: white;
                 animation: rev-block 1.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
-                animation-delay: 2s;
+                animation-delay: 1.5s;
             }
 
             @keyframes rev-block {
@@ -98,8 +100,6 @@ body {
 
 .landing {
 
-    background: rgba($color: #1a1f25, $alpha: 1.0);
-
     .img-container {
         .img {
             clip-path: circle(35% at 50% 50%);
@@ -112,6 +112,14 @@ body {
             top: 50%;
             writing-mode: vertical-lr;
         }
+    }
+
+    .projects-container {
+        .img-container {
+            position: relative;
+            position: absolute;
+        }
+
     }
 
     .technologies {
