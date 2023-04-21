@@ -198,7 +198,7 @@ const Landingpage = ({ colortoggle }) => {
                 <span className={`font-Poppins font-bold xl:text-[1.5em] ${!colortoggle ? 'text-white' : 'text-black'} tracking-[5px] lg2:text-[1.3em] lg1:text-base lg:text-base md:text-2xl xs:text-xl`}>
                     My <span className={`text-[#FFB64B]`}>Skills</span>
                 </span>
-                <div type='input' className='mt-2 h-auto xs:w-[85vw] lg:w-[60vw] rounded-[20px] relative flex flex-wrap items-center justify-between'>
+                <div className='mt-2 h-auto xs:w-[85vw] lg:w-[60vw] rounded-[20px] relative flex flex-wrap items-center justify-between'>
                     <span className={`xs:hidden lg:grid -z-7 absolute font-Oxygen ${!colortoggle ? 'text-white' : 'text-black'} lg:text-[4em] lg1:text-[4em] lg2:text-[4em] xl:text-[5em] grid place-items-center font-bold tracking-[50px] pointer-events-none text transition-all`}>
                         {hover}
                     </span>
@@ -211,8 +211,9 @@ const Landingpage = ({ colortoggle }) => {
                 </div>
             </div>
 
-            <div className='h-auto w-auto grid place-items-center gap-2 relative mt-[10vh]'>
-                <div className='h-auto w-[90vw] flex align-center justify-center text-center'>
+            <div className='bg-white/[0.063] h-auto w-auto grid place-items-center gap-2 relative mt-[10vh]'>
+
+                <div className='h-auto w-[90vw] mt-5 flex align-center justify-center text-center'>
                     <p className='font-Poppins text-2xl text-white'>Need a front-end
                         <br />
                         <span className='font-Poppins text-[#FFB64B] font-[500]'>Developer ?</span>
@@ -220,8 +221,8 @@ const Landingpage = ({ colortoggle }) => {
                     </p>
                 </div>
 
-                <div className='bg-[#0f0f0f] h-auto w-[80vw] mb-5 mt-2 flex flex-wrap justify-center align-center'>
-                    <div className='bg-[#1b1b1b] h-[28.5vh] w-[70vw] m-3 rounded-[5px]'>
+                <div className='h-auto w-[80vw] mb-5 mt-2 flex flex-wrap justify-center align-center'>
+                    <div className='h-auto w-[70vw] m-3 rounded-[5px]'>
                         <p className='font-Poppins text-white text-[.8em] ml-3 mt-2'><span className='text-[#FFB64B]'>CONTACT</span> INFORMATION</p>
                         <p className='font-Poppins text-white w-[65vw] text-sm ml-3 mt-2 leading-[1.25rem] text-left'>If you have a good opportunity that matches my skills then don't hesitate to contact me.</p>
 
@@ -232,7 +233,7 @@ const Landingpage = ({ colortoggle }) => {
                         <button className='w-auto flex align-center justify-center ml-3 mt-2'><FaFacebookMessenger className='text-white mt-[.1em] xs:text-[.9em]' /><span className='text-white font-Poppins ml-[.75em] text-sm'>Messenger</span></button>
                     </div>
 
-                    <div className='bg-[#1b1b1b] h-auto w-[70vw] mb-3 rounded-[5px] flex flex-wrap justify-center'>
+                    <div className='h-auto w-[70vw] mb-3 rounded-[5px] flex flex-wrap justify-center'>
                         <button className='bg-[#E2E2E2] h-[40px] w-[240px] border border-[#E2E2E2] xs:mt-3 rounded-[3px]'>
                             <span className='text-black font-Poppins'>Discord</span>
                         </button>
