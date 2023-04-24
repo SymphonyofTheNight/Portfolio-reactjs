@@ -164,17 +164,18 @@ const Landingpage = ({ colortoggle }) => {
                 </div>
             </div> */}
 
+            {/* projects */}
             <div className='h-auto w-full flex items-center justify-center mt-5 projects-container'>
-                <div className='xs:w-[90vw] h-full'>
+                <div className='h-auto xs:w-[90vw] lg:w-[50vw] lg:mt-[7vh] flex flex-wrap justify-between'>
                     {projects && Object.keys(projects).map((index) => {
                         return (
-                            <div className='h-[45vh] w-full relative mt-4 mb-4'>
-                                <h1 className={`font-Poppins ${!colortoggle ? 'text-[#E2E2E2]' : 'text-black'} text-[30px] font-[700] absolute top-0 left-0`}>{projects[index].project}</h1>
+                            <div className='h-auto w-auto relative mt-2 mb-5'>
+                                <h1 className={`font-Poppins ${!colortoggle ? 'text-[#E2E2E2]' : 'text-black'} text-[30px] lg:text-[60px] font-[700] absolute top-0 left-0 lg:left-1`}>{projects[index].project}</h1>
                                 <span className={`font-Poppins ${!colortoggle ? 'text-[#E2E2E2]' : 'text-black'} p-[10px] text-[12px] font-[700] absolute top-0 right-0`}>{projects[index].web}</span>
-                                <div className='h-[auto] w-[90vw] right-0 mt-[5vh] img-container'>
+                                <div className='h-[auto] w-[90vw] lg:w-[50vw] right-0 mt-[5vh] img-container'>
                                     <img src={`${projects[index].img}`} alt='img' />
-                                    <div className='h-[auto] w-[90vw] mt-4'>
-                                        <span className='font-Poppins font-[700] text-[#E2E2E2] text-sm'>
+                                    <div className='h-[auto] w-[90vw] lg:w-auto mt-4'>
+                                        <span className='font-Poppins font-[700] text-[#E2E2E2] text-sm lg:text-[0.95em]'>
                                             {projects[index].description}
                                         </span>
                                     </div>
@@ -211,6 +212,7 @@ const Landingpage = ({ colortoggle }) => {
                 </div>
             </div>
 
+            {/* footer */}
             <div className='bg-white/[0.063] h-auto w-auto grid place-items-center gap-2 relative mt-[10vh]'>
 
                 <div className='h-auto w-[90vw] mt-5 flex align-center justify-center text-center'>
