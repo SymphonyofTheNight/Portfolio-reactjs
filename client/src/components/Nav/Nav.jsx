@@ -14,18 +14,22 @@ const Nav = ({ colortoggle, setColortoggle }) => {
 
     useEffect(() => {
         if (scrollcount <= shownav) {
-            shownavref.current.style.transform = 'translateY(100px)';
+            shownavref.current.style.transform = 'translateY(-100px)';
         } else {
             shownavref.current.style.transform = 'translateY(0px)';
         }
     }, [scrollcount]);
 
     return (
-        <nav className='flex items-center justify-end h-[6vh] w-[100vw] absolute bottom-0 left-0 z-10 transition-all duration-500 ease-in-out nav' ref={shownavref}>
-            <button className={`bg-[#1a1a1a] h-[4vh] w-auto p-2 rounded-[5px] xs:mr-[2vw] lg:mr-[1vw] font-Oxygen text-sm text-white`}
-                onClick={() => setColortoggle(state => !state)}
-            >
-                {!colortoggle ? 'Light mode' : 'Night mode'}
+        <nav className='nav absolute h-[10vh] w-[100vw] top-0 left-0 z-10 transition-all duration-500 ease-in-out' ref={shownavref}>
+            <button className={`xs:ml-[6vw] ${!colortoggle ? 'text-white' : 'text-black'} font-Oswald xl:text-2xl lg:tracking-[2.75px] xs:tracking-[1.75px] lg2:text-1xl lg1:text-[1.3em] lg:text-[1.3em] md:text-[1em] xs:text-base`}>
+                GINO D.V
+            </button>
+            <button className='absolute mr-[8vw] h-full w-[auto] grid items-center justify-center right-0'>
+                <div class="space-y-2">
+                    <span class="block w-8 h-0.5 bg-white"></span>
+                    <span class="block w-5 h-0.5 bg-white"></span>
+                </div>
             </button>
         </nav>
     )
