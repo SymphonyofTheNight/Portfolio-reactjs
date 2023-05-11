@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FaFacebookMessenger, FaCode, FaDiscord, FaPhone, FaEnvelope, FaFacebook, FaEnvelopeSquare } from 'react-icons/fa'
+import { FaFacebookMessenger, FaCode, FaDiscord, FaPhone, FaEnvelope, FaFacebook, FaEnvelopeSquare } from 'react-icons/fa';
 
 // developer
 import developer from '../../developer/developer';
@@ -167,13 +167,13 @@ const Landingpage = ({ colortoggle }) => {
                     </div>
 
                     <div className='h-auto w-[70vw] md:w-[80vw] lg:w-[1150px] xl:w-[1550px] mb-3 rounded-[5px] flex flex-wrap justify-center sm:mt-[3vh] xs:mt-[2vh] '>
-                        <button className='bg-[#E2E2E2] h-[40px] w-[270px] sm:w-[200px] border border-[#E2E2E2] xs:mt-3 sm:m-2 rounded-[3px]'>
+                        <button className='bg-[#FFB64B] h-[40px] w-[270px] sm:w-[200px] xs:mt-3 sm:m-2 rounded-[3px]'>
                             <span className='text-black font-Poppins'>Discord</span>
                         </button>
-                        <button className='bg-[#E2E2E2] h-[40px] w-[270px] sm:w-[200px] border border-[#E2E2E2] xs:mt-3 sm:m-2 rounded-[3px]'>
+                        <button className='bg-[#FFB64B] h-[40px] w-[270px] sm:w-[200px] xs:mt-3 sm:m-2 rounded-[3px]'>
                             <span className='text-black font-Poppins'>Gmail</span>
                         </button>
-                        <button className='bg-[#E2E2E2] h-[40px] w-[270px] sm:w-[200px] border border-[#E2E2E2] xs:mt-3 mb-3 sm:m-2 rounded-[3px]'>
+                        <button className='bg-[#FFB64B] h-[40px] w-[270px] sm:w-[200px] xs:mt-3 mb-3 sm:m-2 rounded-[3px]'>
                             <span className='text-black font-Poppins'>Messenger</span>
                         </button>
                     </div>

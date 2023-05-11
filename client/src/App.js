@@ -9,6 +9,8 @@ import Landingpage from './components/Landingpage/Landingpage';
 
 // scss
 import './scss/_main.scss';
+import LeftNav from './components/SideNav/LeftNav';
+import RightNav from './components/SideNav/RightNav';
 
 const App = () => {
 
@@ -32,6 +34,8 @@ const App = () => {
             <Nav colortoggle={colortoggle} setColortoggle={setColortoggle} />
             <Landingpage colortoggle={colortoggle} />
             <Cover colortoggle={colortoggle} setColortoggle={setColortoggle} />
+            <LeftNav colortoggle={colortoggle} setColortoggle={setColortoggle} />
+            <RightNav colortoggle={colortoggle} setColortoggle={setColortoggle} />
           </div>
         }
       />

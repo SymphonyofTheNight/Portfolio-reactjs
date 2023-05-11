@@ -25,6 +25,7 @@ const Cover = ({ colortoggle, setColortoggle }) => {
         window.addEventListener('scroll', offset);
     }, [])
 
+
     useEffect(() => {
         if (scrollcount <= wingTrigger) {
             leftwingref.current.style.transform = 'translateX(0px)';
@@ -92,8 +93,8 @@ const Cover = ({ colortoggle, setColortoggle }) => {
                 </div>
             </div>
             <div className='h-[15vh] w-[100vw] flex flex-row flex-wrap relative transition duration-[1s] ease-in-out' ref={botref}>
-                <div className='lg:w-[40vw] xs:w-[50vw] md:w-[45vw] h-[15vh] flex items-center justify-center md:text-justify'>
-                    <span className={`xl:text-[1.2em] font-Oswald ${!colortoggle ? 'text-white' : 'text-black'} tracking-[7px] mb-[3vh] xl:ml-[1.5vw] lg2:text-base lg2:tracking-[5px] lg1:text-[.9em] lg1:tracking-[4px] lg1:ml-[3vw] lg:text-[.9em] lg:tracking-[3px] md:text-[.9em] md:ml-[2vw] md:tracking-[3px] md:p-[2em] xs:text-[.7em] sm:text-base xs:tracking-[1px] xs:ml-[7vw] sm:ml-[2vw] xs:mb-[5vh]`}>
+                <div className='lg:w-[40vw] xs:w-[50vw] md:w-[45vw] flex items-center justify-center md:text-justify'>
+                    <span className={`xl:text-[1.2em] font-Oswald ${!colortoggle ? 'text-white' : 'text-black'} tracking-[7px] mb-[3vh] xl:ml-[.5vw] lg2:text-base lg2:tracking-[5px] lg1:text-[.9em] lg1:tracking-[4px] lg1:ml-[3vw] lg:text-[.9em] lg:tracking-[3px] md:text-[.9em] md:ml-[2vw] md:tracking-[3px] md:p-[2em] xs:text-[.7em] sm:text-base xs:tracking-[1px] xs:ml-[7vw] sm:ml-[2vw] xs:mb-[5vh]`}>
                         AVAILABLE FOR NEW PROJECTS THIS {months[new Date().getMonth()]}
                     </span>
                 </div>

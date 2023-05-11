@@ -141,3 +141,69 @@ body {
     }
 
 }
+
+.leftnav {
+    position: fixed;
+}
+
+.rightnav {
+    position: fixed;
+
+    .hrline-1 {
+        height: 8vh;
+    }
+
+    .hrline-2 {
+        height: 8vh;
+    }
+
+    .hrline-3 {
+        height: 8vh;
+    }
+
+    .hrline-4 {
+        height: 8vh;
+    }
+
+
+    .hrline-1::after {
+        position: absolute;
+        content: '04';
+        color: white;
+        top: 30px;
+        left: 15px;
+        font-family: 'Poppins', sans-serif;
+        font-size: .8em;
+    }
+
+    .hrline-2::after {
+        position: absolute;
+        content: '03';
+        color: white;
+        top: 30px;
+        left: 15px;
+        font-family: 'Poppins', sans-serif;
+        font-size: .8em;
+    }
+
+    .hrline-3::after {
+        position: absolute;
+        content: '02';
+        color: white;
+        top: 30px;
+        left: 15px;
+        font-family: 'Poppins', sans-serif;
+        font-size: .8em;
+    }
+
+    .hrline-4::after {
+        position: absolute;
+        content: '01';
+        color: white;
+        top: 30px;
+        left: 15px;
+        font-family: 'Poppins', sans-serif;
+        font-size: .8em;
+    }
+
+}
