@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FaFacebookMessenger, FaCode, FaDiscord, FaPhone, FaEnvelope, FaFacebook, FaEnvelopeSquare } from 'react-icons/fa';
+import { FaFacebookMessenger, FaCode, FaDiscord, FaPhone, FaEnvelope } from 'react-icons/fa';
 
 // developer
 import developer from '../../developer/developer';
@@ -10,6 +10,18 @@ import techstack from '../../developer/techstack';
 // projects
 import projects from '../../assets/projectsimg/projects';
 
+// social_media endpoints
+const github_endpoint = () => {
+    window.open('https://github.com/gamexgaming1997', '_blank');
+}
+
+const gmail_endpoint = () => {
+    window.open('mailto:ginodelavega1997@gmail.com', '_blank');
+}
+
+const messenger_endpoint = () => {
+    window.open('https://www.facebook.com/Crissaegrim1997', '_blank');
+}
 
 const Landingpage = ({ colortoggle }) => {
 
@@ -114,8 +126,8 @@ const Landingpage = ({ colortoggle }) => {
                                         </span>
                                     </div>
                                     <div className='h-[10vh] w-[90vw] flex items-center justify-start'>
-                                        <button className='h-[40px] w-[180px] border border-[#E2E2E2]'>
-                                            <span className='text-[#E2E2E2]'>Live Demo</span>
+                                        <button className='group bg-none relative h-[40px] w-[180px] border-[1px] hover:border-[black] border-[#E2E2E2] hover:bg-[#FFB64B]'>
+                                            <span className='text-[#E2E2E2] group-hover:text-[black]'>Live Demo</span>
                                         </button>
                                     </div>
                                 </div>
@@ -167,13 +179,13 @@ const Landingpage = ({ colortoggle }) => {
                     </div>
 
                     <div className='h-auto w-[70vw] md:w-[80vw] lg:w-[1150px] xl:w-[1550px] mb-3 rounded-[5px] flex flex-wrap justify-center sm:mt-[3vh] xs:mt-[2vh] '>
-                        <button className='bg-[#FFB64B] h-[40px] w-[270px] sm:w-[200px] xs:mt-3 sm:m-2 rounded-[3px]'>
-                            <span className='text-black font-Poppins'>Discord</span>
+                        <button onClick={github_endpoint} className='bg-[#FFB64B] h-[40px] w-[270px] sm:w-[200px] xs:mt-3 sm:m-2 rounded-[3px]'>
+                            <span className='text-black font-Poppins'>Github</span>
                         </button>
-                        <button className='bg-[#FFB64B] h-[40px] w-[270px] sm:w-[200px] xs:mt-3 sm:m-2 rounded-[3px]'>
+                        <button onClick={gmail_endpoint} className='bg-[#FFB64B] h-[40px] w-[270px] sm:w-[200px] xs:mt-3 sm:m-2 rounded-[3px]'>
                             <span className='text-black font-Poppins'>Gmail</span>
                         </button>
-                        <button className='bg-[#FFB64B] h-[40px] w-[270px] sm:w-[200px] xs:mt-3 mb-3 sm:m-2 rounded-[3px]'>
+                        <button onClick={messenger_endpoint} className='bg-[#FFB64B] h-[40px] w-[270px] sm:w-[200px] xs:mt-3 mb-3 sm:m-2 rounded-[3px]'>
                             <span className='text-black font-Poppins'>Messenger</span>
                         </button>
                     </div>

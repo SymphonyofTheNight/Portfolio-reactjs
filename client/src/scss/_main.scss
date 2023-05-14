@@ -144,6 +144,16 @@ body {
 
 .leftnav {
     position: fixed;
+
+    .firstbtn {
+        position: absolute;
+        top: 0px;
+    }
+
+    .secondbtn {
+        position: absolute;
+        top: 45px;
+    }
 }
 
 .rightnav {

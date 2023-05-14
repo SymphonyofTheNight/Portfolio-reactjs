@@ -1,12 +1,29 @@
 import React from 'react';
-import { RiGithubLine, RiDiscordLine } from 'react-icons/ri';
+import { RiGithubLine, RiFacebookBoxLine } from 'react-icons/ri';
+
+
+const location_github = () => {
+    window.open('https://github.com/gamexgaming1997', '_blank');
+}
+
+const location_fb = () => {
+    window.open('https://www.facebook.com/Crissaegrim1997', '_blank');
+}
 
 const LeftNav = () => {
     return (
         <div className='xs:hidden relative lg:grid h-[30vh] w-[5vw] left-[3vw] bottom-0 place-items-center leftnav'>
-            <RiGithubLine className='text-white text-2xl absolute top-[0vh]' />
-            <RiDiscordLine className='text-white text-2xl absolute top-[5vh]' />
+
+            <button className='bg-blue-700 relative h-auto w-[5vw] flex items-center justify-center firstbtn' onClick={location_github}>
+                <RiGithubLine className='text-white text-2xl absolute top-[0vh]' />
+            </button>
+
+            <button className='bg-blue-700 relative h-auto w-[5vw] flex items-center justify-center secondbtn' onClick={location_fb}>
+                <RiFacebookBoxLine className='text-white text-2xl absolute top-[0vh]' />
+            </button>
+
             <div className='bg-white absolute h-[20vh] w-[2px] bottom-0' />
+
         </div>
     )
 }

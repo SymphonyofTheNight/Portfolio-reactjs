@@ -100,15 +100,21 @@ const Cover = ({ colortoggle, setColortoggle }) => {
                 </div>
                 <div className='w-[40vw] h-[15vh] absolute right-0 flex items-center justify-end'>
                     <div className='xl:mr-[6vw] lg:h-[4vh] lg:w-[auto] lg:mr-[5vw] xs:mr-[8vw] sm:mr-[4vw] md:mr-[5vw] mb-[3vh] xs:mb-[5vh] flex flex-row '>
-                        <button className='lg:h-[4vh] lg:w-[auto] xs:w-[11vw] sm:w-[auto] grid place-items-center'>
-                            <FaFacebook className={`xl:text-[2em] mr-[20px] ml-[20px] ${!colortoggle ? 'text-white' : 'text-black'} lg2:text-3xl lg1:text-2xl lg:text-2xl md:text-2xl xs:text-2xl`} />
-                        </button>
-                        <button className='bg-transparent lg:h-[4vh] lg:w-[auto] xs:w-[11vw] sm:w-[auto] grid place-items-center'>
-                            <FaGithub className={`xl:text-[2em] mr-[20px] ml-[20px] ${!colortoggle ? 'text-white' : 'text-black'} lg2:text-3xl lg1:text-2xl lg:text-2xl md:text-2xl xs:text-2xl`} />
-                        </button>
-                        <button className='bg-transparent lg:h-[4vh] lg:w-[auto] xs:w-[11vw] sm:w-[auto] grid place-items-center'>
-                            <FaTelegram className={`xl:text-[2em] mr-[20px] ml-[20px] ${!colortoggle ? 'text-white' : 'text-black'} lg2:text-3xl lg1:text-2xl lg:text-2xl md:text-2xl xs:text-2xl`} />
-                        </button>
+                        <a href='https://www.facebook.com/Crissaegrim1997' target="_blank" rel="noreferrer">
+                            <button className='lg:h-[4vh] lg:w-[auto] xs:w-[11vw] sm:w-[auto] grid place-items-center'>
+                                <FaFacebook className={`xl:text-[2em] mr-[20px] ml-[20px] ${!colortoggle ? 'text-white' : 'text-black'} lg2:text-3xl lg1:text-2xl lg:text-2xl md:text-2xl xs:text-2xl`} />
+                            </button>
+                        </a>
+                        <a href='https://github.com/gamexgaming1997' target="_blank" rel="noreferrer">
+                            <button className='bg-transparent lg:h-[4vh] lg:w-[auto] xs:w-[11vw] sm:w-[auto] grid place-items-center'>
+                                <FaGithub className={`xl:text-[2em] mr-[20px] ml-[20px] ${!colortoggle ? 'text-white' : 'text-black'} lg2:text-3xl lg1:text-2xl lg:text-2xl md:text-2xl xs:text-2xl`} />
+                            </button>
+                        </a>
+                        <a href="mailto:ginodelavega1997@gmail.com" target="_blank" rel="noreferrer">
+                            <button className='bg-transparent lg:h-[4vh] lg:w-[auto] xs:w-[11vw] sm:w-[auto] grid place-items-center'>
+                                <FaTelegram className={`xl:text-[2em] mr-[20px] ml-[20px] ${!colortoggle ? 'text-white' : 'text-black'} lg2:text-3xl lg1:text-2xl lg:text-2xl md:text-2xl xs:text-2xl`} />
+                            </button>
+                        </a>
                     </div>
                 </div>
             </div>

@@ -1,4 +1,6 @@
 import React, { useRef, useState, useEffect } from 'react';
+// resume
+import resume from '../../resume/resume.docx';
 
 const Nav = ({ colortoggle, setColortoggle }) => {
 
@@ -26,9 +28,11 @@ const Nav = ({ colortoggle, setColortoggle }) => {
                 G
             </button>
             <div className='xs:hidden lg:grid absolute xs:mr-[8vw] lg:mr-[9vw] h-full w-[auto] place-items-center right-0'>
-                <button className='bg-none h-[50px] w-[145px] rounded-[5px] border-[#FFB64B] border-[1px] text-[#FFB64B]'>
-                    Resume
-                </button>
+                <a href={resume} download="resume">
+                    <button className='bg-none h-[50px] w-[145px] rounded-[5px] border-[#FFB64B] border-[1px] text-[#FFB64B]'>
+                        Resume
+                    </button>
+                </a>
             </div>
             <button className='absolute xs:mr-[8vw] lg:mr-[4vw] h-full w-[auto] grid items-center justify-center right-0'>
                 <div class="space-y-2">
