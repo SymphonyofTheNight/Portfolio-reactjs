@@ -121,13 +121,13 @@ const Landingpage = ({ colortoggle }) => {
                                 <div className='h-[auto] w-[90vw] lg:w-full right-0 mt-[5vh] img-container'>
                                     <img src={`${projects[index].img}`} alt='img' />
                                     <div className='h-[auto] w-[90vw] lg:w-auto mt-4'>
-                                        <span className='font-Poppins font-[700] text-[#E2E2E2] text-sm lg:text-[0.95em]'>
+                                        <span className={`font-Poppins font-[700] ${!colortoggle ? 'text-[#E2E2E2]' : 'text-black'} text-sm lg:text-[0.95em]`}>
                                             {projects[index].description}
                                         </span>
                                     </div>
                                     <div className='h-[10vh] w-[90vw] flex items-center justify-start'>
-                                        <button className='group bg-none relative h-[40px] w-[180px] border-[1px] hover:border-[black] border-[#E2E2E2] hover:bg-[#FFB64B]'>
-                                            <span className='text-[#E2E2E2] group-hover:text-[black]'>Live Demo</span>
+                                        <button className={`group bg-none relative h-[40px] w-[180px] border-[1px] hover:border-[black] border-[#E2E2E2] ${!colortoggle ? 'hover:bg-[#FFB64B]' : 'hover:bg-[#000000]'}`}>
+                                            <span className={`${!colortoggle ? 'text-[#E2E2E2]' : 'text-black'} group-hover:text-[black]`}>Live Demo</span>
                                         </button>
                                     </div>
                                 </div>
@@ -156,10 +156,10 @@ const Landingpage = ({ colortoggle }) => {
             </div>
 
             {/* footer */}
-            <div className='bg-white/[0.063] h-auto w-auto grid place-items-center gap-2 relative mt-[10vh]'>
+            <div className={`bg-white/[0.063] h-auto w-auto grid place-items-center gap-2 relative mt-[10vh]`}>
 
                 <div className='h-auto w-[90vw] mt-5 flex align-center justify-center text-center'>
-                    <p className='font-Poppins text-2xl text-white'>Need a front-end
+                    <p className={`font-Poppins text-2xl ${!colortoggle ? 'text-white' : 'text-black'}`}>Need a front-end
                         <br />
                         <span className='font-Poppins text-[#FFB64B] font-[500]'>Developer ?</span>
                         <p className='text-base font-[500]'>Let's <span className='text-[#FFB64B]'>work</span> together!!</p>
@@ -168,14 +168,14 @@ const Landingpage = ({ colortoggle }) => {
 
                 <div className='h-auto w-[80vw] md:w-auto mb-5 mt-2 flex flex-wrap justify-center align-center'>
                     <div className='h-auto w-[70vw] md:w-[60vw] lg:w-[650px] m-3 rounded-[5px]'>
-                        <p className='font-Poppins text-white text-[.8em] ml-3 mt-2'><span className='text-[#FFB64B]'>CONTACT</span> INFORMATION</p>
-                        <p className='font-Poppins text-white w-[65vw] text-sm ml-3 mt-2 leading-[1.25rem] text-left'>If you have a good opportunity that matches my skills then don't hesitate to contact me.</p>
+                        <p className={`font-Poppins ${!colortoggle ? 'text-white' : 'text-black'} text-[.8em] ml-3 mt-2`}><span className='text-[#FFB64B]'>CONTACT</span> INFORMATION</p>
+                        <p className={`font-Poppins ${!colortoggle ? 'text-white' : 'text-black'} w-[65vw] text-sm ml-3 mt-2 leading-[1.25rem] text-left`}>If you have a good opportunity that matches my skills then don't hesitate to contact me.</p>
 
                         <br />
-                        <button className='w-auto flex align-center justify-center ml-3'><FaDiscord className='text-white mt-[.1em] xs:text-[.9em]' /><span className='text-white font-Poppins ml-[.75em] text-sm'>Discord</span></button>
-                        <button className='w-auto flex align-center justify-center ml-3 mt-2'><FaEnvelope className='text-white mt-[.1em] xs:text-[.9em]' /><span className='text-white font-Poppins ml-[.75em] text-sm'>ginodelavega1997@gmail.com</span></button>
-                        <button className='w-auto flex align-center justify-center ml-3 mt-2'><FaPhone className='text-white mt-[.1em] xs:text-[.9em]' /><span className='text-white font-Poppins ml-[.75em] text-sm'>+63 9922325221</span></button>
-                        <button className='w-auto flex align-center justify-center ml-3 mt-2'><FaFacebookMessenger className='text-white mt-[.1em] xs:text-[.9em]' /><span className='text-white font-Poppins ml-[.75em] text-sm'>Messenger</span></button>
+                        <button className='w-auto flex align-center justify-center ml-3'><FaDiscord className={`${!colortoggle ? 'text-white' : 'text-black'} mt-[.1em] xs:text-[.9em]`} /><span className={`${!colortoggle ? 'text-white' : 'text-black'} font-Poppins ml-[.75em] text-sm`}>Discord</span></button>
+                        <button className='w-auto flex align-center justify-center ml-3 mt-2'><FaEnvelope className={`${!colortoggle ? 'text-white' : 'text-black'} mt-[.1em] xs:text-[.9em]`} /><span className={`${!colortoggle ? 'text-white' : 'text-black'} font-Poppins ml-[.75em] text-sm`}>ginodelavega1997@gmail.com</span></button>
+                        <button className='w-auto flex align-center justify-center ml-3 mt-2'><FaPhone className={`${!colortoggle ? 'text-white' : 'text-black'} mt-[.1em] xs:text-[.9em]`} /><span className={`${!colortoggle ? 'text-white' : 'text-black'} font-Poppins ml-[.75em] text-sm`}>+63 9922325221</span></button>
+                        <button className='w-auto flex align-center justify-center ml-3 mt-2'><FaFacebookMessenger className={`${!colortoggle ? 'text-white' : 'text-black'} mt-[.1em] xs:text-[.9em]`} /><span className={`${!colortoggle ? 'text-white' : 'text-black'} font-Poppins ml-[.75em] text-sm`}>Messenger</span></button>
                     </div>
 
                     <div className='h-auto w-[70vw] md:w-[80vw] lg:w-[1150px] xl:w-[1550px] mb-3 rounded-[5px] flex flex-wrap justify-center sm:mt-[3vh] xs:mt-[2vh] '>
