@@ -121,13 +121,13 @@ const Landingpage = ({ colortoggle }) => {
                                 <div className='h-[auto] w-[90vw] lg:w-full right-0 mt-[5vh] img-container'>
                                     <img src={`${projects[index].img}`} alt='img' />
                                     <div className='h-[auto] w-[90vw] lg:w-auto mt-4'>
-                                        <span className={`font-Poppins font-[700] ${!colortoggle ? 'text-[#E2E2E2]' : 'text-black'} text-sm lg:text-[0.95em]`}>
+                                        <span className={`font-Poppins font-[700] ${!colortoggle ? 'text-[#E2E2E2]' : 'text-black opacity-[0.6]'} text-sm lg:text-[0.95em]`}>
                                             {projects[index].description}
                                         </span>
                                     </div>
                                     <div className='h-[10vh] w-[90vw] flex items-center justify-start'>
                                         <button className={`group bg-none relative h-[40px] w-[180px] border-[1px] hover:border-[black] border-[#E2E2E2] ${!colortoggle ? 'hover:bg-[#FFB64B]' : 'hover:bg-[#000000]'}`}>
-                                            <span className={`${!colortoggle ? 'text-[#E2E2E2]' : 'text-black'} group-hover:text-[black]`}>Live Demo</span>
+                                            <span className={`${!colortoggle ? 'text-[#E2E2E2]' : 'group-hover:text-[#FFB64B]'} `}>Live Demo</span>
                                         </button>
                                     </div>
                                 </div>
