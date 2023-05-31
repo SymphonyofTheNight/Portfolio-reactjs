@@ -6,6 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Cover from './components/Cover/Cover';
 import Nav from './components/Nav/Nav';
 import Landingpage from './components/Landingpage/Landingpage';
+import HamburgerNav from './components/HamburgerNav/HamburgerNav';
 
 // scss
 import './scss/_main.scss';
@@ -15,6 +16,7 @@ import RightNav from './components/SideNav/RightNav';
 const App = () => {
 
   const [colortoggle, setColortoggle] = useState(false);
+  const [hamburgertoggle, setHamburgertoggle] = useState(false);
 
   useEffect(() => {
     var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
@@ -31,11 +33,12 @@ const App = () => {
       <Route path='/' element=
         {
           <div className='overflow-hidden'>
-            <Nav colortoggle={colortoggle} setColortoggle={setColortoggle} />
+            <Nav colortoggle={colortoggle} setColortoggle={setColortoggle} setHambugertoggle={setHamburgertoggle} />
             <Landingpage colortoggle={colortoggle} />
             <Cover colortoggle={colortoggle} setColortoggle={setColortoggle} />
             <LeftNav colortoggle={colortoggle} setColortoggle={setColortoggle} />
             <RightNav colortoggle={colortoggle} setColortoggle={setColortoggle} />
+            <HamburgerNav colortoggle={colortoggle} hamburgertoggle={hamburgertoggle} setHambugertoggle={setHamburgertoggle} />
           </div>
         }
       />

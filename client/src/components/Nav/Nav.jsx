@@ -1,8 +1,8 @@
 import React, { useRef, useState, useEffect } from 'react';
 // resume
-import resume from '../../resume/resume.docx';
+import resume from '../../resume/resume.pdf';
 
-const Nav = ({ colortoggle, setColortoggle }) => {
+const Nav = ({ colortoggle, setColortoggle, setHambugertoggle }) => {
 
     const [scrollcount, setScrollCount] = useState(0);
     const shownavref = useRef(null);
@@ -24,7 +24,7 @@ const Nav = ({ colortoggle, setColortoggle }) => {
 
     return (
         <div className='nav absolute xs:h-[10vh] lg:h-[14vh] w-[100vw] top-0 left-0 z-10 transition-all duration-500 ease-in-out' ref={shownavref}>
-            <button className={`xs:ml-[6vw] lg:ml-[4vw] ${!colortoggle ? 'text-white' : 'text-black'} font-Poppins font-[700] lg:tracking-[2.75px] xs:tracking-[1.75px] lg:text-[2.3em] md:text-[1em] xs:text-base`}>
+            <button className={`xs:ml-[6vw] lg:ml-[4vw] ${!colortoggle ? 'text-white' : 'text-black'} font-Poppins font-[700] lg:tracking-[2.75px] xs:tracking-[1.75px] lg:text-[2.3em] md:text-[1em] xs:text-2xl`}>
                 G
             </button>
             <div className='xs:hidden lg:grid absolute xs:mr-[8vw] lg:mr-[9vw] h-full w-[auto] place-items-center right-0'>
@@ -34,7 +34,11 @@ const Nav = ({ colortoggle, setColortoggle }) => {
                     </button>
                 </a>
             </div>
-            <button className='absolute xs:mr-[8vw] lg:mr-[4vw] h-full w-[auto] grid items-center justify-center right-0'>
+            <button className='absolute xs:mr-[6.5vw] lg:mr-[4vw] h-full w-[auto] grid items-center justify-center right-0'
+                onClick={() => {
+                    setHambugertoggle(state => !state)
+                }}
+            >
                 <div class="space-y-2">
                     <span class={`block w-8 h-0.5 ${!colortoggle ? 'bg-white' : 'bg-black'}`}></span>
                     <span class={`block w-5 h-0.5 ${!colortoggle ? 'bg-white' : 'bg-black'}`}></span>
