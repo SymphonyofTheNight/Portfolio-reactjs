@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
-import { FaFacebookMessenger, FaCode, FaDiscord, FaPhone, FaEnvelope } from 'react-icons/fa';
+import React, { useState, useEffect, useRef } from 'react';
+import { FaFacebookMessenger, FaCode, FaDiscord, FaPhone, FaEnvelope, FaTimes } from 'react-icons/fa';
+import { RiGithubLine, RiFacebookBoxLine } from 'react-icons/ri';
 
 // developer
 import developer from '../../developer/developer';
@@ -23,65 +24,44 @@ const messenger_endpoint = () => {
     window.open('https://www.facebook.com/Crissaegrim1997', '_blank');
 }
 
-const Landingpage = ({ colortoggle }) => {
+const Landingpage = ({ colortoggle, setHambugertoggle, hamburgertoggle }) => {
 
     const [hover, setHover] = useState("");
-    //     let ctx = gsap.context(() => {
-    //         gsap.timeline({
-    //             scrollTrigger: {
-    //                 trigger: '.box-1',
-    //                 scrub: true,
-    //                 start: "top center",
-    //             }
-    //         }).fromTo('.landing',
-    //             {
-    //                 background: '#0A0909'
-    //             },
-    //             {
-    //                 duration: 2,
-    //                 background: '#1F2124',
-    //                 transition: 1
-    //             }
-    //         );
-    //         gsap.timeline({
-    //             scrollTrigger: {
-    //                 trigger: '.box-2',
-    //                 scrub: true,
-    //                 start: "top center",
-    //             }
-    //         }).fromTo('.landing',
-    //             {
-    //                 background: '#1F2124'
-    //             },
-    //             {
-    //                 duration: 2,
-    //                 background: '#161824',
-    //                 transition: 1
-    //             }
-    //         );
-    //         gsap.timeline({
-    //             scrollTrigger: {
-    //                 trigger: '.box-3',
-    //                 scrub: true,
-    //                 start: "top center",
-    //             }
-    //         }).fromTo('.landing',
-    //             {
-    //                 background: '#161824'
-    //             },
-    //             {
-    //                 duration: 2,
-    //                 background: '#22272E',
-    //                 transition: 1
-    //             }
-    //         );
-    //     });
+    const dom_child = useRef();
 
-    //     return () => ctx.revert();
-    // }, []);
+    //   elements to navigate
+    const home = useRef(null);
+    const about = useRef(null);
+    const project = useRef(null);
+    const contact = useRef(null);
+
+    useEffect(() => {
+        if (!hamburgertoggle) {
+            dom_child.current.style.transform = 'TranslateX(100%)';
+        } else {
+            dom_child.current.style.transform = 'TranslateX(0%)';
+        }
+    }, [hamburgertoggle])
+
+    const scrollInto_home = () => {
+        home.current.scrollIntoView({ behavior: 'smooth' });
+        setHambugertoggle(state => !state);
+    }
+
+    const scrollInto_about = () => {
+        about.current.scrollIntoView({ behavior: 'auto', block: 'center', inline: 'center' });
+    }
+
+    const scrollInto_projects = () => {
+        project.current.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    const scrollInto_contact = () => {
+        contact.current.scrollIntoView({ behavior: 'smooth' });
+    }
 
     return (
-        <div className={`${colortoggle ? 'bg-[#ffffff]' : 'bg-[#0A0909]'} h-full w-full overflow-hidden landing`}>
+        <div className={`${colortoggle ? 'bg-[#ffffff]' : 'bg-[#0A0909]'} h-full w-full overflow-hidden landing`} ref={home}>
 
             {/* img */}
             <div className='h-[70vh] w-[100vw] md:mt-[30vh] xs:mt-[50vh] relative grid items-center justify-center img-container'>
@@ -89,7 +69,7 @@ const Landingpage = ({ colortoggle }) => {
             </div>
 
             {/* about me */}
-            <div className='h-[auto] w-[100vw] mt-[5vh] relative flex flex-wrap xs:flex-col lg:flex-row items-center lg:items-start lg:justify-center text-left about'>
+            <div className='h-[auto] w-[100vw] mt-[5vh] relative flex flex-wrap xs:flex-col lg:flex-row items-center lg:items-start lg:justify-center text-left about' ref={about}>
                 <div className='xs:h-[auto] w-[90vw] lg:w-[220px] lg:h-[10vh]'>
                     <span className={`${!colortoggle ? 'text-white' : 'text-black'} opacity-[0.9] font-Poppins xl:text-[1em] lg2:text-[1em] lg:text-base md:text-[1em] xs:text-[1.20em]  md:text-justify`}>
                         <span className='text-[#FFB64B] m-[2vw] sm:m-[0vw] font-Poppins xl:text-[1em] lg2:text-[1em] lg:text-base md:text-[1em] xs:text-base md:text-justify'>02.</span> About Me.
@@ -106,7 +86,7 @@ const Landingpage = ({ colortoggle }) => {
             </div>
 
             {/* projects */}
-            <div className='xs:mt-[15vh] h-auto w-full flex flex-wrap xs:flex-col items-center justify-center projects-container'>
+            <div className='xs:mt-[15vh] h-auto w-full flex flex-wrap xs:flex-col items-center justify-center projects-container' ref={project}>
                 <div className='xs:h-[auto] w-[90vw] lg:w-[970px]'>
                     <span className={`${!colortoggle ? 'text-white' : 'text-black'} opacity-[0.9] font-Poppins xl:text-[1em] lg2:text-[1em] lg:text-base md:text-[1em] xs:text-[1.20em] md:text-justify`}>
                         <span className='text-[#FFB64B] m-[2vw] sm:m-[0vw] font-Poppins xl:text-[1em] lg2:text-[1em] lg:text-base md:text-[1em] xs:text-base md:text-justify'>02.</span> Projects.
@@ -126,7 +106,11 @@ const Landingpage = ({ colortoggle }) => {
                                         </span>
                                     </div>
                                     <div className='h-[10vh] w-[90vw] flex items-center justify-start'>
-                                        <button className={`group bg-none relative h-[40px] w-[180px] border-[1px] hover:border-[black] border-[#E2E2E2] ${!colortoggle ? 'hover:bg-[#FFB64B]' : 'hover:bg-[#000000]'}`}>
+                                        <button className={`group bg-none relative h-[40px] w-[180px] border-[1px] hover:border-[black] border-[#E2E2E2] ${!colortoggle ? 'hover:bg-[#FFB64B]' : 'hover:bg-[#000000]'}`}
+                                            onClick={() => {
+                                                window.open(`${projects[index].link}`, '_blank');
+                                            }}
+                                        >
                                             <span className={`${!colortoggle ? 'text-[#E2E2E2]' : 'group-hover:text-[#FFB64B]'} `}>Live Demo</span>
                                         </button>
                                     </div>
@@ -156,7 +140,7 @@ const Landingpage = ({ colortoggle }) => {
             </div>
 
             {/* footer */}
-            <div className={`bg-white/[0.063] h-auto w-auto grid place-items-center gap-2 relative mt-[10vh]`}>
+            <div className={`bg-white/[0.063] h-auto w-auto grid place-items-center gap-2 relative mt-[10vh]`} ref={contact}>
 
                 <div className='h-auto w-[90vw] mt-5 flex align-center justify-center text-center'>
                     <p className={`font-Poppins text-2xl ${!colortoggle ? 'text-white' : 'text-black'}`}>Need a front-end
@@ -193,6 +177,46 @@ const Landingpage = ({ colortoggle }) => {
 
                 <div className={`${!colortoggle ? 'text-white' : 'text-black'} xs:h-[5vh] w-full flex items-center justify-center font-Poppins text-[.7em] sm:text-base lg:text-[.7em]`}>
                     Built with <FaCode className={`xs:ml-2 transform-all`} /> &nbsp; by Gino Dela Vega
+                </div>
+            </div>
+
+            {/* hamburgernav */}
+            <div className={`xs:h-full xs:w-[100vw] ${!colortoggle ? 'bg-transparent' : 'bg-transparent'} absolute top-0 left-0 z-20 transition-all duration-500 ease-in-out HamburgerNav`} ref={dom_child}>
+                <div className='absolute top-0 right-0 xs:h-full xs:w-[100vw] sm:w-[412px]'>
+                    <button className='h-[5vh] xs:w-[50px] absolute top-5 right-3 grid place-items-center'
+                        onClick={() => {
+                            setHambugertoggle(state => !state)
+                        }}
+                    >
+                        <FaTimes className={`${!colortoggle ? 'text-[#FFB64B]' : 'text-black'} text-1xl`} />
+                    </button>
+                    <div className={`${!colortoggle ? 'bg-[#181818]' : 'bg-[#ffffff]'} xs:h-[100vh] xs:w-full grid`}>
+                        <div className='h-[41vh] w-[410px] mt-[25vh]'>
+                            <button className='h-[7vh] w-full text-left flex items-end justify-bottom' onClick={scrollInto_home}>
+                                <span className='text-[#FFB64B] ml-5 font-Poppins text-base'>01 <span className={`${!colortoggle ? 'text-white' : 'text-black'} ml-2 font-Poppins text-3xl`}>HOME</span></span>
+                            </button>
+                            <button className='h-[7vh] w-full text-left flex items-end justify-bottom' onClick={scrollInto_about} >
+                                <span className='text-[#FFB64B] ml-5 font-Poppins text-base'>02 <span className={`${!colortoggle ? 'text-white' : 'text-black'} ml-2 font-Poppins text-3xl`}>ABOUT</span></span>
+                            </button>
+                            <button className='h-[7vh] w-full text-left flex items-end justify-bottom' onClick={scrollInto_projects}>
+                                <span className='text-[#FFB64B] ml-5 font-Poppins text-base'>03 <span className={`${!colortoggle ? 'text-white' : 'text-black'} ml-2 font-Poppins text-3xl`}>PROJECTS</span></span>
+                            </button>
+                            <button className='h-[7vh] w-full text-left flex items-end justify-bottom' onClick={scrollInto_contact}>
+                                <span className='text-[#FFB64B] ml-5 font-Poppins text-base'>04 <span className={`${!colortoggle ? 'text-white' : 'text-black'} ml-2 font-Poppins text-3xl`}>CONTACT</span></span>
+                            </button>
+                            <div className='mt-[6vh] h-[7vh] w-[270px] ml-5 text-left flex items-center justify-between'>
+                                <button className={`bg-none h-[50px] w-[145px] rounded-[5px] ${!colortoggle ? 'border-[#FFB64B] text-[#FFB64B]' : 'border-[#000000] text-[#000000]'} font-Poppins border-[1px] `}>
+                                    Resume
+                                </button>
+                                <button className={`h-[50px] w-[auto] rounded-[5px] ${!colortoggle ? 'border-[#FFB64B] text-[#FFB64B]' : 'border-[#000000] text-[#000000]'} border-[1px] `}>
+                                    <RiGithubLine className={`${!colortoggle ? 'text-[#FFB64B]' : 'text-black'} text-2xl ml-3 mr-3`} />
+                                </button>
+                                <button className={`h-[50px] w-[auto] rounded-[5px] ${!colortoggle ? 'border-[#FFB64B] text-[#FFB64B]' : 'border-[#000000] text-[#000000]'} border-[1px] `}>
+                                    <RiFacebookBoxLine className={`${!colortoggle ? 'text-[#FFB64B]' : 'text-black'} text-2xl ml-3 mr-3`} />
+                                </button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 

@@ -92,6 +92,7 @@ body {
 //nav
 .nav {
     position: fixed;
+    transform: translateY(-100px);
 }
 
 .landing {
@@ -283,4 +284,5 @@ body {
 .HamburgerNav {
     position: relative;
     position: fixed;
+    transform: translateX(100%);
 }

@@ -26,15 +26,15 @@ module.exports = {
       })
     },
     screens: {
-      xs: "360px",
-      sss: "405px",
-      ss: "620px",
-      sm: "768px",
-      md: "1024px",
-      lg: "1280px",
-      lg1: "1366px",
-      lg2: "1660px",
-      xl: "1920px",
+      xs: "360px", // s-phone
+      sss: "405px", // m-phone
+      ss: "620px", // s-tablet
+      sm: "768px", // tablet
+      md: "1024px", // tablet - ipad
+      lg: "1280px", // ipad
+      lg1: "1366px", // laptop
+      lg2: "1660px", // computer
+      xl: "1920px", // computer-l
     },
   },
   plugins: [],
