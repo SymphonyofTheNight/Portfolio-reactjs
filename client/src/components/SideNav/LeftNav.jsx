@@ -7,6 +7,7 @@ const location_github = () => {
 }
 
 const location_fb = () => {
+    alert();
     window.open('https://www.facebook.com/Crissaegrim1997', '_blank');
 }
 

@@ -2,6 +2,9 @@ import React, { useState, useEffect, useRef } from 'react';
 import { FaFacebookMessenger, FaCode, FaDiscord, FaPhone, FaEnvelope, FaTimes } from 'react-icons/fa';
 import { RiGithubLine, RiFacebookBoxLine } from 'react-icons/ri';
 
+// resume
+import resume from '../../resume/resume.pdf';
+
 // developer
 import developer from '../../developer/developer';
 
@@ -58,6 +61,14 @@ const Landingpage = ({ colortoggle, setHambugertoggle, hamburgertoggle }) => {
 
     const scrollInto_contact = () => {
         contact.current.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    const location_github = () => {
+        window.open('https://github.com/gamexgaming1997', '_blank');
+    }
+
+    const location_fb = () => {
+        window.open('https://www.facebook.com/Crissaegrim1997', '_blank');
     }
 
     return (
@@ -205,13 +216,19 @@ const Landingpage = ({ colortoggle, setHambugertoggle, hamburgertoggle }) => {
                                 <span className='text-[#FFB64B] ml-5 font-Poppins text-base'>04 <span className={`${!colortoggle ? 'text-white' : 'text-black'} ml-2 font-Poppins text-3xl`}>CONTACT</span></span>
                             </button>
                             <div className='mt-[6vh] h-[7vh] w-[270px] ml-5 text-left flex items-center justify-between'>
-                                <button className={`bg-none h-[50px] w-[145px] rounded-[5px] ${!colortoggle ? 'border-[#FFB64B] text-[#FFB64B]' : 'border-[#000000] text-[#000000]'} font-Poppins border-[1px] `}>
-                                    Resume
-                                </button>
-                                <button className={`h-[50px] w-[auto] rounded-[5px] ${!colortoggle ? 'border-[#FFB64B] text-[#FFB64B]' : 'border-[#000000] text-[#000000]'} border-[1px] `}>
+                                <a href={resume} download="resume">
+                                    <button className={`bg-none h-[50px] w-[145px] rounded-[5px] ${!colortoggle ? 'border-[#FFB64B] text-[#FFB64B]' : 'border-[#000000] text-[#000000]'} font-Poppins border-[1px] `}>
+                                        Resume
+                                    </button>
+                                </a>
+                                <button className={`h-[50px] w-[auto] rounded-[5px] ${!colortoggle ? 'border-[#FFB64B] text-[#FFB64B]' : 'border-[#000000] text-[#000000]'} border-[1px] `}
+                                    onClick={location_github}
+                                >
                                     <RiGithubLine className={`${!colortoggle ? 'text-[#FFB64B]' : 'text-black'} text-2xl ml-3 mr-3`} />
                                 </button>
-                                <button className={`h-[50px] w-[auto] rounded-[5px] ${!colortoggle ? 'border-[#FFB64B] text-[#FFB64B]' : 'border-[#000000] text-[#000000]'} border-[1px] `}>
+                                <button className={`h-[50px] w-[auto] rounded-[5px] ${!colortoggle ? 'border-[#FFB64B] text-[#FFB64B]' : 'border-[#000000] text-[#000000]'} border-[1px] `}
+                                    onClick={location_fb}
+                                >
                                     <RiFacebookBoxLine className={`${!colortoggle ? 'text-[#FFB64B]' : 'text-black'} text-2xl ml-3 mr-3`} />
                                 </button>
                             </div>
