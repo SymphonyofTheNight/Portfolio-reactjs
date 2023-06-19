@@ -6,11 +6,13 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Cover from './components/Cover/Cover';
 import Nav from './components/Nav/Nav';
 import Landingpage from './components/Landingpage/Landingpage';
+import Projects from './components/Projects/Projects';
 import LeftNav from './components/SideNav/LeftNav';
 import RightNav from './components/SideNav/RightNav';
 
 // scss
 import './scss/_main.scss';
+
 
 const App = () => {
 
@@ -24,12 +26,21 @@ const App = () => {
           <div className='overflow-hidden'>
             <Nav colortoggle={colortoggle} setColortoggle={setColortoggle} setHambugertoggle={setHamburgertoggle} />
             <Landingpage colortoggle={colortoggle} setHambugertoggle={setHamburgertoggle} hamburgertoggle={hamburgertoggle} />
-            <Cover colortoggle={colortoggle} setColortoggle={setColortoggle} />
+            <Cover colortoggle={colortoggle} setColortoggle={setColortoggle} title='FRONT END DEVELOPER' />
             <LeftNav colortoggle={colortoggle} setColortoggle={setColortoggle} />
             <RightNav colortoggle={colortoggle} setColortoggle={setColortoggle} />
           </div>
         }
       />
+      <Route path='/projects' element={
+        <div className='overflow-hidden'>
+          <Nav colortoggle={colortoggle} setColortoggle={setColortoggle} setHambugertoggle={setHamburgertoggle} />
+          <Projects colortoggle={colortoggle} setHambugertoggle={setHamburgertoggle} hamburgertoggle={hamburgertoggle} />
+          <Cover colortoggle={colortoggle} setColortoggle={setColortoggle} title='PROJECTS' />
+          <LeftNav colortoggle={colortoggle} setColortoggle={setColortoggle} />
+          <RightNav colortoggle={colortoggle} setColortoggle={setColortoggle} />
+        </div>
+      } />
     </Routes>
   )
 }

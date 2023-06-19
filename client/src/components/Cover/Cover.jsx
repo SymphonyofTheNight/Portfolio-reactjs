@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 import { useEffect, useState } from 'react';
 import { FaFacebook, FaGithub, FaTelegram } from 'react-icons/fa';
 
-const Cover = ({ colortoggle, setColortoggle }) => {
+const Cover = ({ colortoggle, setColortoggle, title }) => {
 
     const months = ["JANUARY", "FEBRUARY", "MARCH", "APRIL", "MAY", "JUNE", "JULY", "AUGUST", "SEPTEMBER", "October", "NOVEMBER", "DECEMBER"];
 
@@ -84,7 +84,7 @@ const Cover = ({ colortoggle, setColortoggle }) => {
                 <div className='lg:h-[65vh] xs:h-[80vh] w-[70vw] flex items-center justify-center xs:text-center center-text-container'>
                     <div className='txt-container'>
                         <span className={`xl:text-[4.5em] flex items-center justify-center w-auto ${!colortoggle ? 'text-white' : 'text-black'} font-Oxygen lg:tracking-[25px] xs:tracking-[10px] font-bold lg2:text-[3.5em] lg1:text-[2.5em] lg:text-[2.2em] md:text-[2.8em] sm:text-[4.5em] xs:text-[2em] text`}>
-                            FRONT END DEVELOPER <br />
+                            {title} <br />
                         </span>
                     </div>
                 </div>

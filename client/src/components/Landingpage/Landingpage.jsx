@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { FaFacebookMessenger, FaCode, FaDiscord, FaPhone, FaEnvelope, FaTimes } from 'react-icons/fa';
-import { RiGithubLine, RiFacebookBoxLine } from 'react-icons/ri';
+import { Link } from 'react-router-dom';
+import { FaFacebookMessenger, FaCode, FaDiscord, FaPhone, FaEnvelope, FaTimes, } from 'react-icons/fa';
+import { RiGithubLine, RiFacebookBoxLine, RiArrowRightSFill } from 'react-icons/ri';
 
 // resume
 import resume from '../../resume/resume.pdf';
@@ -129,6 +130,20 @@ const Landingpage = ({ colortoggle, setHambugertoggle, hamburgertoggle }) => {
                             </div>
                         )
                     })}
+                </div>
+                <div className='h-auto xs:w-[90vw] lg:w-[970px] flex justify-start items-center'>
+                    <button className='group h-[4vh] w-[auto] flex flex-wrap flex-row justify-start items-center' onClick={() => {
+                        home.current.scrollIntoView({ behavior: 'smooth' })
+                        setTimeout(() => {
+                            // window.open('https://ginodelavega.netlify.app/projects');
+                            window.open('http://localhost:3000/projects', '_self');
+                        }, 1000)
+                    }}>
+                        <span className={`font-Poppins ${!colortoggle ? 'text-[#E2E2E2] group-hover:text-[#FFB64B]' : 'text-black'}  text-xl`}>
+                            Other Projects
+                        </span>
+                        <RiArrowRightSFill className={`${!colortoggle ? 'text-[#E2E2E2] group-hover:text-[#FFB64B]' : 'text-black'} text-3xl`} />
+                    </button>
                 </div>
             </div>
 
