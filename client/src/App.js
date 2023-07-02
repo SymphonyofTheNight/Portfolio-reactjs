@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -13,11 +13,26 @@ import RightNav from './components/SideNav/RightNav';
 // scss
 import './scss/_main.scss';
 
+// projects 
+import projects from './assets/projectsimg/projects';
 
 const App = () => {
 
   const [colortoggle, setColortoggle] = useState(false);
   const [hamburgertoggle, setHamburgertoggle] = useState(false);
+  const [path, setPath] = useState('');
+  const [titlepage, setTitlepage] = useState('');
+  const [getid, setGetId] = useState('');
+
+  // find specific proj
+  const [myprojects_arr] = useState(projects ? projects : null);
+
+  useEffect(() => {
+    const get_selected_proj = getid ? myprojects_arr.find(proj => proj.id === getid) : null;
+    console.log(get_selected_proj)
+    setPath(get_selected_proj?.endpoint)
+    if (getid) localStorage.setItem("selected_project", JSON.stringify(get_selected_proj));
+  }, [getid])
 
   return (
     <Routes>
@@ -25,18 +40,18 @@ const App = () => {
         {
           <div className='overflow-hidden'>
             <Nav colortoggle={colortoggle} setColortoggle={setColortoggle} setHambugertoggle={setHamburgertoggle} />
-            <Landingpage colortoggle={colortoggle} setHambugertoggle={setHamburgertoggle} hamburgertoggle={hamburgertoggle} />
+            <Landingpage colortoggle={colortoggle} setGetId={setGetId} setHambugertoggle={setHamburgertoggle} hamburgertoggle={hamburgertoggle} setTitlepage={setTitlepage} />
             <Cover colortoggle={colortoggle} setColortoggle={setColortoggle} title='FRONT END DEVELOPER' />
             <LeftNav colortoggle={colortoggle} setColortoggle={setColortoggle} />
             <RightNav colortoggle={colortoggle} setColortoggle={setColortoggle} />
           </div>
         }
       />
-      <Route path='/projects' element={
+      <Route path={`/projects/${path ? path : ''}`} element={
         <div className='overflow-hidden'>
           <Nav colortoggle={colortoggle} setColortoggle={setColortoggle} setHambugertoggle={setHamburgertoggle} />
-          <Projects colortoggle={colortoggle} setHambugertoggle={setHamburgertoggle} hamburgertoggle={hamburgertoggle} />
-          <Cover colortoggle={colortoggle} setColortoggle={setColortoggle} title='PROJECTS' />
+          <Projects colortoggle={colortoggle} getid={getid} setHambugertoggle={setHamburgertoggle} hamburgertoggle={hamburgertoggle} />
+          <Cover colortoggle={colortoggle} setColortoggle={setColortoggle} title={titlepage} />
           <LeftNav colortoggle={colortoggle} setColortoggle={setColortoggle} />
           <RightNav colortoggle={colortoggle} setColortoggle={setColortoggle} />
         </div>

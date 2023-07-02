@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import { FaTimes } from 'react-icons/fa';
 import { RiGithubLine, RiFacebookBoxLine } from 'react-icons/ri';
 
@@ -7,11 +7,14 @@ import resume from '../../resume/resume.pdf';
 
 const Projects = ({ colortoggle, setHambugertoggle, hamburgertoggle }) => {
 
+    const selected_proj_from_local = localStorage.getItem("selected_project");
+
     const dom_child = useRef();
     const home = useRef(null);
     const about = useRef(null);
-    const project = useRef(null);
-    const contact = useRef(null);
+
+    // selected project
+    const [proj_selected] = useState(selected_proj_from_local ? JSON.parse(selected_proj_from_local) : null);
 
     const scrollInto_home = () => {
         home.current.scrollIntoView({ behavior: 'smooth' });
@@ -20,14 +23,6 @@ const Projects = ({ colortoggle, setHambugertoggle, hamburgertoggle }) => {
 
     const scrollInto_about = () => {
         about.current.scrollIntoView({ behavior: 'auto', block: 'center', inline: 'center' });
-    }
-
-    const scrollInto_projects = () => {
-        project.current.scrollIntoView({ behavior: 'smooth' });
-    }
-
-    const scrollInto_contact = () => {
-        contact.current.scrollIntoView({ behavior: 'smooth' });
     }
 
     const location_github = () => {
@@ -47,7 +42,7 @@ const Projects = ({ colortoggle, setHambugertoggle, hamburgertoggle }) => {
     }, [hamburgertoggle])
 
     return (
-        <div className={`${colortoggle ? 'bg-[#ffffff]' : 'bg-[#0A0909]'} h-[260vh] w-[100vw] overflow-hidden`}>
+        <div className={`${colortoggle ? 'bg-[#ffffff]' : 'bg-[#0A0909]'} h-[260vh] w-[100vw] grid items-center justify-center overflow-hidden`}>
 
             {/* hamburgernav */}
             <div className={`xs:h-full xs:w-[100vw] ${!colortoggle ? 'bg-transparent' : 'bg-transparent'} absolute top-0 left-0 z-20 transition-all duration-500 ease-in-out HamburgerNav`} ref={dom_child}>
@@ -88,6 +83,13 @@ const Projects = ({ colortoggle, setHambugertoggle, hamburgertoggle }) => {
                     </div>
                 </div>
             </div>
+
+            <div className={`bg-red-700 h-[120vh] xs:w-auto`}>
+                <div className='bg-blue-700 h-[10vh] w-[100vw]'>
+                    <p className='font-Poppins'>{ }</p>
+                </div>
+            </div>
+
         </div>
     )
 }

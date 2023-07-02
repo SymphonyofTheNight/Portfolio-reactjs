@@ -28,7 +28,7 @@ const messenger_endpoint = () => {
     window.open('https://www.facebook.com/Crissaegrim1997', '_blank');
 }
 
-const Landingpage = ({ colortoggle, setHambugertoggle, hamburgertoggle }) => {
+const Landingpage = ({ colortoggle, setHambugertoggle, hamburgertoggle, setTitlepage, setGetId }) => {
 
     const [hover, setHover] = useState("");
     const dom_child = useRef();
@@ -106,6 +106,7 @@ const Landingpage = ({ colortoggle, setHambugertoggle, hamburgertoggle }) => {
                 </div>
                 <div className='xs:mt-[4vh] h-auto xs:w-[90vw] lg:w-[970px] lg:mt-[7vh] flex flex-wrap justify-between'>
                     {projects && Object.keys(projects).map((index) => {
+                        console.log(projects[index].endpoint)
                         return (
                             <div className='h-auto w-full relative mt-2 mb-5'>
                                 <h1 className={`font-Poppins ${!colortoggle ? 'text-[#E2E2E2]' : 'text-black'} text-[30px] lg:text-[30px] font-[700] absolute top-0 left-0 lg:left-1`}>{projects[index].project}</h1>
@@ -118,32 +119,25 @@ const Landingpage = ({ colortoggle, setHambugertoggle, hamburgertoggle }) => {
                                         </span>
                                     </div>
                                     <div className='h-[10vh] w-[90vw] flex items-center justify-start'>
-                                        <button className={`group bg-none relative h-[40px] w-[180px] border-[1px] hover:border-[black] border-[#E2E2E2] ${!colortoggle ? 'hover:bg-[#FFB64B]' : 'hover:bg-[#000000]'}`}
-                                            onClick={() => {
-                                                window.open(`${projects[index].link}`, '_blank');
-                                            }}
-                                        >
-                                            <span className={`${!colortoggle ? 'text-[#E2E2E2]' : 'group-hover:text-[#FFB64B]'} `}>Live Demo</span>
-                                        </button>
+                                        <Link to={`/projects/${projects[index].endpoint}`} path="relevant">
+                                            <button className={`group bg-none relative h-[40px] w-[180px] border-[1px] hover:border-[black] border-[#E2E2E2] ${!colortoggle ? 'hover:bg-[#FFB64B]' : 'hover:bg-[#000000]'}`}
+                                                onClick={() => {
+                                                    home.current.scrollIntoView({ behavior: 'smooth' })
+                                                    setTimeout(() => {
+                                                        setGetId(projects[index].id)
+                                                        setTitlepage(projects[index].titlepage)
+                                                        // setPath(projects[index].endpoint)
+                                                    }, 1000)
+                                                }}
+                                            >
+                                                <span className={`${!colortoggle ? 'text-[#E2E2E2]' : 'group-hover:text-[#FFB64B]'} `}>Learn more</span>
+                                            </button>
+                                        </Link>
                                     </div>
                                 </div>
                             </div>
                         )
                     })}
-                </div>
-                <div className='h-auto xs:w-[90vw] lg:w-[970px] flex justify-start items-center'>
-                    <button className='group h-[4vh] w-[auto] flex flex-wrap flex-row justify-start items-center' onClick={() => {
-                        home.current.scrollIntoView({ behavior: 'smooth' })
-                        setTimeout(() => {
-                            // window.open('https://ginodelavega.netlify.app/projects');
-                            window.open('http://localhost:3000/projects', '_self');
-                        }, 1000)
-                    }}>
-                        <span className={`font-Poppins ${!colortoggle ? 'text-[#E2E2E2] group-hover:text-[#FFB64B]' : 'text-black'}  text-xl`}>
-                            Other Projects
-                        </span>
-                        <RiArrowRightSFill className={`${!colortoggle ? 'text-[#E2E2E2] group-hover:text-[#FFB64B]' : 'text-black'} text-3xl`} />
-                    </button>
                 </div>
             </div>
 
