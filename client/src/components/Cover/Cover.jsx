@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 import { useEffect, useState } from 'react';
 import { FaFacebook, FaGithub, FaTelegram } from 'react-icons/fa';
 
-const Cover = ({ colortoggle, setColortoggle, title }) => {
+const Cover = ({ colortoggle, setColortoggle, title, setTitlepage }) => {
 
     const months = ["JANUARY", "FEBRUARY", "MARCH", "APRIL", "MAY", "JUNE", "JULY", "AUGUST", "SEPTEMBER", "October", "NOVEMBER", "DECEMBER"];
 
@@ -60,6 +60,14 @@ const Cover = ({ colortoggle, setColortoggle, title }) => {
             mainref.current.style.display = 'none';
         }
     }, [scrollcount])
+
+    useEffect(() => {
+        if (title === '' || title === null) {
+            const getlocal = localStorage.getItem("selected_project");
+            const toparsedata = JSON.parse(getlocal);
+            setTitlepage(toparsedata.titlepage)
+        }
+    }, [title])
 
     return (
         <div className={`cover ${!colortoggle ? 'bg-black/[0.9]' : 'bg-white/[0.9]'} overflow-hidden h-[100vh] w-[100vw] absolute top-0 left-0 z-[30] flex flex-col flex-wrap transition duration-[1s] ease-in-out`} ref={mainref}>

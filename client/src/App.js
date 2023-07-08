@@ -29,10 +29,17 @@ const App = () => {
 
   useEffect(() => {
     const get_selected_proj = getid ? myprojects_arr.find(proj => proj.id === getid) : null;
-    console.log(get_selected_proj)
     setPath(get_selected_proj?.endpoint)
     if (getid) localStorage.setItem("selected_project", JSON.stringify(get_selected_proj));
   }, [getid])
+
+  useEffect(() => {
+    if (path === '' || path === null) {
+      const getlocal = localStorage.getItem("selected_project");
+      const toparsedata = JSON.parse(getlocal);
+      setPath(toparsedata.endpoint)
+    }
+  }, [path])
 
   return (
     <Routes>
@@ -47,11 +54,11 @@ const App = () => {
           </div>
         }
       />
-      <Route path={`/projects/${path ? path : ''}`} element={
+      <Route path={`/projects/${path}`} element={
         <div className='overflow-hidden'>
           <Nav colortoggle={colortoggle} setColortoggle={setColortoggle} setHambugertoggle={setHamburgertoggle} />
           <Projects colortoggle={colortoggle} getid={getid} setHambugertoggle={setHamburgertoggle} hamburgertoggle={hamburgertoggle} />
-          <Cover colortoggle={colortoggle} setColortoggle={setColortoggle} title={titlepage} />
+          <Cover colortoggle={colortoggle} setColortoggle={setColortoggle} title={titlepage} setTitlepage={setTitlepage} />
           <LeftNav colortoggle={colortoggle} setColortoggle={setColortoggle} />
           <RightNav colortoggle={colortoggle} setColortoggle={setColortoggle} />
         </div>

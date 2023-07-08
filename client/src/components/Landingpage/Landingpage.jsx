@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { FaFacebookMessenger, FaCode, FaDiscord, FaPhone, FaEnvelope, FaTimes, } from 'react-icons/fa';
-import { RiGithubLine, RiFacebookBoxLine, RiArrowRightSFill } from 'react-icons/ri';
+import { RiGithubLine, RiFacebookBoxLine } from 'react-icons/ri';
 
 // resume
 import resume from '../../resume/resume.pdf';
