@@ -23,6 +23,20 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
   <title>Gino D.V</title>
+  <script>
+    window.addEventListener('DOMContentLoaded', function () {
+      var xhttp = new XMLHttpRequest();
+      xhttp.open('GET', 'https://example.com', true);
+      xhttp.setRequestHeader('User-Agent', 'ch-ua-form-factor=tablet');
+      xhttp.setRequestHeader('Header-Name', 'Header-Value');
+      // Set the ch-ua-form-factor value here
+
+      // Add other headers if necessary
+      // xhttp.setRequestHeader('Header-Name', 'Header-Value');
+
+      xhttp.send();
+    });
+  </script>
 </head>
 
 <body>
