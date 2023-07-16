@@ -1,6 +1,7 @@
 import React, { useRef, useEffect, useState } from 'react';
 import { FaFacebookMessenger, FaCode, FaDiscord, FaPhone, FaEnvelope, FaTimes, } from 'react-icons/fa';
 import { RiGithubLine, RiFacebookBoxLine } from 'react-icons/ri';
+import { Link } from 'react-router-dom';
 
 // resume
 import resume from '../../resume/resume.pdf';
@@ -21,9 +22,9 @@ const Projects = ({ colortoggle, setHambugertoggle, hamburgertoggle }) => {
         setHambugertoggle(state => !state);
     }
 
-    const scrollInto_about = () => {
-        about.current.scrollIntoView({ behavior: 'auto', block: 'center', inline: 'center' });
-    }
+    // const scrollInto_about = () => {
+    //     about.current.scrollIntoView({ behavior: 'auto', block: 'center', inline: 'center' });
+    // }
 
     const location_github = () => {
         window.open('https://github.com/gamexgaming1997', '_blank');
@@ -59,14 +60,52 @@ const Projects = ({ colortoggle, setHambugertoggle, hamburgertoggle }) => {
     return (
         <div className={`${colortoggle ? 'bg-[#ffffff]' : 'bg-[#0A0909]'} grid items-center justify-center h-auto w-full overflow-hidden`} ref={home}>
 
-            <div className={`bg-red-700 h-[140vh] mt-[70vh] xs:w-auto`}>
-                <div className='bg-blue-700 h-[10vh] grid items-center justify-start w-[100vw]'>
-                    <p className='ml-5 font-Poppins text-white text-xl'>{proj_selected.project}</p>
+            <div className={`h-[auto] pt-10 pb-10 mt-[70vh] flex flex-wrap flex-col items-center justify-center xs:w-[100vw]`}>
+                <div className='h-[10vh] grid items-center justify-start w-[90vw]'>
+                    <p className={`font-Poppins ${!colortoggle ? 'text-white' : 'text-black'} text-xl font-bold`}>{proj_selected.project}</p>
                 </div>
 
-                <div className='bg-violet-700 h-auto mt-[5vh] w-[100vw] tracking-[.25em] leading-8 p-2'>
-                    <p className='ml-5 font-Poppins text-white text-1xl'>{proj_selected.description}</p>
+                <div className='h-auto mt-[5vh] w-[90vw] tracking-[.10em] leading-8'>
+                    <p className={`font-Poppins ${!colortoggle ? 'text-white' : 'text-black'} text-xl`}>{proj_selected.description}</p>
                 </div>
+
+                <div className='h-auto mt-[5vh] w-[90vw] tracking-[.10em] leading-7'>
+                    <p className={`font-Poppins ${!colortoggle ? 'text-white' : 'text-black'} text-base font-bold`}>Location</p>
+                    <p className={`font-Poppins ${!colortoggle ? 'text-white' : 'text-black'} text-sm`}>{proj_selected.location}</p>
+                </div>
+
+                <div className='h-auto mt-[1.5vh] w-[90vw] tracking-[.10em] leading-7'>
+                    <p className={`font-Poppins ${!colortoggle ? 'text-white' : 'text-black'} text-base font-bold`}>Date</p>
+                    <p className={`font-Poppins ${!colortoggle ? 'text-white' : 'text-black'} text-sm`}>{proj_selected.date}</p>
+                </div>
+
+                <div className='h-auto mt-[1.5vh] w-[90vw] tracking-[.10em] leading-7'>
+                    <p className={`font-Poppins ${!colortoggle ? 'text-white' : 'text-black'} text-base font-bold`}>Technologies</p>
+                    <p className={`font-Poppins ${!colortoggle ? 'text-white' : 'text-black'} text-sm`}>{proj_selected.technologies}</p>
+                </div>
+
+                <div className='h-auto mt-[1.5vh] w-[90vw] tracking-[.10em] leading-7'>
+                    <p className={`font-Poppins ${!colortoggle ? 'text-white' : 'text-black'} text-base font-bold`}>Product</p>
+                    <p className={`font-Poppins ${!colortoggle ? 'text-white' : 'text-black'} text-sm`}>{proj_selected.product}</p>
+                </div>
+
+                <div className='h-auto mt-[4.5vh] w-[90vw] tracking-[.10em] leading-7'>
+                    <img src={proj_selected.img} className='h-auto w-[100%]' alt='img' />
+                </div>
+
+                <div className='h-auto mt-[4.5vh] w-[90vw] tracking-[.10em] leading-7'>
+                    <p className={`font-Poppins ${!colortoggle ? 'text-white' : 'text-black'} text-base font-bold`}>/ 01 CONTEXT</p>
+                    <p className={`font-Poppins ${!colortoggle ? 'text-white' : 'text-black'} text-sm mt-[1.5vh]`}>{proj_selected.context}</p>
+                </div>
+
+                {proj_selected.img2 === "" || null || undefined ?
+                    <>
+                    </>
+                    :
+                    <div className='h-auto mt-[4.5vh] w-[90vw] tracking-[.10em] leading-7'>
+                        <img src={proj_selected.img2} className='h-auto w-[100%]' alt='img' />
+                    </div>
+                }
             </div>
 
             {/* footer */}
@@ -122,12 +161,11 @@ const Projects = ({ colortoggle, setHambugertoggle, hamburgertoggle }) => {
                     </button>
                     <div className={`${!colortoggle ? 'bg-[#181818]' : 'bg-[#ffffff]'} xs:h-[100vh] xs:w-full grid`}>
                         <div className='h-[41vh] w-[410px] mt-[25vh]'>
-                            <button className='h-[7vh] w-full text-left flex items-end justify-bottom' onClick={scrollInto_home}>
-                                <span className='text-[#FFB64B] ml-5 font-Poppins text-base'>01 <span className={`${!colortoggle ? 'text-white' : 'text-black'} ml-2 font-Poppins text-3xl`}>HOME</span></span>
-                            </button>
-                            <button className='h-[7vh] w-full text-left flex items-end justify-bottom' onClick={scrollInto_about} >
-                                <span className='text-[#FFB64B] ml-5 font-Poppins text-base'>02 <span className={`${!colortoggle ? 'text-white' : 'text-black'} ml-2 font-Poppins text-3xl`}>PROJECTS</span></span>
-                            </button>
+                            <Link to="/" path="relevant" >
+                                <button className='h-[7vh] w-full text-left flex items-end justify-bottom' onClick={scrollInto_home}>
+                                    <span className='text-[#FFB64B] ml-5 font-Poppins text-base'>01 <span className={`${!colortoggle ? 'text-white' : 'text-black'} ml-2 font-Poppins text-3xl`}>HOME</span></span>
+                                </button>
+                            </Link>
                             <div className='mt-[6vh] h-[7vh] w-[270px] ml-5 text-left flex items-center justify-between'>
                                 <a href={resume} download="resume">
                                     <button className={`bg-none h-[50px] w-[145px] rounded-[5px] ${!colortoggle ? 'border-[#FFB64B] text-[#FFB64B]' : 'border-[#000000] text-[#000000]'} font-Poppins border-[1px] `}>
@@ -151,56 +189,6 @@ const Projects = ({ colortoggle, setHambugertoggle, hamburgertoggle }) => {
             </div>
 
         </div>
-
-        // <div className={`${colortoggle ? 'bg-[#ffffff]' : 'bg-[#0A0909]'} flex items-end justify-center relative h-[250vh] w-full overflow-hidden`}>
-
-        // <div className={`bg-red-700 h-[80vh] xs:w-auto`}>
-        //     <div className='bg-blue-700 h-[10vh] w-[100vw]'>
-        //         <p className='font-Poppins'></p>
-        //     </div>
-        // </div>
-
-        // {/* hamburgernav */}
-        // <div className={`xs:h-full xs:w-[100vw] ${!colortoggle ? 'bg-transparent' : 'bg-transparent'} absolute top-0 left-0 z-20 transition-all duration-500 ease-in-out HamburgerNav`} ref={dom_child}>
-        //     <div className='absolute top-0 right-0 xs:h-full xs:w-[100vw] sm:w-[412px]'>
-        //         <button className='h-[5vh] xs:w-[50px] absolute top-5 right-3 grid place-items-center'
-        //             onClick={() => {
-        //                 setHambugertoggle(state => !state)
-        //             }}
-        //         >
-        //             <FaTimes className={`${!colortoggle ? 'text-[#FFB64B]' : 'text-black'} text-1xl`} />
-        //         </button>
-        //         <div className={`${!colortoggle ? 'bg-[#181818]' : 'bg-[#ffffff]'} xs:h-[100vh] xs:w-full grid`}>
-        //             <div className='h-[41vh] w-[410px] mt-[25vh]'>
-        //                 <button className='h-[7vh] w-full text-left flex items-end justify-bottom' onClick={scrollInto_home}>
-        //                     <span className='text-[#FFB64B] ml-5 font-Poppins text-base'>01 <span className={`${!colortoggle ? 'text-white' : 'text-black'} ml-2 font-Poppins text-3xl`}>HOME</span></span>
-        //                 </button>
-        //                 <button className='h-[7vh] w-full text-left flex items-end justify-bottom' onClick={scrollInto_about} >
-        //                     <span className='text-[#FFB64B] ml-5 font-Poppins text-base'>02 <span className={`${!colortoggle ? 'text-white' : 'text-black'} ml-2 font-Poppins text-3xl`}>PROJECTS</span></span>
-        //                 </button>
-        //                 <div className='mt-[6vh] h-[7vh] w-[270px] ml-5 text-left flex items-center justify-between'>
-        //                     <a href={resume} download="resume">
-        //                         <button className={`bg-none h-[50px] w-[145px] rounded-[5px] ${!colortoggle ? 'border-[#FFB64B] text-[#FFB64B]' : 'border-[#000000] text-[#000000]'} font-Poppins border-[1px] `}>
-        //                             Resume
-        //                         </button>
-        //                     </a>
-        //                     <button className={`h-[50px] w-[auto] rounded-[5px] ${!colortoggle ? 'border-[#FFB64B] text-[#FFB64B]' : 'border-[#000000] text-[#000000]'} border-[1px] `}
-        //                         onClick={location_github}
-        //                     >
-        //                         <RiGithubLine className={`${!colortoggle ? 'text-[#FFB64B]' : 'text-black'} text-2xl ml-3 mr-3`} />
-        //                     </button>
-        //                     <button className={`h-[50px] w-[auto] rounded-[5px] ${!colortoggle ? 'border-[#FFB64B] text-[#FFB64B]' : 'border-[#000000] text-[#000000]'} border-[1px] `}
-        //                         onClick={location_fb}
-        //                     >
-        //                         <RiFacebookBoxLine className={`${!colortoggle ? 'text-[#FFB64B]' : 'text-black'} text-2xl ml-3 mr-3`} />
-        //                     </button>
-        //                 </div>
-        //             </div>
-        //         </div>
-        //     </div>
-        // </div>
-
-        // </div>
     )
 }
 
