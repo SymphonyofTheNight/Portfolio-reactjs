@@ -27,7 +27,7 @@ module.exports = {
       })
     },
     screens: {
-      xs: "320px", // s-phone
+      xs: "360px", // s-phone
       sss: "405px", // m-phone
       ss: "620px", // s-tablet
       sm: "768px", // tablet

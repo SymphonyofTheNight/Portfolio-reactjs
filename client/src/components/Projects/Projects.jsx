@@ -12,7 +12,7 @@ const Projects = ({ colortoggle, setHambugertoggle, hamburgertoggle }) => {
 
     const dom_child = useRef();
     const home = useRef(null);
-    const about = useRef(null);
+    // const about = useRef(null);
 
     // selected project
     const [proj_selected] = useState(selected_proj_from_local ? JSON.parse(selected_proj_from_local) : null);

@@ -119,7 +119,7 @@ const Landingpage = ({ colortoggle, setHambugertoggle, hamburgertoggle, setTitle
                                         </span>
                                     </div>
                                     <div className='h-[10vh] w-[90vw] flex items-center justify-start'>
-                                        <Link to={`/projects/${projects[index].endpoint}`} path="relevant">
+                                        <Link to={`/projects/${projects[index]?.endpoint}`} path="relevant">
                                             <button className={`group bg-none relative h-[40px] w-[180px] border-[1px] hover:border-[black] border-[#E2E2E2] ${!colortoggle ? 'hover:bg-[#FFB64B]' : 'hover:bg-[#000000]'}`}
                                                 onClick={() => {
                                                     home.current.scrollIntoView({ behavior: 'smooth' })

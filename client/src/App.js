@@ -37,7 +37,7 @@ const App = () => {
     if (path === '' || path === null) {
       const getlocal = localStorage.getItem("selected_project");
       const toparsedata = JSON.parse(getlocal);
-      setPath(toparsedata.endpoint)
+      setPath(toparsedata?.endpoint)
     }
   }, [path])
 
