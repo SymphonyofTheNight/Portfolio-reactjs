@@ -31,6 +31,14 @@ const App = () => {
     const get_selected_proj = getid ? myprojects_arr.find(proj => proj.id === getid) : null;
     setPath(get_selected_proj?.endpoint)
     if (getid) localStorage.setItem("selected_project", JSON.stringify(get_selected_proj));
+
+    // return () => {
+    //   // clean local torage 
+    //   console.log("cleaning localstorage....");
+    //   localStorage.clear();
+    //   console.log("cleaning done....");
+    // }
+
   }, [getid])
 
   useEffect(() => {

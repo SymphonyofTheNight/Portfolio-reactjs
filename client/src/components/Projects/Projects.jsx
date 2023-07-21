@@ -1,6 +1,6 @@
 import React, { useRef, useEffect, useState } from 'react';
 import { FaFacebookMessenger, FaCode, FaDiscord, FaPhone, FaEnvelope, FaTimes, } from 'react-icons/fa';
-import { RiGithubLine, RiFacebookBoxLine } from 'react-icons/ri';
+import { RiGithubLine, RiFacebookBoxLine, RiArrowRightUpLine } from 'react-icons/ri';
 import { Link } from 'react-router-dom';
 
 // resume
@@ -55,18 +55,82 @@ const Projects = ({ colortoggle, setHambugertoggle, hamburgertoggle }) => {
         }
     }, [hamburgertoggle])
 
-    console.log(proj_selected)
-
     return (
         <div className={`${colortoggle ? 'bg-[#ffffff]' : 'bg-[#0A0909]'} grid items-center justify-center h-auto w-full overflow-hidden`} ref={home}>
 
-            <div className={`h-[auto] pt-10 pb-10 mt-[70vh] flex flex-wrap flex-col items-center justify-center xs:w-[100vw]`}>
-                <div className='h-[10vh] grid items-center justify-start w-[90vw]'>
-                    <p className={`font-Poppins ${!colortoggle ? 'text-white' : 'text-black'} text-xl font-bold`}>{proj_selected.project}</p>
+            <div className={`h-[auto] pt-10 pb-10 mt-[80vh] lg1:mt-[70vh] flex flex-wrap flex-col items-center justify-center xs:w-[100vw]`}>
+                <div className='h-[auto] w-[100vw] lg1:w-[60vw] flex flex-col items-center lg1:flex-row lg1:flex-wrap'>
+                    <div className=' h-[10vh] grid items-center justify-start w-[90vw] lg1:w-[60vw]'>
+                        <p className={`font-Poppins ${!colortoggle ? 'text-white' : 'text-black'} text-xl lg1:text-2xl font-bold`}>{proj_selected.project}</p>
+                    </div>
+
+                    <div className='h-auto mt-[5vh] w-[90vw] lg1:w-[100vw] tracking-[.02em] lg1:tracking-tighter leading-8 text-justify'>
+                        <p className={`font-Poppins ${!colortoggle ? 'text-white' : 'text-black'} text-base lg1:text-1xl pr-[15vw] lg1:pr-[35vw] lg1:mb-[5vh]`}>{proj_selected.description}</p>
+                    </div>
+
+                    <div className='h-auto mt-[5vh] lg1:mt-[1.5vh] w-[90vw] lg1:w-[60vw] tracking-[.10em] leading-7'>
+                        <Link to={`${proj_selected.link}`}>
+                            <button className={`font-Poppins ${!colortoggle ? 'text-white' : 'text-black'} flex flex-row items-center justify-center text-base lg1:text-1xl underline`}>Live Demo <RiArrowRightUpLine className='lg1:ml-2 font-bold underline' /></button>
+                        </Link>
+                    </div>
+
+                    <div className='h-auto mt-[7vh] lg1:mt-[8.5vh] w-[90vw] lg1:w-[15vw] tracking-[.10em] leading-7'>
+                        <p className={`font-Poppins ${!colortoggle ? 'text-white' : 'text-black'} text-base font-bold`}>Location</p>
+                        <p className={`font-Poppins ${!colortoggle ? 'text-white' : 'text-black'} text-sm`}>{proj_selected.location}</p>
+                    </div>
+
+                    <div className='h-auto mt-[3vh] lg1:mt-[8.5vh] w-[90vw] lg1:w-[15vw] tracking-[.10em] leading-7'>
+                        <p className={`font-Poppins ${!colortoggle ? 'text-white' : 'text-black'} text-base font-bold`}>Date</p>
+                        <p className={`font-Poppins ${!colortoggle ? 'text-white' : 'text-black'} text-sm`}>{proj_selected.date}</p>
+                    </div>
+
+                    <div className='h-auto mt-[3vh] lg1:h-[20vh] lg1:mt-[8.5vh] w-[90vw] lg1:w-[15vw] tracking-[.10em] leading-7 lg1:whitespace-pre'>
+                        <p className={`font-Poppins ${!colortoggle ? 'text-white' : 'text-black'} text-base font-bold`}>Technologies</p>
+                        <p className={`font-Poppins ${!colortoggle ? 'text-white' : 'text-black'} text-sm lg1:pr-2`}>{proj_selected.technologies}</p>
+                    </div>
+
+                    <div className='h-auto mt-[3vh] lg1:mt-[8.5vh] w-[90vw] lg1:w-[15vw] tracking-[.10em] leading-7'>
+                        <p className={`font-Poppins ${!colortoggle ? 'text-white' : 'text-black'} text-base font-bold`}>Product</p>
+                        <p className={`font-Poppins ${!colortoggle ? 'text-white' : 'text-black'} text-sm`}>{proj_selected.product}</p>
+                    </div>
+
+                    <div className='h-auto mt-[4.5vh] w-[90vw] lg1:w-[60vw] tracking-[.10em] leading-7'>
+                        <img src={proj_selected.img} className='h-auto w-auto lg1:w-[70vw]' alt='img' />
+                    </div>
+
+                    {/* mobile to tablet and ipad hidden in desktop */}
+                    <div className='h-auto mt-[4.5vh] w-[90vw] tracking-[.10em] leading-7 lg1:hidden'>
+                        <p className={`font-Poppins ${!colortoggle ? 'text-white' : 'text-black'} text-base font-bold`}>/ 01 CONTEXT</p>
+                        <p className={`font-Poppins ${!colortoggle ? 'text-white' : 'text-black'} text-sm mt-[1.5vh]`}>{proj_selected.context}</p>
+                    </div>
+
+                    {/*desktop version */}
+                    <div className='xs:hidden lg1:flex h-auto mt-[4.5vh] lg1:mt-[7.5vh] xs:w-[90vw] lg1:w-[60vw] tracking-[.10em] leading-7 flex-row flex-wrap'>
+                        <div className='min-h-[15vh] h-auto w-[30vw] flex items-start justify-start'>
+                            <p className={`font-Poppins ${!colortoggle ? 'text-white' : 'text-black'} text-base lg1:text-sm font-bold lg1:font-light`}>/ 01 CONTEXT</p>
+                        </div>
+                        <div className='min-h-[15vh] h-auto w-[30vw] text-justify'>
+                            <p className={`font-Poppins ${!colortoggle ? 'text-white' : 'text-black'} text-sm lg1:text-base xs:mt-[1.5vh] lg1:mt-[0vh]`}>{proj_selected.context}</p>
+                        </div>
+                        {/* <p className={`font-Poppins ${!colortoggle ? 'text-white' : 'text-black'} text-base font-bold`}>/ 01 CONTEXT</p> */}
+                        {/* <p className={`font-Poppins ${!colortoggle ? 'text-white' : 'text-black'} text-sm mt-[1.5vh]`}>{proj_selected.context}</p> */}
+                    </div>
+
+                    {proj_selected.img2 === "" || null || undefined ?
+                        <>
+                        </>
+                        :
+                        <div className='h-auto mt-[4.5vh] w-[90vw] lg1:w-[60vw] tracking-[.10em] leading-7'>
+                            <img src={proj_selected.img2} className='h-auto w-auto lg1:w-[70vw]' alt='img' />
+                        </div>
+                    }
+                </div>
+                {/* <div className='h-[10vh] grid items-center justify-start w-[90vw]'>
+                    <p className={`font-Poppins ${!colortoggle ? 'text-white' : 'text-black'} text-xl font-bold lg1:ml-[4vw]`}>{proj_selected.project}</p>
                 </div>
 
-                <div className='h-auto mt-[5vh] w-[90vw] tracking-[.10em] leading-8'>
-                    <p className={`font-Poppins ${!colortoggle ? 'text-white' : 'text-black'} text-xl`}>{proj_selected.description}</p>
+                <div className='bg-blue-700 h-auto mt-[5vh] w-[90vw] lg1:w-[50vw] tracking-[.10em] leading-8'>
+                    <p className={`font-Poppins ${!colortoggle ? 'text-white' : 'text-black'} text-1xl`}>{proj_selected.description}</p>
                 </div>
 
                 <div className='h-auto mt-[5vh] w-[90vw] tracking-[.10em] leading-7'>
@@ -105,7 +169,7 @@ const Projects = ({ colortoggle, setHambugertoggle, hamburgertoggle }) => {
                     <div className='h-auto mt-[4.5vh] w-[90vw] tracking-[.10em] leading-7'>
                         <img src={proj_selected.img2} className='h-auto w-[100%]' alt='img' />
                     </div>
-                }
+                } */}
             </div>
 
             {/* footer */}

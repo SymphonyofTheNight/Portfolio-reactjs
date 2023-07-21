@@ -15,7 +15,7 @@ const projects = [
         hashtag: '#ReactJS #Tailwindcss #Sass',
         description: 'A minimalist website portfolio for software engineers that is very fast and has a responsive design to showcase my projects in effective way.',
         endpoint: 'myportfolio',
-        link: 'http://localhost:3000/myportfolio',
+        link: 'https://ginodelavega.netlify.app/',
         img: portfolio,
         img2: portfolio2,
         location: "Philippines",
@@ -38,7 +38,7 @@ const projects = [
         img2: "",
         location: "Philippines",
         date: "November 2022",
-        tehnologies: "React, SCSS",
+        technologies: "React, SCSS",
         product: "Anime Website",
         context: "Since exploring react was my goal, I started to learn about API's so I tried to create a anime website using JIKAN API where you can find thousands of popular anime content."
     },
@@ -56,7 +56,7 @@ const projects = [
         img2: "",
         location: "Philippines",
         date: "February 2023",
-        tehnologies: "React, SCSS",
+        technologies: "React, SCSS",
         product: "NFT card",
         context: "Web 3 is an idea for a new iteration of the World Wide Web which incorporates concepts such as decentralization, blockchain technologies, and token-based economics so I decided to create a sample of NFT card."
     }

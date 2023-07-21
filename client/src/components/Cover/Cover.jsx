@@ -11,7 +11,7 @@ const Cover = ({ colortoggle, setColortoggle, title, setTitlepage }) => {
     const wingTrigger = 150;
     const topbotTrigger = 350;
     const fadediv = 400;
-    const displaynon = 600;
+    const displaynon = 475;
 
     // reference
     const leftwingref = useRef(null);
